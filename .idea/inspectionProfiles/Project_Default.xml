@@ -1,0 +1,28 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyMethodMayBeStaticInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" editorAttributes="INFO_ATTRIBUTES" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="main.Gui.button_push_trans" />
+          <option value="main.Gui.*" />
+          <option value="main.Account.account_name" />
+          <option value="main.Account.*" />
+          <option value="Qt6_main.Gui.*" />
+          <option value="PyQt5.uic" />
+          <option value="window.Gui.button_confirm" />
+          <option value="window.Gui.text_weight" />
+          <option value="window.Gui.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
