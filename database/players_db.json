@@ -1,0 +1,77 @@
+{
+  "_default": {
+    "1": {
+      "username": "TURBO Trusty",
+      "rank": {}
+    },
+    "2": {
+      "username": "Ckwaceupoulet",
+      "rank": {}
+    },
+    "3": {
+      "username": "TURBO OLINGO",
+      "rank": {}
+    },
+    "4": {
+      "username": "ATM Kryder",
+      "rank": {
+        "RANKED_TFT_DOUBLE_UP": {
+          "division": "II",
+          "hotStreak": false,
+          "leaguePoints": 24,
+          "losses": 8,
+          "wins": 5,
+          "tier": "BRONZE"
+        },
+        "RANKED_SOLO_5x5": {
+          "division": "II",
+          "hotStreak": false,
+          "leaguePoints": 49,
+          "losses": 6,
+          "wins": 2,
+          "tier": "EMERALD"
+        }
+      },
+      "rank_history": {
+        "20/07/23": {
+          "RANKED_TFT_DOUBLE_UP": "BRONZE II 1 24",
+          "RANKED_SOLO_5x5": "EMERALD II 5 49"
+        }
+      }
+    },
+    "5": {
+      "username": "Raz0xx",
+      "rank": {}
+    },
+    "6": {
+      "username": "FRANZIZKUZ",
+      "rank": {}
+    },
+    "7": {
+      "username": "TheRedAquaman",
+      "rank": {
+        "RANKED_TFT_DOUBLE_UP": {
+          "division": "II",
+          "hotStreak": false,
+          "leaguePoints": 96,
+          "losses": 2,
+          "wins": 3,
+          "tier": "BRONZE"
+        }
+      },
+      "rank_history": {
+        "20/07/23": {
+          "RANKED_TFT_DOUBLE_UP": "BRONZE II 1 96"
+        }
+      }
+    },
+    "8": {
+      "username": "TURBO ALUCO",
+      "rank": {}
+    },
+    "9": {
+      "username": "Welisilmanan",
+      "rank": {}
+    }
+  }
+}
