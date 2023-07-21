@@ -13,3 +13,8 @@ scheduler.start()
 @player_bp.route("/get_all", methods=["GET"])
 def get_all():
     return summ_manager.get_all()
+
+
+@player_bp.route("/get_sorted_ranks", methods=["GET"])
+def get_sorted_ranks():
+    return summ_manager.get_sorted_ranks()

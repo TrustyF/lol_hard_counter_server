@@ -6,7 +6,17 @@
     },
     "2": {
       "username": "Ckwaceupoulet",
-      "rank": {}
+      "rank": {
+        "RANKED_FLEX_SR": {
+          "rank": 528,
+          "winrate": [2, 4]
+        }
+      },
+      "rank_history": {
+        "RANKED_FLEX_SR": {
+          "21/07/23": 528
+        }
+      }
     },
     "3": {
       "username": "TURBO OLINGO",
@@ -16,32 +26,36 @@
       "username": "ATM Kryder",
       "rank": {
         "RANKED_TFT_DOUBLE_UP": {
-          "division": "II",
-          "hotStreak": false,
-          "leaguePoints": 24,
-          "losses": 8,
-          "wins": 5,
-          "tier": "BRONZE"
+          "rank": 1224,
+          "winrate": [5, 8]
         },
         "RANKED_SOLO_5x5": {
-          "division": "II",
-          "hotStreak": false,
-          "leaguePoints": 49,
-          "losses": 6,
-          "wins": 2,
-          "tier": "EMERALD"
+          "rank": 5278,
+          "winrate": [3, 6]
         }
       },
       "rank_history": {
-        "20/07/23": {
-          "RANKED_TFT_DOUBLE_UP": "BRONZE II 1 24",
-          "RANKED_SOLO_5x5": "EMERALD II 5 49"
+        "RANKED_TFT_DOUBLE_UP": {
+          "21/07/23": 1224
+        },
+        "RANKED_SOLO_5x5": {
+          "21/07/23": 5278
         }
       }
     },
     "5": {
       "username": "Raz0xx",
-      "rank": {}
+      "rank": {
+        "RANKED_FLEX_SR": {
+          "rank": 297,
+          "winrate": [2, 3]
+        }
+      },
+      "rank_history": {
+        "RANKED_FLEX_SR": {
+          "21/07/23": 297
+        }
+      }
     },
     "6": {
       "username": "FRANZIZKUZ",
@@ -51,17 +65,13 @@
       "username": "TheRedAquaman",
       "rank": {
         "RANKED_TFT_DOUBLE_UP": {
-          "division": "II",
-          "hotStreak": false,
-          "leaguePoints": 96,
-          "losses": 2,
-          "wins": 3,
-          "tier": "BRONZE"
+          "rank": 1296,
+          "winrate": [3, 2]
         }
       },
       "rank_history": {
-        "20/07/23": {
-          "RANKED_TFT_DOUBLE_UP": "BRONZE II 1 96"
+        "RANKED_TFT_DOUBLE_UP": {
+          "21/07/23": 1296
         }
       }
     },
