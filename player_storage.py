@@ -19,8 +19,6 @@ def convert_to_rank_val(f_data, f_mapping):
     formatted = int(str(f_mapping['rank_values'].index(f_data['tier'].lower())) +
                     str(f_mapping['division_values'].index(f_data['division'])) +
                     str(f_data['leaguePoints']))
-
-    # print(formatted, f"{f_data['tier']}{f_data['division']}")
     return formatted
 
 
