@@ -2,86 +2,262 @@
   "_default": {
     "1": {
       "username": "TURBO Trusty",
-      "rank": {}
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        }
+      }
     },
     "2": {
       "username": "Ckwaceupoulet",
       "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
         "RANKED_FLEX_SR": {
-          "rank": 528,
-          "winrate": [2, 4]
+          "rank": 5239,
+          "winrate": [4, 5]
         }
       },
       "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
         "RANKED_FLEX_SR": {
-          "21/07/23": 528
+          "22/07/23": 5239
         }
       }
     },
     "3": {
       "username": "TURBO OLINGO",
-      "rank": {}
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        }
+      }
     },
     "4": {
       "username": "ATM Kryder",
       "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 5175,
+          "winrate": [3, 11]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
         "RANKED_TFT_DOUBLE_UP": {
           "rank": 1224,
           "winrate": [5, 8]
-        },
-        "RANKED_SOLO_5x5": {
-          "rank": 5278,
-          "winrate": [3, 6]
         }
       },
       "rank_history": {
-        "RANKED_TFT_DOUBLE_UP": {
-          "21/07/23": 1224
-        },
         "RANKED_SOLO_5x5": {
-          "21/07/23": 5278
+          "22/07/23": 5175
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 1224
         }
       }
     },
     "5": {
       "username": "Raz0xx",
       "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
         "RANKED_FLEX_SR": {
           "rank": 297,
           "winrate": [2, 3]
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "rank": 0,
+          "winrate": [0, 0]
         }
       },
       "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
         "RANKED_FLEX_SR": {
-          "21/07/23": 297
+          "22/07/23": 297
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 0
         }
       }
     },
     "6": {
       "username": "FRANZIZKUZ",
-      "rank": {}
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 4137,
+          "winrate": [4, 2]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 4040,
+          "winrate": [4, 1]
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "rank": 0,
+          "winrate": [0, 0]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 4137
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 4040
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 0
+        }
+      }
     },
     "7": {
       "username": "TheRedAquaman",
       "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
         "RANKED_TFT_DOUBLE_UP": {
           "rank": 1296,
           "winrate": [3, 2]
         }
       },
       "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        },
         "RANKED_TFT_DOUBLE_UP": {
-          "21/07/23": 1296
+          "22/07/23": 1296
         }
       }
     },
     "8": {
       "username": "TURBO ALUCO",
-      "rank": {}
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "rank": 0,
+          "winrate": [0, 0]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 0
+        }
+      }
     },
     "9": {
       "username": "Welisilmanan",
-      "rank": {}
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "rank": 0,
+          "winrate": [0, 0]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 0
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 0
+        }
+      }
+    },
+    "10": {
+      "username": "Grandoullf",
+      "rank": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [0, 0]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 5310,
+          "winrate": [2, 4]
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "rank": 4067,
+          "winrate": [37, 28]
+        }
+      },
+      "rank_history": {
+        "RANKED_SOLO_5x5": {
+          "22/07/23": 0
+        },
+        "RANKED_FLEX_SR": {
+          "22/07/23": 5310
+        },
+        "RANKED_TFT_DOUBLE_UP": {
+          "22/07/23": 4067
+        }
+      }
     }
   }
 }

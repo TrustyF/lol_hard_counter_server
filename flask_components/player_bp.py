@@ -1,6 +1,9 @@
+import pprint
+
 from flask import Blueprint, render_template, redirect
 from player_storage import summ_manager
 from flask_apscheduler import APScheduler
+import time
 
 player_bp = Blueprint('player', __name__)
 scheduler = APScheduler()
@@ -15,6 +18,7 @@ def get_all():
     return summ_manager.get_all()
 
 
-@player_bp.route("/get_sorted_ranks", methods=["GET"])
-def get_sorted_ranks():
-    return summ_manager.get_sorted_ranks()
+@player_bp.route("/get_sorted_by_rank", methods=["GET"])
+def get_sorted_by_rank():
+    # pprint.pprint(summ_manager.sorted_by_rank)
+    return summ_manager.sorted_by_rank
