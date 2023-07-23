@@ -18,7 +18,8 @@ cass.set_riot_api_key(os.environ.get("RIOT_API_KEY"))
 def convert_to_rank_val(f_data, f_mapping):
     formatted = int(str(f_mapping['rank_values'].index(f_data['tier'].lower())) +
                     str(f_mapping['division_values'].index(f_data['division'])) +
-                    str(f_data['leaguePoints']))
+                    str(f_data['leaguePoints']).zfill(2))
+    print(formatted)
     return formatted
 
 
@@ -90,13 +91,16 @@ class Manager:
             if not db_entry:
                 continue
 
-            # Check if user has any rank
-            if not db_entry['rank']:
-                continue
-
             # Check if user has rank history, if not add it
             if 'rank_history' not in db_entry:
                 db_entry['rank_history'] = {}
+
+            # Check if date has already been added
+            if curr_date in db_entry['rank_history']['RANKED_SOLO_5x5']:
+                continue
+
+            # Refresh current rank
+            db_entry['rank'] = self.get_current_rank(db_entry['username'])
 
             formatted_rank = {}
             for queue in db_entry['rank']:
@@ -106,14 +110,9 @@ class Manager:
                 if queue not in db_entry['rank_history']:
                     db_entry['rank_history'][queue] = {}
 
-                # Check if data has already been updated
-                # if curr_date in db_entry['rank_history'][queue]:
-                #     continue
-
                 db_entry['rank_history'][queue][curr_date] = db_entry['rank'][queue]['rank']
 
                 # Update
-                # pprint(db_entry)
                 self.db.update(db_entry, username_query)
 
     def get_current_rank(self, f_username):
