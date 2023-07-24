@@ -6,6 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="D:\A_Mod\A_Projects\Web design\league_counters_website\server\requirements.txt" />
     <option name="versionSpecifier" value="Strong equality (==x.y.z)" />
   </component>
 </module>
