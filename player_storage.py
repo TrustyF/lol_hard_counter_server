@@ -160,13 +160,18 @@ class Manager:
                 # Check if rank has changed
                 # Find closest date
                 all_dates = (db_entry['rank_history'][queue].keys())
-                all_dates = [datetime.strptime(x, date_format) for x in all_dates]
-                nearest_d = nearest_date(all_dates, datetime.strptime(curr_date, date_format))
 
-                # Compare last rank
-                if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearest_d]:
-                    log.warning('rank unchanged')
-                    continue
+                # Check if any dates exist
+                if len(all_dates) > 0:
+                    log.warning('no other days found')
+
+                    all_dates = [datetime.strptime(x, date_format) for x in all_dates]
+                    nearest_d = nearest_date(all_dates, datetime.strptime(curr_date, date_format))
+
+                    # Compare last rank
+                    if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearest_d]:
+                        log.warning('rank unchanged')
+                        continue
 
                 # Create queue if none
                 if queue not in db_entry['rank_history']:
@@ -179,17 +184,6 @@ class Manager:
 
     def get_current_rank(self, f_username):
         """Get the current ranked info for summoner"""
-
-        return {
-            'RANKED_SOLO_5x5': {
-                'rank': 0,
-                'winrate': [0, 0]
-            },
-            'RANKED_FLEX_SR': {
-                'rank': 0,
-                'winrate': [0, 0]
-            },
-        }
 
         player = cass.Summoner(name=f_username, region='EUW')
         entries = player.league_entries
