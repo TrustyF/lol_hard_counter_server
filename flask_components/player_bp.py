@@ -1,4 +1,4 @@
-import pprint
+from pprint import pprint
 
 from flask import Blueprint, render_template, redirect
 from player_storage import summ_manager
@@ -18,7 +18,6 @@ def get_all():
     return summ_manager.get_all()
 
 
-@player_bp.route("/get_sorted_by_rank", methods=["GET"])
-def get_sorted_by_rank():
-    # pprint.pprint(summ_manager.sorted_by_rank)
-    return summ_manager.sorted_by_rank
+@player_bp.route("/get_date_range", methods=["GET"])
+def get_date_range():
+    return summ_manager.get_date_range()

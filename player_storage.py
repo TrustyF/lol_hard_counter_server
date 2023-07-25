@@ -6,14 +6,14 @@ import cassiopeia as cass
 from dotenv import load_dotenv
 from pprint import pprint
 import time
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from collections import defaultdict
 
 env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
 cass.set_riot_api_key(os.environ.get("RIOT_API_KEY"))
-date_format = "%d/%m/%y"
+date_format = "%d/%m/%Y"
 
 COLOR_CODES = {
     logging.CRITICAL: "\033[1;35m",  # bright/bold magenta
@@ -48,19 +48,18 @@ class Manager:
 
         self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
                           'TheRedAquaman', 'TURBO ALUCO', 'Welisilmanan', 'Grandoullf']
+        # self.usernames = ['Grandoullf']
 
         self.rank_mappings = {
             'rank_values': ['iron', 'bronze', 'silver', 'gold', 'platinum', 'emerald',
                             'diamond', 'master', 'grandmaster', 'challenger'],
             'division_values': ['IV', 'III', 'II', 'I']
         }
+        self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
 
-        # self.usernames = ['ATM Kryder']
-
-        self.check_new_players()
-        self.add_rank_to_history()
-
-        # self.sorted_by_rank = self.sort_by_rank()
+        # self.check_new_players()
+        # self.add_rank_to_history()
+        print('working!!!!!!')
 
     # flask funcs
     def get_all(self):
@@ -74,6 +73,36 @@ class Manager:
         newlist.extend(list(filter(lambda x: 'RANKED_SOLO_5x5' not in x['rank'], unsorted)))
 
         return newlist
+
+    def get_date_range(self):
+
+        all_dates = []
+        for player in self.db.all():
+            for queue in self.queues:
+                hist = player['rank_history'][queue]
+
+                if hist == {}:
+                    continue
+
+                hist_keys = list(hist.keys())
+
+                for h_key in hist_keys:
+                    if h_key in all_dates:
+                        continue
+
+                    all_dates.append(h_key)
+
+        # keep in case date comparaison doesnt work anymore
+        # date_list = [datetime.strptime(x, date_format) for x in all_dates]
+
+        date_range = [min(all_dates), max(all_dates)]
+
+        start = datetime.strptime(date_range[0], date_format)
+        end = datetime.strptime(date_range[1], date_format)
+
+        dates_generated = [start + timedelta(days=x) for x in range(0, (end - start).days)]
+
+        return [datetime.strftime(x, date_format) for x in dates_generated]
 
     # Class funcs
     def check_new_players(self):
