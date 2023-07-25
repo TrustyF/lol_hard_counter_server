@@ -148,9 +148,9 @@ class Manager:
                     continue
 
                 # Check if date has already been added
-                if curr_date in db_entry['rank_history'][queue]:
-                    log.warning('current date found')
-                    continue
+                # if curr_date in db_entry['rank_history'][queue]:
+                #     log.warning('current date found')
+                #     continue
 
                 # Check if rank has changed
                 # Find closest date
@@ -177,6 +177,7 @@ class Manager:
                 db_entry['rank_history'][queue][curr_date] = db_entry['rank'][queue]['rank']
 
                 # Update
+                log.info('updated new rank')
                 self.db.update(db_entry, username_query)
 
     def get_current_rank(self, f_username):

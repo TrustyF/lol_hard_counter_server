@@ -1,6 +1,6 @@
 from pprint import pprint
 
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template, redirect, jsonify
 from player_storage import summ_manager
 from flask_apscheduler import APScheduler
 import time
@@ -27,4 +27,5 @@ def get_date_range():
 
 @player_bp.route("/add_rank_to_history", methods=["GET"])
 def add_rank_to_history():
-    return summ_manager.add_rank_to_history()
+    summ_manager.add_rank_to_history()
+    return {}, 200
