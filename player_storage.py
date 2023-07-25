@@ -145,6 +145,7 @@ class Manager:
 
             formatted_rank = {}
             for queue in db_entry['rank']:
+                log.info(f'current queue {queue}')
                 data = db_entry['rank'][queue]
 
                 # Check if rank is 0
@@ -163,7 +164,7 @@ class Manager:
 
                 # Check if any dates exist
                 if len(all_dates) > 0:
-                    log.warning('no other days found')
+                    log.warning('comparing last day rank')
 
                     all_dates = [datetime.strptime(x, date_format) for x in all_dates]
                     nearest_d = nearest_date(all_dates, datetime.strptime(curr_date, date_format))
@@ -172,6 +173,8 @@ class Manager:
                     if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearest_d]:
                         log.warning('rank unchanged')
                         continue
+                else:
+                    log.warning('no last day rank gound')
 
                 # Create queue if none
                 if queue not in db_entry['rank_history']:
