@@ -12,16 +12,11 @@ from collections import defaultdict
 env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
-cass.set_riot_api_key(os.environ.get("RIOT_API_KEY"))
-date_format = "%d/%m/%Y"
+RIOT_KEY = os.environ.get("RIOT_API_KEY")
+print(RIOT_KEY[:10])
 
-COLOR_CODES = {
-    logging.CRITICAL: "\033[1;35m",  # bright/bold magenta
-    logging.ERROR: "\033[1;31m",  # bright/bold red
-    logging.WARNING: "\033[1;33m",  # bright/bold yellow
-    logging.INFO: "\033[0;37m",  # white / light gray
-    logging.DEBUG: "\033[1;30m"  # bright/bold black / dark gray
-}
+cass.set_riot_api_key(RIOT_KEY)
+date_format = "%d/%m/%Y"
 
 log = logging.getLogger('my_logger')
 log.setLevel(logging.INFO)
