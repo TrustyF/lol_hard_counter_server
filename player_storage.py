@@ -179,6 +179,18 @@ class Manager:
 
     def get_current_rank(self, f_username):
         """Get the current ranked info for summoner"""
+
+        return {
+            'RANKED_SOLO_5x5': {
+                'rank': 0,
+                'winrate': [0, 0]
+            },
+            'RANKED_FLEX_SR': {
+                'rank': 0,
+                'winrate': [0, 0]
+            },
+        }
+
         player = cass.Summoner(name=f_username, region='EUW')
         entries = player.league_entries
 
