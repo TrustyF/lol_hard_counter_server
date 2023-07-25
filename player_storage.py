@@ -51,8 +51,8 @@ class Manager:
         }
         self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
 
-        # self.check_new_players()
-        # self.add_rank_to_history()
+        self.check_new_players()
+        self.add_rank_to_history()
 
     # flask funcs
     def get_all(self):
