@@ -13,14 +13,29 @@ env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
 cass.set_riot_api_key(os.environ.get("RIOT_API_KEY"))
+date_format = "%d/%m/%y"
+
+COLOR_CODES = {
+    logging.CRITICAL: "\033[1;35m",  # bright/bold magenta
+    logging.ERROR: "\033[1;31m",  # bright/bold red
+    logging.WARNING: "\033[1;33m",  # bright/bold yellow
+    logging.INFO: "\033[0;37m",  # white / light gray
+    logging.DEBUG: "\033[1;30m"  # bright/bold black / dark gray
+}
+
+log = logging.getLogger('my_logger')
+log.setLevel(logging.INFO)
 
 
 def convert_to_rank_val(f_data, f_mapping):
     formatted = int(str(f_mapping['rank_values'].index(f_data['tier'].lower())) +
                     str(f_mapping['division_values'].index(f_data['division'])) +
                     str(f_data['leaguePoints']).zfill(2))
-    print(formatted)
     return formatted
+
+
+def nearest_date(items, pivot):
+    return datetime.strftime(min(items, key=lambda x: abs(x - pivot)), date_format)
 
 
 class Manager:
@@ -75,29 +90,27 @@ class Manager:
             data['username'] = user
             data['rank'] = rank_info
 
-            # pprint(data)
             self.db.insert(data)
 
     def add_rank_to_history(self):
         """Add current rank info to rank history database"""
+        log.info('Adding to rank history')
         for user in self.usernames:
+            log.info(f'current username {user}')
             data = {}
             username_query = Query().username == user
             db_entry = self.db.get(username_query)
 
-            curr_date = date.today().strftime("%d/%m/%y")
+            curr_date = date.today().strftime(date_format)
 
             # Check if user in db
             if not db_entry:
+                log.warning('user not in DB')
                 continue
 
             # Check if user has rank history, if not add it
             if 'rank_history' not in db_entry:
                 db_entry['rank_history'] = {}
-
-            # Check if date has already been added
-            if curr_date in db_entry['rank_history']['RANKED_SOLO_5x5']:
-                continue
 
             # Refresh current rank
             db_entry['rank'] = self.get_current_rank(db_entry['username'])
@@ -105,6 +118,27 @@ class Manager:
             formatted_rank = {}
             for queue in db_entry['rank']:
                 data = db_entry['rank'][queue]
+
+                # Check if rank is 0
+                if db_entry['rank'][queue]['rank'] == 0:
+                    log.warning('rank is 0')
+                    continue
+
+                # Check if date has already been added
+                if curr_date in db_entry['rank_history'][queue]:
+                    log.warning('current date found')
+                    continue
+
+                # Check if rank has changed
+                # Find closest date
+                all_dates = (db_entry['rank_history'][queue].keys())
+                all_dates = [datetime.strptime(x, date_format) for x in all_dates]
+                nearest_d = nearest_date(all_dates, datetime.strptime(curr_date, date_format))
+
+                # Compare last rank
+                if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearest_d]:
+                    log.warning('rank unchanged')
+                    continue
 
                 # Create queue if none
                 if queue not in db_entry['rank_history']:
@@ -129,20 +163,19 @@ class Manager:
                 'rank': 0,
                 'winrate': [0, 0]
             },
-            'RANKED_TFT_DOUBLE_UP': {
-                'rank': 0,
-                'winrate': [0, 0]
-            },
         }
         for entry in entries:
             values = entry.to_dict()
+
+            if values['queue'] not in out:
+                log.warning(f'skipping queue {values["queue"]}')
+                continue
 
             # check if any rank exists
             if 'tier' in values:
                 out[values['queue']]['rank'] = convert_to_rank_val(values, self.rank_mappings)
                 out[values['queue']]['winrate'] = (values['wins'], values['losses'])
 
-        # pprint(out)
         return out
 
 

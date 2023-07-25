@@ -10,26 +10,12 @@
         "RANKED_FLEX_SR": {
           "rank": 5352,
           "winrate": [1, 4]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
-        "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
+        "RANKED_SOLO_5x5": {},
         "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 5352,
-          "24/07/23": 5352
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "23/07/23": 0,
-          "24/07/23": 0
+          "23/07/23": 5352
         }
       }
     },
@@ -43,26 +29,15 @@
         "RANKED_FLEX_SR": {
           "rank": 5270,
           "winrate": [5, 5]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
           "24/07/23": 5346
         },
         "RANKED_FLEX_SR": {
           "22/07/23": 5239,
-          "23/07/23": 5270,
-          "24/07/23": 5270
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "23/07/23": 0,
-          "24/07/23": 0
+          "23/07/23": 5270
         }
       }
     },
@@ -83,20 +58,8 @@
         }
       },
       "rank_history": {
-        "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "23/07/23": 0,
-          "24/07/23": 0
-        }
+        "RANKED_SOLO_5x5": {},
+        "RANKED_FLEX_SR": {}
       }
     },
     "4": {
@@ -109,27 +72,15 @@
         "RANKED_FLEX_SR": {
           "rank": 6001,
           "winrate": [2, 4]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 1224,
-          "winrate": [5, 8]
         }
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
           "22/07/23": 5175,
-          "23/07/23": 5206,
-          "24/07/23": 5206
+          "23/07/23": 5206
         },
         "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 6001,
-          "24/07/23": 6001
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 1224,
-          "23/07/23": 1224,
-          "24/07/23": 1224
+          "23/07/23": 6001
         }
       }
     },
@@ -143,27 +94,12 @@
         "RANKED_FLEX_SR": {
           "rank": 297,
           "winrate": [2, 3]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
-        "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
+        "RANKED_SOLO_5x5": {},
         "RANKED_FLEX_SR": {
-          "22/07/23": 297,
-          "23/07/23": 297,
-          "24/07/23": 297
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
+          "22/07/23": 297
         }
       }
     },
@@ -171,33 +107,21 @@
       "username": "FRANZIZKUZ",
       "rank": {
         "RANKED_SOLO_5x5": {
-          "rank": 4173,
-          "winrate": [5, 2]
+          "rank": 4276,
+          "winrate": [8, 2]
         },
         "RANKED_FLEX_SR": {
           "rank": 4040,
           "winrate": [4, 1]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
           "22/07/23": 4137,
-          "23/07/23": 4137,
-          "24/07/23": 4173
+          "25/07/23": 4276
         },
         "RANKED_FLEX_SR": {
-          "22/07/23": 4040,
-          "23/07/23": 4040,
-          "24/07/23": 4040
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
+          "22/07/23": 4040
         }
       }
     },
@@ -211,28 +135,11 @@
         "RANKED_FLEX_SR": {
           "rank": 0,
           "winrate": [0, 0]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 1296,
-          "winrate": [3, 2]
         }
       },
       "rank_history": {
-        "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 1296,
-          "23/07/23": 1296,
-          "24/07/23": 1296
-        }
+        "RANKED_SOLO_5x5": {},
+        "RANKED_FLEX_SR": {}
       }
     },
     "8": {
@@ -245,28 +152,13 @@
         "RANKED_FLEX_SR": {
           "rank": 0,
           "winrate": [0, 0]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
           "24/07/23": 2248
         },
-        "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        }
+        "RANKED_FLEX_SR": {}
       }
     },
     "9": {
@@ -279,28 +171,11 @@
         "RANKED_FLEX_SR": {
           "rank": 0,
           "winrate": [0, 0]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 0,
-          "winrate": [0, 0]
         }
       },
       "rank_history": {
-        "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_FLEX_SR": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 0,
-          "23/07/23": 0,
-          "24/07/23": 0
-        }
+        "RANKED_SOLO_5x5": {},
+        "RANKED_FLEX_SR": {}
       }
     },
     "10": {
@@ -313,27 +188,16 @@
         "RANKED_FLEX_SR": {
           "rank": 5347,
           "winrate": [3, 4]
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "rank": 41100,
-          "winrate": [45, 32]
         }
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
-          "22/07/23": 0,
           "23/07/23": 5216,
           "24/07/23": 5242
         },
         "RANKED_FLEX_SR": {
           "22/07/23": 5310,
-          "23/07/23": 5347,
-          "24/07/23": 5347
-        },
-        "RANKED_TFT_DOUBLE_UP": {
-          "22/07/23": 4067,
-          "23/07/23": 4096,
-          "24/07/23": 41100
+          "23/07/23": 5347
         }
       }
     }
