@@ -4,3 +4,4 @@ tinydb==4.8.0
 cassiopeia==5.0.3
 python-dotenv==1.0.0
 APScheduler==3.10.1
+Flask-APScheduler==1.12.4
