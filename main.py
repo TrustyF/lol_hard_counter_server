@@ -7,8 +7,8 @@ import sys
 app = Flask(__name__)
 CORS(app)
 
-app.register_blueprint(champion_bp, url_prefix='/champion')
+# app.register_blueprint(champion_bp, url_prefix='/champion')
 app.register_blueprint(player_bp, url_prefix='/player')
 
-if __name__ == '__main__':
-    app.run(debug=False)
+# if __name__ == '__main__':
+#     app.run()

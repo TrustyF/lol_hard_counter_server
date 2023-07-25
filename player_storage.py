@@ -13,8 +13,6 @@ env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
 RIOT_KEY = os.environ.get("RIOT_API_KEY")
-print(env_path)
-print(RIOT_KEY[:10])
 
 cass.set_riot_api_key(RIOT_KEY)
 date_format = "%d/%m/%Y"
@@ -53,8 +51,8 @@ class Manager:
         }
         self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
 
-        self.check_new_players()
-        self.add_rank_to_history()
+        # self.check_new_players()
+        # self.add_rank_to_history()
 
     # flask funcs
     def get_all(self):
