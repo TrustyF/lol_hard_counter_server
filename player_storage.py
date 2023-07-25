@@ -52,7 +52,7 @@ class Manager:
         self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
 
         self.check_new_players()
-        self.add_rank_to_history()
+        # self.add_rank_to_history()
 
     # flask funcs
     def get_all(self):
@@ -87,13 +87,13 @@ class Manager:
 
         # keep in case date comparaison doesnt work anymore
         # date_list = [datetime.strptime(x, date_format) for x in all_dates]
-
         date_range = [min(all_dates), max(all_dates)]
 
         start = datetime.strptime(date_range[0], date_format)
         end = datetime.strptime(date_range[1], date_format)
 
         dates_generated = [start + timedelta(days=x) for x in range(0, (end - start).days)]
+        dates_generated.append(end)
 
         return [datetime.strftime(x, date_format) for x in dates_generated]
 
