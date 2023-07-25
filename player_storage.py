@@ -13,6 +13,7 @@ env_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(env_path)
 
 RIOT_KEY = os.environ.get("RIOT_API_KEY")
+print(env_path)
 print(RIOT_KEY[:10])
 
 cass.set_riot_api_key(RIOT_KEY)
