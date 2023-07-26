@@ -123,8 +123,7 @@ class Manager:
             username_query = Query().username == user
             db_entry = self.db.get(username_query)
 
-            curr_date = (date.today() + timedelta(days=10)).strftime(date_format)
-            print(curr_date)
+            curr_date = date.today().strftime(date_format)
 
             # Check if user in db
             if not db_entry:
