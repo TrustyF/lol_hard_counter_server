@@ -24,8 +24,8 @@
       "username": "Ckwaceupoulet",
       "rank": {
         "RANKED_SOLO_5x5": {
-          "rank": 5346,
-          "winrate": [3, 2]
+          "rank": 5300,
+          "winrate": [4, 5]
         },
         "RANKED_FLEX_SR": {
           "rank": 5257,
@@ -34,7 +34,8 @@
       },
       "rank_history": {
         "RANKED_SOLO_5x5": {
-          "24/07/2023": 5346
+          "24/07/2023": 5346,
+          "26/07/2023": 5300
         },
         "RANKED_FLEX_SR": {
           "22/07/2023": 5239,
@@ -148,8 +149,8 @@
       "username": "TURBO ALUCO",
       "rank": {
         "RANKED_SOLO_5x5": {
-          "rank": 2277,
-          "winrate": [6, 1]
+          "rank": 2304,
+          "winrate": [7, 1]
         },
         "RANKED_FLEX_SR": {
           "rank": 0,
@@ -159,7 +160,7 @@
       "rank_history": {
         "RANKED_SOLO_5x5": {
           "24/07/2023": 2248,
-          "26/07/2023": 2277
+          "26/07/2023": 2304
         },
         "RANKED_FLEX_SR": {}
       }
@@ -201,7 +202,8 @@
         "RANKED_FLEX_SR": {
           "22/07/2023": 5310,
           "23/07/2023": 5347,
-          "26/07/2023": 5343
+          "26/07/2023": 5343,
+          "30/07/2023": 7000
         }
       }
     }
