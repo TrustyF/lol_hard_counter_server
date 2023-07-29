@@ -50,9 +50,10 @@ class Manager:
             'division_values': ['IV', 'III', 'II', 'I']
         }
         self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
+        self.curr_date = date.today().strftime(date_format)
 
         self.check_new_players()
-        # self.add_rank_to_history()
+        self.update_latest_rank_date()
 
     # flask funcs
     def get_all(self):
@@ -121,9 +122,9 @@ class Manager:
             log.info(f'current username {user}')
             data = {}
             username_query = Query().username == user
-            db_entry = self.db.get(username_query)
+            nearset_date = None
 
-            curr_date = date.today().strftime(date_format)
+            db_entry = self.db.get(username_query)
 
             # Check if user in db
             if not db_entry:
@@ -147,11 +148,6 @@ class Manager:
                     log.warning('rank is 0')
                     continue
 
-                # Check if date has already been added
-                # if curr_date in db_entry['rank_history'][queue]:
-                #     log.warning('current date found')
-                #     continue
-
                 # Check if rank has changed
                 # Find closest date
                 all_dates = (db_entry['rank_history'][queue].keys())
@@ -161,10 +157,10 @@ class Manager:
                     log.warning('comparing last day rank')
 
                     all_dates = [datetime.strptime(x, date_format) for x in all_dates]
-                    nearest_d = nearest_date(all_dates, datetime.strptime(curr_date, date_format))
+                    nearset_date = nearest_date(all_dates, datetime.strptime(self.curr_date, date_format))
 
                     # Compare last rank
-                    if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearest_d]:
+                    if db_entry['rank'][queue]['rank'] == db_entry['rank_history'][queue][nearset_date]:
                         log.warning('rank unchanged')
                         continue
                 else:
@@ -174,10 +170,44 @@ class Manager:
                 if queue not in db_entry['rank_history']:
                     db_entry['rank_history'][queue] = {}
 
-                db_entry['rank_history'][queue][curr_date] = db_entry['rank'][queue]['rank']
+                db_entry['rank_history'][queue][self.curr_date] = db_entry['rank'][queue]['rank']
 
                 # Update
                 log.info('updated new rank')
+                self.db.update(db_entry, username_query)
+
+        self.update_latest_rank_date()
+
+    def update_latest_rank_date(self):
+        for user in self.usernames:
+
+            username_query = Query().username == user
+            db_entry = self.db.get(username_query)
+
+            for queue in db_entry['rank_history']:
+
+                all_dates = list(db_entry['rank_history'][queue].keys())
+
+                #  skip if list is empty
+                if len(all_dates) < 1:
+                    continue
+
+                #  remove current date
+                if self.curr_date in all_dates:
+                    all_dates.remove(self.curr_date)
+
+                all_dates = [datetime.strptime(x, date_format) for x in all_dates]
+                nearset_date = nearest_date(all_dates, datetime.strptime(self.curr_date, date_format))
+
+                # Create rank info if none
+                if 'rank_info' not in db_entry:
+                    db_entry['rank_info'] = {}
+                if queue not in db_entry['rank_info']:
+                    db_entry['rank_info'][queue] = {}
+
+                db_entry['rank_info'][queue]['nearest_date'] = nearset_date
+
+                log.info('updated latest rank date')
                 self.db.update(db_entry, username_query)
 
     def get_current_rank(self, f_username):
