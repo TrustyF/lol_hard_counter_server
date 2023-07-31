@@ -205,6 +205,11 @@ class Manager:
                     all_dates.remove(self.curr_date)
 
                 all_dates = [datetime.strptime(x, date_format) for x in all_dates]
+
+                # skip if no other nearest date
+                if len(all_dates) < 1:
+                    continue
+
                 nearset_date = nearest_date(all_dates, datetime.strptime(self.curr_date, date_format))
 
                 # Create rank info if none
