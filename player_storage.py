@@ -29,10 +29,21 @@ log = logging.getLogger('my_logger')
 log.setLevel(logging.INFO)
 
 
-def convert_to_rank_val(f_data, f_mapping):
-    formatted = int(str(f_mapping['rank_values'].index(f_data['tier'].lower())) +
-                    str(f_mapping['division_values'].index(f_data['division'])) +
-                    str(f_data['leaguePoints']).zfill(2))
+def convert_to_rank_val(f_data):
+    rank_mappings = {
+        'rank_values': ['iron', 'bronze', 'silver', 'gold', 'platinum', 'emerald',
+                        'diamond', 'master', 'grandmaster', 'challenger'],
+        'division_values': ['IV', 'III', 'II', 'I']
+    }
+
+    lp = f_data['leaguePoints']
+    division = rank_mappings['division_values'].index(f_data['division'])
+    tier = rank_mappings['rank_values'].index(f_data['tier'].lower())
+
+    formatted = lp + (division * 100) + (tier * 400)
+
+    # print(f"{f_data['tier']} {f_data['division']} {f_data['leaguePoints']},", formatted, ",", lp, division * 100,
+    #       tier * 400)
     return formatted
 
 
@@ -52,11 +63,6 @@ class Manager:
                           'TheRedAquaman', 'TURBO ALUCO', 'Welisilmanan', 'Grandoullf']
         # self.usernames = ['Grandoullf']
 
-        self.rank_mappings = {
-            'rank_values': ['iron', 'bronze', 'silver', 'gold', 'platinum', 'emerald',
-                            'diamond', 'master', 'grandmaster', 'challenger'],
-            'division_values': ['IV', 'III', 'II', 'I']
-        }
         self.queues = ['RANKED_SOLO_5x5', 'RANKED_FLEX_SR']
         self.curr_date = date.today().strftime(date_format)
 
@@ -248,10 +254,43 @@ class Manager:
 
             # check if any rank exists
             if 'tier' in values:
-                out[values['queue']]['rank'] = convert_to_rank_val(values, self.rank_mappings)
+                out[values['queue']]['rank'] = convert_to_rank_val(values)
                 out[values['queue']]['winrate'] = (values['wins'], values['losses'])
 
         return out
+
+    # helpers
+    def fix_ranks(self):
+        for user in self.usernames:
+
+            print(user)
+            username_query = Query().username == user
+            db_entry = self.db.get(username_query)
+
+            # pprint(db_entry)
+
+            for category in ['rank', 'rank_history']:
+                for queue in db_entry[category]:
+                    for date in db_entry[category][queue]:
+                        rank = db_entry[category][queue][date]
+
+                        if rank == 0:
+                            continue
+
+                        if date == 'winrate':
+                            continue
+
+                        # print(rank)
+
+                        old_rank = {
+                            'leaguePoints': int(str(rank)[-2:]),
+                            'division': int(str(rank)[-3:-2]),
+                            'tier': int(str(rank)[0])
+                        }
+                        db_entry[category][queue][date] = old_rank['leaguePoints'] + (old_rank['division'] * 100) + (
+                                old_rank['tier'] * 400)
+
+            self.db.update(db_entry, username_query)
 
 
 summ_manager = Manager()
