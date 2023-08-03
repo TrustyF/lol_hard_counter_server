@@ -1,8 +1,5 @@
-from pprint import pprint
-
-from flask import Blueprint, render_template, redirect, jsonify
-from player_storage import summ_manager
-import time
+from flask import Blueprint
+from stores.manager import summ_manager
 
 player_bp = Blueprint('player', __name__)
 

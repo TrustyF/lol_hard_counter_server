@@ -3,26 +3,11 @@ import cassiopeia
 from tinydb import TinyDB, Query
 import os
 import cassiopeia as cass
-from dotenv import load_dotenv
 from pprint import pprint
 import time
 from datetime import datetime, date, timedelta
 from collections import defaultdict
 
-env_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(env_path)
-
-RIOT_KEY = os.environ.get("RIOT_API_KEY")
-
-cass.set_riot_api_key(RIOT_KEY)
-cass.apply_settings({
-    "logging": {
-        "print_calls": False,
-        "print_riot_api_key": False,
-        "default": "WARNING",
-        "core": "WARNING"
-    }
-})
 date_format = "%d/%m/%Y"
 
 log = logging.getLogger('my_logger')
@@ -55,7 +40,7 @@ class Manager:
     def __init__(self):
 
         self.base_path = os.path.dirname(__file__)
-        self.db_path = os.path.join(self.base_path, f'database/players_db.json')
+        self.db_path = os.path.join(self.base_path, f'../database/players_db.json')
 
         self.db = TinyDB(self.db_path)
 
