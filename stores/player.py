@@ -41,6 +41,7 @@ class Player:
                 "nearest_rank_date": None,
             },
         }
+        self.profile_icon = None
 
         # dates
         self.curr_date = datetime.today().strftime(DATE_FORMAT)
@@ -49,24 +50,50 @@ class Player:
         self.cass_summoner = cass.Summoner(name=self.username, region='EUW')
 
     # Class functions
+
+    # json functions
     def load_from_json(self, data):
         """Set class variables from data"""
 
         # deserialize username
-        self.username = data['username']
+        if 'username' in data:
+            self.username = data['username']
 
         # deserialize queue
-        self.ranked = data['ranked']
+        if 'ranked' in data:
+            self.ranked = data['ranked']
 
-        # update nearest date
+        # deserialize profile icon
+        if 'profile_icon' in data:
+            self.profile_icon = data['profile_icon']
+
+        # updates
         self.update_nearest_date()
+        self.update_profile_icon()
 
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
+            'profile_icon': self.profile_icon,
         }
+
+    # update functions
+    def update_nearest_date(self):
+        for queue in self.ranked:
+            queue_entry = self.ranked[queue]
+
+            all_dates = queue_entry['rank_history'].keys()
+
+            # Check if any dates exist
+            if len(all_dates) > 0:
+                all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
+                nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
+                self.ranked[queue]['nearest_rank_date'] = nearset_date
+
+    def update_profile_icon(self):
+        self.profile_icon = self.cass_summoner.profile_icon.id
 
     # Cassio functions
     def update_current_rank(self):
@@ -86,18 +113,6 @@ class Player:
             if 'tier' in values:
                 self.ranked[queue]['rank'] = utils.convert_to_rank_val(values)
                 self.ranked[queue]['winrate'] = [values['wins'], values['losses']]
-
-    def update_nearest_date(self):
-        for queue in self.ranked:
-            queue_entry = self.ranked[queue]
-
-            all_dates = queue_entry['rank_history'].keys()
-
-            # Check if any dates exist
-            if len(all_dates) > 0:
-                all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
-                nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
-                self.ranked[queue]['nearest_rank_date'] = nearset_date
 
     def add_rank_to_history(self):
         """Add current rank info to rank history"""
