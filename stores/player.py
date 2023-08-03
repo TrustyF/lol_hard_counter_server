@@ -116,7 +116,7 @@ class Player:
                 continue
 
             # Skip if last rank is the same
-            if queue_entry['rank'] == queue_entry['nearest_rank_date']:
+            if queue_entry['rank'] == queue_entry['rank_history'][queue_entry['nearest_rank_date']]:
                 LOG.warning('rank unchanged')
                 continue
 
