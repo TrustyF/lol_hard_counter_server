@@ -5,6 +5,8 @@ from pprint import pprint
 import time
 from datetime import datetime, date, timedelta
 from collections import defaultdict
+import io
+
 from stores.constants import DATE_FORMAT, LOG, BASE_PATH
 import stores.utils
 from stores.player import Player
@@ -16,7 +18,7 @@ class Manager:
         self.db = TinyDB(self.db_path)
 
         self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
-                          'TheRedAquaman', 'TURBO ALUCO', 'Welisilmanan', 'Grandoullf']
+                          'TheRedAquaman', 'TURBO ALUCO', 'Welisilmanan', 'Grandoullf', 'TURBO BERINGEI']
 
         # Prep players
         self.players = []
@@ -43,7 +45,11 @@ class Manager:
         for player in self.players:
             LOG.warning(f'saving {player.username} to DB')
             user_query = Query().username == player.username
-            self.db.update(player.save_to_json(), user_query)
+
+            if self.db.get(user_query):
+                self.db.update(player.save_to_json(), user_query)
+            else:
+                self.db.insert(player.save_to_json())
 
     # flask funcs
     def add_rank_to_history(self):
@@ -51,6 +57,12 @@ class Manager:
             player.add_rank_to_history()
 
         self.save_players()
+
+    def get_profile_icon(self, player):
+        index = self.usernames.index(player)
+        output = io.BytesIO()
+        self.players[index].cass_summoner.profile_icon.image.save(output, format='JPEG')
+        return output.getvalue()
 
 
 summ_manager = Manager()

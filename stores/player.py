@@ -15,7 +15,7 @@ RIOT_KEY = os.environ.get("RIOT_API_KEY")
 cass.set_riot_api_key(RIOT_KEY)
 cass.apply_settings({
     "logging": {
-        "print_calls": False,
+        "print_calls": True,
         "print_riot_api_key": False,
         "default": "WARNING",
         "core": "WARNING"
@@ -41,7 +41,6 @@ class Player:
                 "nearest_rank_date": None,
             },
         }
-        self.profile_icon = None
 
         # dates
         self.curr_date = datetime.today().strftime(DATE_FORMAT)
@@ -55,28 +54,23 @@ class Player:
     def load_from_json(self, data):
         """Set class variables from data"""
 
-        # deserialize username
-        if 'username' in data:
-            self.username = data['username']
+        if data is not None:
+            # deserialize username
+            if 'username' in data:
+                self.username = data['username']
 
-        # deserialize queue
-        if 'ranked' in data:
-            self.ranked = data['ranked']
-
-        # deserialize profile icon
-        if 'profile_icon' in data:
-            self.profile_icon = data['profile_icon']
+            # deserialize queue
+            if 'ranked' in data:
+                self.ranked = data['ranked']
 
         # updates
         self.update_nearest_date()
-        self.update_profile_icon()
 
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
-            'profile_icon': self.profile_icon,
         }
 
     # update functions
@@ -91,9 +85,6 @@ class Player:
                 all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
                 nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
                 self.ranked[queue]['nearest_rank_date'] = nearset_date
-
-    def update_profile_icon(self):
-        self.profile_icon = self.cass_summoner.profile_icon.id
 
     # Cassio functions
     def update_current_rank(self):
