@@ -179,28 +179,31 @@ class Player:
             self.ranked[queue]['rank_history'][self.curr_date] = self.ranked[queue]['rank']
 
     def add_funny_to_stats(self):
+
+        def add_to_hist(f_id):
+            LOG.warning(f'id {f_id} not found adding')
+            self.match_history.append(f_id)
+
         # noinspection PyTypeChecker
         for match in self.cass_summoner.match_history[:30]:
-
-            # skip if match is missing attributes
-            try:
-                if not hasattr(match, 'mode'):
-                    continue
-            except ValueError:
-                continue
-
-            # skip if mode is not classic
-            if match.mode.name != 'classic':
-                continue
 
             # skip if already seen
             if match.id in self.match_history:
                 LOG.warning(f'match {match.id} found, not adding')
                 continue
 
+            # Exclude arena and other invalid game modes
+            try:
+                # skip if mode is not classic
+                if match.mode.name != 'classic':
+                    add_to_hist(match.id)
+                    continue
+            except ValueError:
+                add_to_hist(match.id)
+                continue
+
             # add to hist if found
-            LOG.warning(f'id {match.id} not found adding')
-            self.match_history.append(match.id)
+            add_to_hist(match.id)
 
             # get current player stats from participants
             LOG.warning(f'{match.id} adding to funny stats')
