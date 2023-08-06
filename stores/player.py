@@ -41,12 +41,49 @@ class Player:
                 "nearest_rank_date": None,
             },
         }
+        self.match_history = []
+        self.funny_stats = {
+            'total_matches': 0,
+            'kills': {
+                'kda': [0, 0, 0],
+                'first_blood': 0,
+                'penta_kills': 0,
+                'quadra_kills': 0,
+                'triple_kills': 0,
+                'double_kills': 0,
+            },
+            'vision': {
+                'pinks': 0,
+                'wards': 0,
+                'vision_score': 0,
+            },
+            'monsters': {
+                'dragon_kills': 0,
+                'baron_kills': 0,
+
+            },
+            'objectives': {
+                'objectives_stolen': 0,
+                'first_tower_kill': 0,
+                'tower_kills': 0,
+            },
+            'consumables': 0,
+            'gold': 0,
+            'time': {
+                'time_spent_dead': 0,
+                'time_spent_alive': 0,
+                'time_cc_self': 0,
+                'time_cc_other': 0,
+            },
+
+        }
 
         # dates
         self.curr_date = datetime.today().strftime(DATE_FORMAT)
 
         # Summoner
-        self.cass_summoner = cass.Summoner(name=self.username, region='EUW')
+        self.region = 'EUW'
+        self.cass_summoner = cass.Summoner(name=self.username, region=self.region)
 
     # Class functions
 
@@ -63,14 +100,25 @@ class Player:
             if 'ranked' in data:
                 self.ranked = data['ranked']
 
+            # deserialize match history
+            if 'match_history' in data:
+                self.match_history = data['match_history']
+
+            # deserialize match history
+            if 'funny_stats' in data:
+                self.funny_stats = data['funny_stats']
+
         # updates
         self.update_nearest_date()
+        self.add_funny_to_stats()
 
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
+            'match_history': self.match_history,
+            'funny_stats': self.funny_stats,
         }
 
     # update functions
@@ -129,3 +177,65 @@ class Player:
             # Update
             LOG.info('updated new rank')
             self.ranked[queue]['rank_history'][self.curr_date] = self.ranked[queue]['rank']
+
+    def add_funny_to_stats(self):
+        # noinspection PyTypeChecker
+        for match in self.cass_summoner.match_history[:30]:
+
+            # skip if match is missing attributes
+            try:
+                if not hasattr(match, 'mode'):
+                    continue
+            except ValueError:
+                continue
+
+            # skip if mode is not classic
+            if match.mode.name != 'classic':
+                continue
+
+            # skip if already seen
+            if match.id in self.match_history:
+                LOG.warning(f'match {match.id} found, not adding')
+                continue
+
+            # add to hist if found
+            LOG.warning(f'id {match.id} not found adding')
+            self.match_history.append(match.id)
+
+            # get current player stats from participants
+            LOG.warning(f'{match.id} adding to funny stats')
+            # pprint(dir(match.mode))
+            player_index = [x.summoner.name for x in match.participants].index(self.username)
+            player_stats = match.participants[player_index].stats
+
+            # assign to funny stats
+            self.funny_stats['total_matches'] += 1
+
+            self.funny_stats['kills']['kda'][0] += player_stats.kills
+            self.funny_stats['kills']['kda'][1] += player_stats.deaths
+            self.funny_stats['kills']['kda'][2] += player_stats.assists
+            self.funny_stats['kills']['first_blood'] += int(player_stats.first_blood_kill)
+            self.funny_stats['kills']['double_kills'] += player_stats.double_kills
+            self.funny_stats['kills']['triple_kills'] += player_stats.triple_kills
+            self.funny_stats['kills']['quadra_kills'] += player_stats.quadra_kills
+            self.funny_stats['kills']['penta_kills'] += player_stats.penta_kills
+
+            self.funny_stats['vision']['pinks'] += player_stats.vision_wards_placed
+            self.funny_stats['vision']['wards'] += player_stats.wards_placed
+            self.funny_stats['vision']['vision_score'] += player_stats.vision_score
+
+            self.funny_stats['monsters']['dragon_kills'] += player_stats.dragon_kills
+            self.funny_stats['monsters']['baron_kills'] += player_stats.baron_kills
+
+            self.funny_stats['objectives']['objectives_stolen'] += player_stats.objectives_stolen
+            self.funny_stats['objectives']['first_tower_kill'] += int(player_stats.first_tower_kill)
+            self.funny_stats['objectives']['tower_kills'] += player_stats.turret_kills
+
+            self.funny_stats['time']['time_cc_self'] += player_stats.total_time_cc_dealt
+            self.funny_stats['time']['time_cc_other'] += player_stats.time_CCing_others
+            self.funny_stats['time']['time_spent_dead'] += player_stats.total_time_spent_dead
+            self.funny_stats['time']['time_spent_alive'] += player_stats.longest_time_spent_living
+
+            self.funny_stats['gold'] += player_stats.gold_earned
+
+            self.funny_stats['consumables'] += player_stats.consumables_purchased
