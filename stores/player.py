@@ -110,7 +110,6 @@ class Player:
 
         # updates
         self.update_nearest_date()
-        self.add_funny_to_stats()
 
     def save_to_json(self):
         """Return formatted values to be saved to json"""
