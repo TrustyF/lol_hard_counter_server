@@ -17,8 +17,8 @@ cass.apply_settings({
     "logging": {
         "print_calls": True,
         "print_riot_api_key": False,
-        "default": "WARNING",
-        "core": "WARNING"
+        "default": "INFO",
+        "core": "INFO"
     }
 })
 
@@ -147,10 +147,15 @@ class Player:
         for queue in self.ranked:
             queue_entry = self.ranked[queue]
 
-            all_dates = queue_entry['rank_history'].keys()
+            all_dates = list(queue_entry['rank_history'].keys())
 
             # Check if any dates exist
             if len(all_dates) > 0:
+
+                # remove today from possible picks
+                if self.curr_date in all_dates:
+                    all_dates.pop(all_dates.index(self.curr_date))
+
                 all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
                 nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
                 self.ranked[queue]['nearest_rank'] = [nearset_date, queue_entry['rank_history'][nearset_date]]
@@ -173,6 +178,8 @@ class Player:
             if 'tier' in values:
                 self.ranked[queue]['rank'] = utils.convert_to_rank_val(values)
                 self.ranked[queue]['winrate'] = [values['wins'], values['losses']]
+                LOG.warning(f'setting new current rank for {self.username} to {self.ranked[queue]["rank"]} in'
+                            f' {queue} with winrate {self.ranked[queue]["winrate"]}')
 
     def add_rank_to_history(self):
         """Add current rank info to rank history"""
@@ -196,7 +203,7 @@ class Player:
                 continue
 
             # Update
-            LOG.info('updated new rank')
+            LOG.info(f'updated new rank to {self.ranked[queue]["rank"]}')
             self.ranked[queue]['rank_history'][self.curr_date] = self.ranked[queue]['rank']
 
     def add_funny_to_stats(self):
