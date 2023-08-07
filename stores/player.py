@@ -29,16 +29,16 @@ class Player:
         self.username = username
         self.ranked = {
             "RANKED_SOLO_5x5": {
-                "rank": None,
-                "winrate": [None, None],
+                "rank": 0,
+                "winrate": [0, 0],
                 "rank_history": {},
-                "nearest_rank": [None, None],
+                "nearest_rank": ["", 0],
             },
             "RANKED_FLEX_SR": {
-                "rank": None,
-                "winrate": [None, None],
+                "rank": 0,
+                "winrate": [0, 0],
                 "rank_history": {},
-                "nearest_rank": [None, None],
+                "nearest_rank": ["", 0],
             },
         }
         self.match_history = []
@@ -94,7 +94,7 @@ class Player:
         def verify_missing_keys(f_orig: dict, f_new: dict):
             """Recursive function to check for key differences between code and DB"""
 
-            if isinstance(f_orig, None | list) or isinstance(f_new, None | list):
+            if not isinstance(f_orig, dict) or not isinstance(f_new, dict):
                 return []
 
             key1 = f_orig.keys()
@@ -191,7 +191,7 @@ class Player:
                 continue
 
             # Skip if last rank is the same
-            if queue_entry['rank'] == queue_entry['rank_history'][queue_entry['nearest_rank_date']]:
+            if queue_entry['rank'] == queue_entry['nearest_rank'][1]:
                 LOG.warning('rank unchanged')
                 continue
 
