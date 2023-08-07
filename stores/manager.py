@@ -6,6 +6,7 @@ import time
 from datetime import datetime, date, timedelta
 from collections import defaultdict
 import io
+from PIL import Image
 
 from stores.constants import DATE_FORMAT, LOG, BASE_PATH
 import stores.utils
@@ -18,7 +19,7 @@ class Manager:
         self.db = TinyDB(self.db_path, indent=2)
 
         self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
-                          'TheRedAquaman', 'TURBO ALUCO', 'Welisilmanan', 'Grandoullf', 'TURBO BERINGEI']
+                          'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI']
         # self.usernames = ['TURBO Trusty']
 
         # Prep players
@@ -62,8 +63,17 @@ class Manager:
 
     def get_profile_icon(self, player):
         index = self.usernames.index(player)
+        image_path = os.path.join(BASE_PATH, f'../assets/{player}.jpeg')
+
+        # if not found download it
+        if not os.path.exists(image_path):
+            self.players[index].cass_summoner.profile_icon.image.save(image_path, format='JPEG')
+
+        # open image bytes
         output = io.BytesIO()
-        self.players[index].cass_summoner.profile_icon.image.save(output, format='JPEG')
+        img = Image.open(image_path)
+        img.save(output, format='JPEG')
+
         return output.getvalue()
 
 
