@@ -32,13 +32,13 @@ class Player:
                 "rank": None,
                 "winrate": [None, None],
                 "rank_history": {},
-                "nearest_rank_date": None,
+                "nearest_rank": [None, None],
             },
             "RANKED_FLEX_SR": {
                 "rank": None,
                 "winrate": [None, None],
                 "rank_history": {},
-                "nearest_rank_date": None,
+                "nearest_rank": [None, None],
             },
         }
         self.match_history = []
@@ -91,13 +91,35 @@ class Player:
     def load_from_json(self, data):
         """Set class variables from data"""
 
+        def verify_missing_keys(f_orig: dict, f_new: dict):
+            """Recursive function to check for key differences between code and DB"""
+
+            if isinstance(f_orig, None | list) or isinstance(f_new, None | list):
+                return []
+
+            key1 = f_orig.keys()
+            key2 = f_new.keys()
+            diff = [item for item in key1 if item not in key2]
+            same = [item for item in key1 if item in key2]
+
+            if len(diff) < 1:
+                for key in same:
+                    return verify_missing_keys(f_orig[key], f_new[key])
+            else:
+                return diff
+
         if data is not None:
             # deserialize username
             if 'username' in data:
                 self.username = data['username']
 
-            # deserialize queue
+            # deserialize ranked
             if 'ranked' in data:
+                for queue in self.ranked:
+                    for missing in verify_missing_keys(self.ranked[queue], data['ranked'][queue]):
+                        # if self.username == 'TURBO OLINGO': pprint(missing)
+                        data['ranked'][queue][missing] = self.ranked[queue][missing]
+
                 self.ranked = data['ranked']
 
             # deserialize match history
@@ -131,7 +153,7 @@ class Player:
             if len(all_dates) > 0:
                 all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
                 nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
-                self.ranked[queue]['nearest_rank_date'] = nearset_date
+                self.ranked[queue]['nearest_rank'] = [nearset_date, queue_entry['rank_history'][nearset_date]]
 
     # Cassio functions
     def update_current_rank(self):

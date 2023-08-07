@@ -20,7 +20,7 @@ class Manager:
 
         self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
                           'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI']
-        # self.usernames = ['TURBO Trusty']
+        # self.usernames = ['TURBO OLINGO']
 
         # Prep players
         self.players = []
