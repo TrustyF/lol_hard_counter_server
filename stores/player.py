@@ -60,21 +60,28 @@ class Player:
             'monsters': {
                 'dragon_kills': 0,
                 'baron_kills': 0,
-
+                'creep_kills': 0,
             },
             'objectives': {
                 'objectives_stolen': 0,
                 'first_tower_kill': 0,
                 'tower_kills': 0,
             },
-            'consumables': 0,
             'gold': 0,
             'time': {
+                'total_time_played': 0,
                 'time_spent_dead': 0,
                 'time_spent_alive': 0,
                 'time_cc_self': 0,
                 'time_cc_other': 0,
             },
+            'pings': {
+                'missing': 0,
+                'bait': 0,
+            },
+            'other': {
+                'skill_shots_dodged': 0
+            }
 
         }
 
@@ -84,8 +91,6 @@ class Player:
         # Summoner
         self.region = 'EUW'
         self.cass_summoner = cass.Summoner(name=self.username, region=self.region)
-
-    # Class functions
 
     # json functions
     def load_from_json(self, data):
@@ -212,8 +217,13 @@ class Player:
             LOG.warning(f'id {f_id} not found adding')
             self.match_history.append(f_id)
 
-        # noinspection PyTypeChecker
-        for match in self.cass_summoner.match_history[:30]:
+        match_limit = 100
+        for i, match in enumerate(self.cass_summoner.match_history):
+
+            # Limit to last 100 games
+            if i >= match_limit:
+                LOG.warning(f'Hit 100 match limit, stopping')
+                break
 
             # skip if already seen
             if match.id in self.match_history:
@@ -224,10 +234,14 @@ class Player:
             try:
                 # skip if mode is not classic
                 if match.mode.name != 'classic':
+                    LOG.warning('match not classic')
                     add_to_hist(match.id)
+                    match_limit += 1
                     continue
             except ValueError:
+                LOG.warning('match returned an error')
                 add_to_hist(match.id)
+                match_limit += 1
                 continue
 
             # add to hist if found
@@ -237,36 +251,49 @@ class Player:
             LOG.warning(f'{match.id} adding to funny stats')
             # pprint(dir(match.mode))
             player_index = [x.summoner.name for x in match.participants].index(self.username)
-            player_stats = match.participants[player_index].stats
+
+            player_info = match.participants[player_index].to_dict()
+            player_stats = player_info['stats']
+            player_challenges = player_info['challenges']
+
+            # pprint((match.participants[player_index].to_dict()))
+
+            # constants
+            time_played = player_stats['timePlayed']
 
             # assign to funny stats
             self.funny_stats['total_matches'] += 1
+            self.funny_stats['time']['total_time_played'] += time_played
 
-            self.funny_stats['kills']['kda'][0] += player_stats.kills
-            self.funny_stats['kills']['kda'][1] += player_stats.deaths
-            self.funny_stats['kills']['kda'][2] += player_stats.assists
-            self.funny_stats['kills']['first_blood'] += int(player_stats.first_blood_kill)
-            self.funny_stats['kills']['double_kills'] += player_stats.double_kills
-            self.funny_stats['kills']['triple_kills'] += player_stats.triple_kills
-            self.funny_stats['kills']['quadra_kills'] += player_stats.quadra_kills
-            self.funny_stats['kills']['penta_kills'] += player_stats.penta_kills
+            self.funny_stats['kills']['kda'][0] += player_stats['kills']
+            self.funny_stats['kills']['kda'][1] += player_stats['deaths']
+            self.funny_stats['kills']['kda'][2] += player_stats['assists']
+            self.funny_stats['kills']['first_blood'] += int(player_stats['firstBloodKill'])
+            self.funny_stats['kills']['double_kills'] += player_stats['doubleKills']
+            self.funny_stats['kills']['triple_kills'] += player_stats['tripleKills']
+            self.funny_stats['kills']['quadra_kills'] += player_stats['quadraKills']
+            self.funny_stats['kills']['penta_kills'] += player_stats['pentaKills']
 
-            self.funny_stats['vision']['pinks'] += player_stats.vision_wards_placed
-            self.funny_stats['vision']['wards'] += player_stats.wards_placed
-            self.funny_stats['vision']['vision_score'] += player_stats.vision_score
+            self.funny_stats['vision']['pinks'] += player_stats['visionWardsBoughtInGame']
+            self.funny_stats['vision']['wards'] += player_stats['wardsPlaced']
+            self.funny_stats['vision']['vision_score'] += player_stats['visionScore']
 
-            self.funny_stats['monsters']['dragon_kills'] += player_stats.dragon_kills
-            self.funny_stats['monsters']['baron_kills'] += player_stats.baron_kills
+            self.funny_stats['monsters']['dragon_kills'] += player_stats['dragonKills']
+            self.funny_stats['monsters']['baron_kills'] += player_stats['baronKills']
+            self.funny_stats['monsters']['creep_kills'] += player_stats['totalMinionsKilled']
 
-            self.funny_stats['objectives']['objectives_stolen'] += player_stats.objectives_stolen
-            self.funny_stats['objectives']['first_tower_kill'] += int(player_stats.first_tower_kill)
-            self.funny_stats['objectives']['tower_kills'] += player_stats.turret_kills
+            self.funny_stats['objectives']['objectives_stolen'] += player_stats['objectivesStolen']
+            self.funny_stats['objectives']['first_tower_kill'] += int(player_stats['firstTowerKill'])
+            self.funny_stats['objectives']['tower_kills'] += player_stats['turretKills']
 
-            self.funny_stats['time']['time_cc_self'] += player_stats.total_time_cc_dealt
-            self.funny_stats['time']['time_cc_other'] += player_stats.time_CCing_others
-            self.funny_stats['time']['time_spent_dead'] += player_stats.total_time_spent_dead
-            self.funny_stats['time']['time_spent_alive'] += player_stats.longest_time_spent_living
+            self.funny_stats['time']['time_cc_self'] += player_stats['totalTimeCCDealt']
+            self.funny_stats['time']['time_cc_other'] += player_stats['timeCCingOthers']
+            self.funny_stats['time']['time_spent_dead'] += player_stats['totalTimeSpentDead']
+            self.funny_stats['time']['time_spent_alive'] += (time_played - player_stats['totalTimeSpentDead'])
 
-            self.funny_stats['gold'] += player_stats.gold_earned
+            self.funny_stats['gold'] += player_stats['goldEarned']
 
-            self.funny_stats['consumables'] += player_stats.consumables_purchased
+            self.funny_stats['pings']['missing'] += player_info['enemyMissingPings']
+            self.funny_stats['pings']['bait'] += player_info['baitPings']
+
+            self.funny_stats['other']['skill_shots_dodged'] += player_challenges['skillshotsDodged']
