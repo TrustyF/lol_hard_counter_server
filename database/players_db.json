@@ -213,51 +213,55 @@
         6473693214,
         6473543861,
         6472493431,
-        6472407114
+        6472407114,
+        6542631465,
+        6542550925,
+        6542516629,
+        6542475484
       ],
       "funny_stats": {
-        "total_matches": 100,
+        "total_matches": 104,
         "kills": {
           "kda": [
-            617,
-            630,
-            1046
+            640,
+            650,
+            1067
           ],
           "first_blood": 7,
           "penta_kills": 0,
           "quadra_kills": 0,
-          "triple_kills": 10,
-          "double_kills": 53
+          "triple_kills": 11,
+          "double_kills": 56
         },
         "vision": {
-          "pinks": 275,
-          "wards": 1449,
-          "vision_score": 3660
+          "pinks": 278,
+          "wards": 1485,
+          "vision_score": 3727
         },
         "monsters": {
           "dragon_kills": 21,
           "baron_kills": 8,
-          "creep_kills": 11999
+          "creep_kills": 12358
         },
         "objectives": {
           "objectives_stolen": 1,
           "first_tower_kill": 2,
-          "tower_kills": 71
+          "tower_kills": 72
         },
-        "gold": 1101858,
+        "gold": 1134562,
         "time": {
-          "total_time_played": 174010,
-          "time_spent_dead": 19262,
-          "time_spent_alive": 154748,
-          "time_cc_self": 21769,
-          "time_cc_other": 2908
+          "total_time_played": 179329,
+          "time_spent_dead": 19717,
+          "time_spent_alive": 159612,
+          "time_cc_self": 21939,
+          "time_cc_other": 2925
         },
         "pings": {
-          "missing": 132,
+          "missing": 147,
           "bait": 11
         },
         "other": {
-          "skill_shots_dodged": 3668
+          "skill_shots_dodged": 3750
         }
       }
     },
@@ -265,10 +269,10 @@
       "username": "Ckwaceupoulet",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2300,
+          "rank": 2276,
           "winrate": [
-            18,
-            20
+            19,
+            22
           ],
           "rank_history": {
             "24/07/2023": 2346,
@@ -279,7 +283,7 @@
             "04/08/2023": 2328,
             "05/08/2023": 2351,
             "07/08/2023": 2370,
-            "08/08/2023": 2300
+            "08/08/2023": 2276
           },
           "nearest_rank": [
             "07/08/2023",
@@ -460,15 +464,18 @@
         6499157994,
         6499134475,
         6499103875,
-        6487300743
+        6487300743,
+        6542590103,
+        6542526346,
+        6542477841
       ],
       "funny_stats": {
-        "total_matches": 100,
+        "total_matches": 103,
         "kills": {
           "kda": [
-            440,
-            418,
-            767
+            451,
+            436,
+            792
           ],
           "first_blood": 2,
           "penta_kills": 0,
@@ -477,34 +484,34 @@
           "double_kills": 39
         },
         "vision": {
-          "pinks": 103,
-          "wards": 889,
-          "vision_score": 1794
+          "pinks": 108,
+          "wards": 921,
+          "vision_score": 1879
         },
         "monsters": {
           "dragon_kills": 12,
           "baron_kills": 1,
-          "creep_kills": 17401
+          "creep_kills": 17973
         },
         "objectives": {
           "objectives_stolen": 2,
-          "first_tower_kill": 8,
-          "tower_kills": 138
+          "first_tower_kill": 9,
+          "tower_kills": 145
         },
-        "gold": 1105485,
+        "gold": 1142838,
         "time": {
-          "total_time_played": 169745,
-          "time_spent_dead": 13175,
-          "time_spent_alive": 156570,
-          "time_cc_self": 37533,
-          "time_cc_other": 2644
+          "total_time_played": 175506,
+          "time_spent_dead": 13836,
+          "time_spent_alive": 161670,
+          "time_cc_self": 38917,
+          "time_cc_other": 2768
         },
         "pings": {
-          "missing": 279,
-          "bait": 9
+          "missing": 285,
+          "bait": 10
         },
         "other": {
-          "skill_shots_dodged": 2869
+          "skill_shots_dodged": 2981
         }
       }
     },
@@ -665,51 +672,52 @@
         6469353918,
         6469276206,
         6468842854,
-        6468768360
+        6468768360,
+        6542631465
       ],
       "funny_stats": {
-        "total_matches": 100,
+        "total_matches": 101,
         "kills": {
           "kda": [
-            695,
-            519,
-            732
+            711,
+            520,
+            742
           ],
           "first_blood": 7,
           "penta_kills": 0,
           "quadra_kills": 1,
           "triple_kills": 12,
-          "double_kills": 75
+          "double_kills": 78
         },
         "vision": {
-          "pinks": 220,
-          "wards": 914,
-          "vision_score": 2316
+          "pinks": 224,
+          "wards": 925,
+          "vision_score": 2346
         },
         "monsters": {
           "dragon_kills": 21,
           "baron_kills": 8,
-          "creep_kills": 17473
+          "creep_kills": 17672
         },
         "objectives": {
           "objectives_stolen": 1,
           "first_tower_kill": 5,
-          "tower_kills": 121
+          "tower_kills": 126
         },
-        "gold": 1212620,
+        "gold": 1227240,
         "time": {
-          "total_time_played": 177563,
+          "total_time_played": 179295,
           "time_spent_dead": 15931,
-          "time_spent_alive": 161632,
-          "time_cc_self": 20230,
-          "time_cc_other": 1861
+          "time_spent_alive": 163364,
+          "time_cc_self": 20390,
+          "time_cc_other": 1870
         },
         "pings": {
-          "missing": 201,
+          "missing": 202,
           "bait": 2
         },
         "other": {
-          "skill_shots_dodged": 3017
+          "skill_shots_dodged": 3032
         }
       }
     },
@@ -1248,10 +1256,10 @@
       "username": "FRANZIZKUZ",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2200,
+          "rank": 2175,
           "winrate": [
             29,
-            14
+            15
           ],
           "rank_history": {
             "22/07/2023": 1737,
@@ -1264,7 +1272,8 @@
             "04/08/2023": 2105,
             "05/08/2023": 2148,
             "06/08/2023": 2161,
-            "07/08/2023": 2200
+            "07/08/2023": 2200,
+            "08/08/2023": 2175
           },
           "nearest_rank": [
             "07/08/2023",
@@ -1411,51 +1420,52 @@
         6495270785,
         6493851895,
         6493796576,
-        6493431721
+        6493431721,
+        6542553452
       ],
       "funny_stats": {
-        "total_matches": 100,
+        "total_matches": 101,
         "kills": {
           "kda": [
-            629,
-            389,
-            967
+            635,
+            399,
+            992
           ],
           "first_blood": 5,
           "penta_kills": 0,
           "quadra_kills": 0,
           "triple_kills": 4,
-          "double_kills": 64
+          "double_kills": 65
         },
         "vision": {
-          "pinks": 214,
-          "wards": 485,
-          "vision_score": 2202
+          "pinks": 215,
+          "wards": 525,
+          "vision_score": 2282
         },
         "monsters": {
           "dragon_kills": 107,
           "baron_kills": 42,
-          "creep_kills": 3781
+          "creep_kills": 3843
         },
         "objectives": {
           "objectives_stolen": 9,
           "first_tower_kill": 4,
-          "tower_kills": 44
+          "tower_kills": 45
         },
-        "gold": 1175901,
+        "gold": 1190580,
         "time": {
-          "total_time_played": 166830,
-          "time_spent_dead": 12366,
-          "time_spent_alive": 154464,
-          "time_cc_self": 42480,
-          "time_cc_other": 3359
+          "total_time_played": 169377,
+          "time_spent_dead": 12707,
+          "time_spent_alive": 156670,
+          "time_cc_self": 42933,
+          "time_cc_other": 3415
         },
         "pings": {
-          "missing": 615,
-          "bait": 86
+          "missing": 642,
+          "bait": 89
         },
         "other": {
-          "skill_shots_dodged": 3142
+          "skill_shots_dodged": 3182
         }
       }
     },
@@ -2542,6 +2552,245 @@
         },
         "other": {
           "skill_shots_dodged": 2418
+        }
+      }
+    },
+    "12": {
+      "username": "Kertor",
+      "ranked": {
+        "RANKED_SOLO_5x5": {
+          "rank": 0,
+          "winrate": [
+            0,
+            0
+          ],
+          "rank_history": {},
+          "nearest_rank": [
+            "",
+            0
+          ]
+        },
+        "RANKED_FLEX_SR": {
+          "rank": 0,
+          "winrate": [
+            0,
+            0
+          ],
+          "rank_history": {},
+          "nearest_rank": [
+            "",
+            0
+          ]
+        }
+      },
+      "match_history": [
+        6464701189,
+        6464685696,
+        6464621657,
+        6463214737,
+        6463141228,
+        6463090349,
+        6458580954,
+        6458528269,
+        6429545141,
+        6419721222,
+        6414917530,
+        6414857928,
+        6414814324,
+        6411704150,
+        6411639579,
+        6411540690,
+        6408841192,
+        6408788011,
+        6403415222,
+        6403324362,
+        6401687517,
+        6401639844,
+        6401582857,
+        6398993967,
+        6398942605,
+        6398871221,
+        6398838657,
+        6398744016,
+        6398672513,
+        6397059390,
+        6396167575,
+        6396084862,
+        6396020939,
+        6393390458,
+        6393299657,
+        6393206941,
+        6392846669,
+        6387386380,
+        6382395242,
+        6382341910,
+        6382301167,
+        6382070910,
+        6382046900,
+        6381992004,
+        6381934896,
+        6381743018,
+        6381654712,
+        6381419438,
+        6381389617,
+        6381267484,
+        6381208132,
+        6381163684,
+        6381121660,
+        6380963798,
+        6380933783,
+        6380714716,
+        6380704062,
+        6380692098,
+        6380676244,
+        6380647075,
+        6380602174,
+        6380545287,
+        6380464425,
+        6380387357,
+        6380327604,
+        6380123803,
+        6380096665,
+        6373716163,
+        6373641985,
+        6373556993,
+        6372155715,
+        6372076009,
+        6372007978,
+        6371911449,
+        6367627503,
+        6367533538,
+        6367384009,
+        6366640172,
+        6366589863,
+        6366516128,
+        6366417934,
+        6366372727,
+        6363817429,
+        6363536727,
+        6363477725,
+        6363407069,
+        6363343492,
+        6363271662,
+        6363217275,
+        6361863365,
+        6361789361,
+        6361746032,
+        6359185853,
+        6359120806,
+        6359064061,
+        6356542914,
+        6353919146,
+        6353834065,
+        6353762348,
+        6353715261,
+        6351891211,
+        6351818773,
+        6348052809,
+        6348009050,
+        6347919706,
+        6347567618,
+        6346806582,
+        6346752611,
+        6346668737,
+        6346556843,
+        6346494419,
+        6336145982,
+        6336090548,
+        6333474549,
+        6333399583,
+        6333266090,
+        6333191387,
+        6332721754,
+        6315941959,
+        6315875604,
+        6313439783,
+        6313368116,
+        6313265312,
+        6313160409,
+        6313089708,
+        6312864706,
+        6305965277,
+        6303261471,
+        6303171115,
+        6303104441,
+        6302369029,
+        6302311311,
+        6302259090,
+        6301780344,
+        6301721609,
+        6300944670,
+        6300472730,
+        6299716826,
+        6299664720,
+        6299290827,
+        6299236607,
+        6298978104,
+        6298623219,
+        6298600114,
+        6298535918,
+        6295071004,
+        6295011785,
+        6294516376,
+        6267597201,
+        6255069529,
+        6255020844,
+        6254989126,
+        6254759610,
+        6254718369,
+        6254684148,
+        6254314712,
+        6254097041,
+        6253972096,
+        6253886909,
+        6253726209,
+        6253659945,
+        6253603445,
+        6253551746
+      ],
+      "funny_stats": {
+        "total_matches": 100,
+        "kills": {
+          "kda": [
+            339,
+            552,
+            1291
+          ],
+          "first_blood": 2,
+          "penta_kills": 0,
+          "quadra_kills": 1,
+          "triple_kills": 3,
+          "double_kills": 22
+        },
+        "vision": {
+          "pinks": 348,
+          "wards": 2135,
+          "vision_score": 4751
+        },
+        "monsters": {
+          "dragon_kills": 14,
+          "baron_kills": 5,
+          "creep_kills": 7059
+        },
+        "objectives": {
+          "objectives_stolen": 1,
+          "first_tower_kill": 3,
+          "tower_kills": 65
+        },
+        "gold": 920890,
+        "time": {
+          "total_time_played": 171679,
+          "time_spent_dead": 15300,
+          "time_spent_alive": 156379,
+          "time_cc_self": 15857,
+          "time_cc_other": 3187
+        },
+        "pings": {
+          "missing": 54,
+          "bait": 3
+        },
+        "other": {
+          "skill_shots_dodged": 2932
         }
       }
     }
