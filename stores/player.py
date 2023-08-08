@@ -225,7 +225,7 @@ class Player:
                 LOG.warning(f'Hit 100 match limit, stopping')
                 break
 
-            # skip if already seen
+            # # skip if already seen
             if match.id in self.match_history:
                 LOG.warning(f'match {match.id} found, not adding')
                 continue
@@ -233,7 +233,7 @@ class Player:
             # Exclude arena and other invalid game modes
             try:
                 # skip if mode is not classic
-                if match.mode.name != 'classic':
+                if match.queue.name not in ['ranked_flex_fives', 'normal_draft_fives', 'ranked_solo_fives']:
                     LOG.warning('match not classic')
                     add_to_hist(match.id)
                     match_limit += 1

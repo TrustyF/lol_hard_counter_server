@@ -20,14 +20,14 @@ class Manager:
 
         self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
                           'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI']
-        # self.usernames = ['TURBO Trusty']
+        # self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', ]
 
         # Prep players
         self.players = []
 
         #  Functions
         self.load_players()
-        self.add_rank_to_history()
+        # self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:
@@ -57,7 +57,7 @@ class Manager:
     # flask funcs
     def add_rank_to_history(self):
         for player in self.players:
-            # player.add_rank_to_history()
+            player.add_rank_to_history()
             player.add_funny_to_stats()
 
         self.save_players()
