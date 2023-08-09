@@ -4,6 +4,7 @@ from tinydb import Query
 from datetime import datetime, date, timedelta
 import os
 from dotenv import load_dotenv
+import copy
 
 from stores.constants import LOG, DATE_FORMAT
 import stores.utils as utils
@@ -81,8 +82,11 @@ class Player:
             },
             'other': {
                 'skill_shots_dodged': 0
+            },
+            'difference': {
+                "date": "",
+                "data": {},
             }
-
         }
 
         # dates
@@ -122,7 +126,6 @@ class Player:
             if 'ranked' in data:
                 for queue in self.ranked:
                     for missing in verify_missing_keys(self.ranked[queue], data['ranked'][queue]):
-                        # if self.username == 'TURBO OLINGO': pprint(missing)
                         data['ranked'][queue][missing] = self.ranked[queue][missing]
 
                 self.ranked = data['ranked']
@@ -131,8 +134,11 @@ class Player:
             if 'match_history' in data:
                 self.match_history = data['match_history']
 
-            # deserialize match history
+            # deserialize funny stats
             if 'funny_stats' in data:
+                for missing in verify_missing_keys(self.funny_stats, data['funny_stats']):
+                    data['funny_stats'][missing] = self.funny_stats[missing]
+
                 self.funny_stats = data['funny_stats']
 
         # updates
@@ -217,6 +223,7 @@ class Player:
             LOG.warning(f'id {f_id} not found adding')
             self.match_history.append(f_id)
 
+        # adding funny stats
         match_limit = 100
         for i, match in enumerate(self.cass_summoner.match_history):
 
@@ -227,7 +234,6 @@ class Player:
 
             # # skip if already seen
             if match.id in self.match_history:
-                LOG.warning(f'match {match.id} found, not adding')
                 continue
 
             # Exclude arena and other invalid game modes
@@ -297,3 +303,36 @@ class Player:
             self.funny_stats['pings']['bait'] += player_info['baitPings']
 
             self.funny_stats['other']['skill_shots_dodged'] += player_challenges['skillshotsDodged']
+
+        # track funny stats changes per day
+        if self.funny_stats['difference']['date'] != self.curr_date:
+            LOG.warning('setting funny stats for the day')
+
+            # set tracking to current date
+            temp_copy = self.funny_stats.copy()
+            del temp_copy['difference']
+
+            # set values
+            self.funny_stats['difference']['date'] = self.curr_date
+            self.funny_stats['difference']['data'] = dict(temp_copy)
+
+            # def recursive_search_diff(f_control, f_updated, f_temp):
+            #     if type(f_control) == int:
+            #         print(f"{f_control} - {f_updated}")
+            #         return f_control - f_updated
+            #
+            #     for key in f_control:
+            #         if type(key) == int:
+            #             temp_list = []
+            #             for i, list_elem in enumerate(f_control):
+            #                 temp_list.append(recursive_search_diff(f_control[i], f_updated[i], f_temp))
+            #             return temp_list
+            #         else:
+            #             f_temp[key] = recursive_search_diff(f_control[key], f_updated[key], f_temp)
+            #
+            #     return f_temp
+            #
+            # # self.funny_stats_diff['data'] = recursive_search_diff(control_dict, self.funny_stats)
+            # test = {}
+            # recursive_search_diff(control_dict, self.funny_stats, test)
+            # pprint(test)
