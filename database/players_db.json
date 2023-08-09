@@ -222,7 +222,8 @@
         6543017397,
         6543152941,
         6543094000,
-        6543230667
+        6543230667,
+        6544721413
       ],
       "funny_stats": {
         "total_matches": 108,
@@ -322,10 +323,10 @@
       "username": "Ckwaceupoulet",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2276,
+          "rank": 2252,
           "winrate": [
-            19,
-            22
+            20,
+            24
           ],
           "rank_history": {
             "24/07/2023": 2346,
@@ -336,7 +337,8 @@
             "04/08/2023": 2328,
             "05/08/2023": 2351,
             "07/08/2023": 2370,
-            "08/08/2023": 2276
+            "08/08/2023": 2276,
+            "09/08/2023": 2252
           },
           "nearest_rank": [
             "08/08/2023",
@@ -520,51 +522,56 @@
         6487300743,
         6542590103,
         6542526346,
-        6542477841
+        6542477841,
+        6544180328,
+        6544131575,
+        6544602023,
+        6544690386,
+        6544661197
       ],
       "funny_stats": {
-        "total_matches": 103,
+        "total_matches": 108,
         "kills": {
           "kda": [
-            451,
-            436,
-            792
+            465,
+            461,
+            845
           ],
           "first_blood": 2,
           "penta_kills": 0,
           "quadra_kills": 0,
           "triple_kills": 6,
-          "double_kills": 39
+          "double_kills": 41
         },
         "vision": {
-          "pinks": 108,
-          "wards": 921,
-          "vision_score": 1879
+          "pinks": 111,
+          "wards": 959,
+          "vision_score": 1949
         },
         "monsters": {
           "dragon_kills": 12,
           "baron_kills": 1,
-          "creep_kills": 17973
+          "creep_kills": 18741
         },
         "objectives": {
           "objectives_stolen": 2,
-          "first_tower_kill": 9,
-          "tower_kills": 145
+          "first_tower_kill": 10,
+          "tower_kills": 149
         },
-        "gold": 1142838,
+        "gold": 1190654,
         "time": {
-          "total_time_played": 175506,
-          "time_spent_dead": 13836,
-          "time_spent_alive": 161670,
-          "time_cc_self": 38917,
-          "time_cc_other": 2768
+          "total_time_played": 183769,
+          "time_spent_dead": 14726,
+          "time_spent_alive": 169043,
+          "time_cc_self": 40800,
+          "time_cc_other": 2892
         },
         "pings": {
-          "missing": 285,
+          "missing": 299,
           "bait": 10
         },
         "other": {
-          "skill_shots_dodged": 2981
+          "skill_shots_dodged": 3090
         },
         "difference": {
           "date": "09/08/2023",
@@ -620,10 +627,10 @@
       "username": "TURBO OLINGO",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": null,
+          "rank": 1363,
           "winrate": [
-            null,
-            null
+            3,
+            4
           ],
           "rank_history": {},
           "nearest_rank": [
@@ -778,15 +785,19 @@
         6543017397,
         6543152941,
         6543094000,
-        6543230667
+        6543230667,
+        6543931093,
+        6544100277,
+        6544154938,
+        6544721413
       ],
       "funny_stats": {
-        "total_matches": 104,
+        "total_matches": 107,
         "kills": {
           "kda": [
-            733,
-            540,
-            757
+            749,
+            548,
+            780
           ],
           "first_blood": 7,
           "penta_kills": 0,
@@ -795,34 +806,34 @@
           "double_kills": 80
         },
         "vision": {
-          "pinks": 229,
-          "wards": 950,
-          "vision_score": 2403
+          "pinks": 236,
+          "wards": 977,
+          "vision_score": 2459
         },
         "monsters": {
           "dragon_kills": 21,
           "baron_kills": 8,
-          "creep_kills": 18196
+          "creep_kills": 18837
         },
         "objectives": {
           "objectives_stolen": 1,
           "first_tower_kill": 5,
-          "tower_kills": 129
+          "tower_kills": 131
         },
-        "gold": 1261446,
+        "gold": 1297839,
         "time": {
-          "total_time_played": 184213,
-          "time_spent_dead": 16488,
-          "time_spent_alive": 167725,
-          "time_cc_self": 20473,
-          "time_cc_other": 1875
+          "total_time_played": 189654,
+          "time_spent_dead": 16745,
+          "time_spent_alive": 172909,
+          "time_cc_self": 20729,
+          "time_cc_other": 1880
         },
         "pings": {
-          "missing": 203,
-          "bait": 2
+          "missing": 205,
+          "bait": 3
         },
         "other": {
-          "skill_shots_dodged": 3153
+          "skill_shots_dodged": 3172
         },
         "difference": {
           "date": "09/08/2023",
