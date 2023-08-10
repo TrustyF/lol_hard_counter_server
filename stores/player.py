@@ -165,7 +165,7 @@ class Player:
 
     # update functions
     def update_nearest_date(self):
-        LOG.warning('(update_nearest_date) - updating nearest date')
+        # LOG.warning('(update_nearest_date) - updating nearest date')
         for queue in self.ranked:
             queue_entry = self.ranked[queue]
 
