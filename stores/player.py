@@ -42,9 +42,23 @@ class Player:
                 "nearest_rank": ["", 0],
             },
         }
-        self.match_history = []
-        self.funny_stats = {
-            'total_matches': 0,
+        self.funny_stats = []
+        self.funny_stats_diff = {
+            "date": "",
+            "data": [],
+        }
+        self.match_history = {
+            "total_matches": 0,
+            "match_ids": []
+        }
+
+        # Data format
+        self.funny_stats_template = {
+            'match': {
+                'match_time': 0,
+                'match_id': 0,
+                'add_date': ""
+            },
             'kills': {
                 'kda': [0, 0, 0],
                 'first_blood': 0,
@@ -70,7 +84,6 @@ class Player:
             },
             'gold': 0,
             'time': {
-                'total_time_played': 0,
                 'time_spent_dead': 0,
                 'time_spent_alive': 0,
                 'time_cc_self': 0,
@@ -83,10 +96,6 @@ class Player:
             'other': {
                 'skill_shots_dodged': 0
             },
-            'difference': {
-                "date": "",
-                "data": {},
-            }
         }
 
         # dates
@@ -130,16 +139,16 @@ class Player:
 
                 self.ranked = data['ranked']
 
-            # deserialize match history
-            if 'match_history' in data:
-                self.match_history = data['match_history']
-
             # deserialize funny stats
             if 'funny_stats' in data:
-                for missing in verify_missing_keys(self.funny_stats, data['funny_stats']):
-                    data['funny_stats'][missing] = self.funny_stats[missing]
-
                 self.funny_stats = data['funny_stats']
+
+            if 'funny_stats_diff' in data:
+                self.funny_stats_diff = data['funny_stats_diff']
+
+            # deserialize match hist
+            if 'match_history' in data:
+                self.match_history = data['match_history']
 
         # updates
         self.update_nearest_date()
@@ -151,6 +160,7 @@ class Player:
             'ranked': self.ranked,
             'match_history': self.match_history,
             'funny_stats': self.funny_stats,
+            'funny_stats_diff': self.funny_stats_diff,
         }
 
     # update functions
@@ -221,10 +231,12 @@ class Player:
 
         def add_to_hist(f_id):
             LOG.warning(f'id {f_id} not found adding')
-            self.match_history.append(f_id)
+            self.match_history['match_ids'].append(f_id)
 
         # adding funny stats
-        match_limit = 100
+        match_limit = 3
+        match_id_diff = []
+
         for i, match in enumerate(self.cass_summoner.match_history):
 
             # Limit to last 100 games
@@ -233,7 +245,8 @@ class Player:
                 break
 
             # # skip if already seen
-            if match.id in self.match_history:
+            if match.id in self.match_history['match_ids']:
+                LOG.warning('Match id found, skipping')
                 continue
 
             # Exclude arena and other invalid game modes
@@ -252,87 +265,67 @@ class Player:
 
             # add to hist if found
             add_to_hist(match.id)
+            match_id_diff.append(match.id)
 
             # get current player stats from participants
             LOG.warning(f'{match.id} adding to funny stats')
-            # pprint(dir(match.mode))
-            player_index = [x.summoner.name for x in match.participants].index(self.username)
 
+            player_index = [x.summoner.name for x in match.participants].index(self.username)
             player_info = match.participants[player_index].to_dict()
             player_stats = player_info['stats']
             player_challenges = player_info['challenges']
 
-            # pprint((match.participants[player_index].to_dict()))
-
-            # constants
-            time_played = player_stats['timePlayed']
-
             # assign to funny stats
-            self.funny_stats['total_matches'] += 1
-            self.funny_stats['time']['total_time_played'] += time_played
+            self.match_history['total_matches'] += 1
 
-            self.funny_stats['kills']['kda'][0] += player_stats['kills']
-            self.funny_stats['kills']['kda'][1] += player_stats['deaths']
-            self.funny_stats['kills']['kda'][2] += player_stats['assists']
-            self.funny_stats['kills']['first_blood'] += int(player_stats['firstBloodKill'])
-            self.funny_stats['kills']['double_kills'] += player_stats['doubleKills']
-            self.funny_stats['kills']['triple_kills'] += player_stats['tripleKills']
-            self.funny_stats['kills']['quadra_kills'] += player_stats['quadraKills']
-            self.funny_stats['kills']['penta_kills'] += player_stats['pentaKills']
+            # Fill template
+            template = self.funny_stats_template.copy()
 
-            self.funny_stats['vision']['pinks'] += player_stats['visionWardsBoughtInGame']
-            self.funny_stats['vision']['wards'] += player_stats['wardsPlaced']
-            self.funny_stats['vision']['vision_score'] += player_stats['visionScore']
+            template['match']['match_time'] = player_stats['timePlayed']
+            template['match']['match_id'] = match.id
+            template['match']['add_date'] = self.curr_date
 
-            self.funny_stats['monsters']['dragon_kills'] += player_stats['dragonKills']
-            self.funny_stats['monsters']['baron_kills'] += player_stats['baronKills']
-            self.funny_stats['monsters']['creep_kills'] += player_stats['totalMinionsKilled']
+            template['kills']['kda'][0] = player_stats['kills']
+            template['kills']['kda'][1] = player_stats['deaths']
+            template['kills']['kda'][2] = player_stats['assists']
+            template['kills']['first_blood'] = int(player_stats['firstBloodKill'])
+            template['kills']['double_kills'] = player_stats['doubleKills']
+            template['kills']['triple_kills'] = player_stats['tripleKills']
+            template['kills']['quadra_kills'] = player_stats['quadraKills']
+            template['kills']['penta_kills'] = player_stats['pentaKills']
 
-            self.funny_stats['objectives']['objectives_stolen'] += player_stats['objectivesStolen']
-            self.funny_stats['objectives']['first_tower_kill'] += int(player_stats['firstTowerKill'])
-            self.funny_stats['objectives']['tower_kills'] += player_stats['turretKills']
+            template['vision']['pinks'] = player_stats['visionWardsBoughtInGame']
+            template['vision']['wards'] = player_stats['wardsPlaced']
+            template['vision']['vision_score'] = player_stats['visionScore']
 
-            self.funny_stats['time']['time_cc_self'] += player_stats['totalTimeCCDealt']
-            self.funny_stats['time']['time_cc_other'] += player_stats['timeCCingOthers']
-            self.funny_stats['time']['time_spent_dead'] += player_stats['totalTimeSpentDead']
-            self.funny_stats['time']['time_spent_alive'] += (time_played - player_stats['totalTimeSpentDead'])
+            template['monsters']['dragon_kills'] = player_stats['dragonKills']
+            template['monsters']['baron_kills'] = player_stats['baronKills']
+            template['monsters']['creep_kills'] = player_stats['totalMinionsKilled']
 
-            self.funny_stats['gold'] += player_stats['goldEarned']
+            template['objectives']['objectives_stolen'] = player_stats['objectivesStolen']
+            template['objectives']['first_tower_kill'] = int(player_stats['firstTowerKill'])
+            template['objectives']['tower_kills'] = player_stats['turretKills']
 
-            self.funny_stats['pings']['missing'] += player_info['enemyMissingPings']
-            self.funny_stats['pings']['bait'] += player_info['baitPings']
+            template['time']['time_cc_self'] = player_stats['totalTimeCCDealt']
+            template['time']['time_cc_other'] = player_stats['timeCCingOthers']
+            template['time']['time_spent_dead'] = player_stats['totalTimeSpentDead']
+            template['time']['time_spent_alive'] = (
+                    player_stats['timePlayed'] - player_stats['totalTimeSpentDead'])
 
-            self.funny_stats['other']['skill_shots_dodged'] += player_challenges['skillshotsDodged']
+            template['gold'] = player_stats['goldEarned']
+
+            template['pings']['missing'] = player_info['enemyMissingPings']
+            template['pings']['bait'] = player_info['baitPings']
+
+            template['other']['skill_shots_dodged'] = player_challenges['skillshotsDodged']
+
+            # Add to funny stats list
+            self.funny_stats.append(template)
 
         # track funny stats changes per day
-        if self.funny_stats['difference']['date'] != self.curr_date:
+        if self.funny_stats_diff['date'] != self.curr_date:
             LOG.warning('setting funny stats for the day')
 
-            # set tracking to current date
-            temp_copy = self.funny_stats.copy()
-            del temp_copy['difference']
-
             # set values
-            self.funny_stats['difference']['date'] = self.curr_date
-            self.funny_stats['difference']['data'] = dict(temp_copy)
-
-            # def recursive_search_diff(f_control, f_updated, f_temp):
-            #     if type(f_control) == int:
-            #         print(f"{f_control} - {f_updated}")
-            #         return f_control - f_updated
-            #
-            #     for key in f_control:
-            #         if type(key) == int:
-            #             temp_list = []
-            #             for i, list_elem in enumerate(f_control):
-            #                 temp_list.append(recursive_search_diff(f_control[i], f_updated[i], f_temp))
-            #             return temp_list
-            #         else:
-            #             f_temp[key] = recursive_search_diff(f_control[key], f_updated[key], f_temp)
-            #
-            #     return f_temp
-            #
-            # # self.funny_stats_diff['data'] = recursive_search_diff(control_dict, self.funny_stats)
-            # test = {}
-            # recursive_search_diff(control_dict, self.funny_stats, test)
-            # pprint(test)
+            self.funny_stats_diff['date'] = self.curr_date
+            self.funny_stats_diff['data'] = match_id_diff
