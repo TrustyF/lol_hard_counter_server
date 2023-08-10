@@ -29,7 +29,7 @@ class Manager:
         self.load_players()
 
         # todo remove this
-        self.add_rank_to_history()
+        # self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:
