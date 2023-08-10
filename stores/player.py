@@ -165,13 +165,14 @@ class Player:
 
     # update functions
     def update_nearest_date(self):
+        LOG.warning('(update_nearest_date) - updating nearest date')
         for queue in self.ranked:
             queue_entry = self.ranked[queue]
 
             all_dates = list(queue_entry['rank_history'].keys())
 
             # Check if any dates exist
-            if len(all_dates) > 0:
+            if len(all_dates) > 1:
 
                 # remove today from possible picks
                 if self.curr_date in all_dates:
@@ -180,11 +181,12 @@ class Player:
                 all_dates = [datetime.strptime(x, DATE_FORMAT) for x in all_dates]
                 nearset_date = utils.nearest_date(all_dates, datetime.strptime(self.curr_date, DATE_FORMAT))
                 self.ranked[queue]['nearest_rank'] = [nearset_date, queue_entry['rank_history'][nearset_date]]
+                LOG.warning('(update_nearest_date) - set nearest date')
 
     # Cassio functions
     def update_current_rank(self):
         """Update the current ranked info for player"""
-        LOG.warning(f'updating rank for {self.username}')
+        LOG.warning(f'(update_current_rank) - updating rank for {self.username}')
 
         cass_entries = self.cass_summoner.league_entries
 
@@ -199,33 +201,30 @@ class Player:
             if 'tier' in values:
                 self.ranked[queue]['rank'] = utils.convert_to_rank_val(values)
                 self.ranked[queue]['winrate'] = [values['wins'], values['losses']]
-                LOG.warning(f'setting new current rank for {self.username} to {self.ranked[queue]["rank"]} in'
+                LOG.warning(f'(update_current_rank) - setting new current rank for'
+                            f' {self.username} to {self.ranked[queue]["rank"]} in'
                             f' {queue} with winrate {self.ranked[queue]["winrate"]}')
 
     def add_rank_to_history(self):
         """Add current rank info to rank history"""
-        LOG.warning(f'adding rank to history for {self.username}')
+        LOG.warning(f'(add_rank_to_history) - adding rank to history for {self.username}')
 
         # Refresh current rank
         self.update_current_rank()
 
         for queue in self.ranked:
-            LOG.warning(f'current queue {queue}')
+            LOG.warning(f'(add_rank_to_history) - current queue {queue}')
             queue_entry = self.ranked[queue]
-
-            # Skip if no dates exists prior
-            if len(queue_entry['rank_history']) < 1:
-                LOG.warning('no rank history')
-                continue
 
             # Skip if last rank is the same
             if queue_entry['rank'] == queue_entry['nearest_rank'][1]:
-                LOG.warning('rank unchanged')
+                LOG.warning('(add_rank_to_history) - rank unchanged')
                 continue
 
             # Update
-            LOG.info(f'updated new rank to {self.ranked[queue]["rank"]}')
+            LOG.info(f'(add_rank_to_history) - updated new rank to {self.ranked[queue]["rank"]}')
             self.ranked[queue]['rank_history'][self.curr_date] = self.ranked[queue]['rank']
+            self.update_nearest_date()
 
     def add_funny_to_stats(self):
 
@@ -234,7 +233,7 @@ class Player:
             self.match_history['match_ids'].append(f_id)
 
         # adding funny stats
-        match_limit = 3
+        match_limit = 40
         match_id_diff = []
 
         for i, match in enumerate(self.cass_summoner.match_history):
@@ -279,7 +278,7 @@ class Player:
             self.match_history['total_matches'] += 1
 
             # Fill template
-            template = self.funny_stats_template.copy()
+            template = copy.deepcopy(self.funny_stats_template)
 
             template['match']['match_time'] = player_stats['timePlayed']
             template['match']['match_id'] = match.id
