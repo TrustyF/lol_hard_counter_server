@@ -323,10 +323,10 @@
       "username": "Ckwaceupoulet",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2252,
+          "rank": 2251,
           "winrate": [
-            20,
-            24
+            22,
+            26
           ],
           "rank_history": {
             "24/07/2023": 2346,
@@ -338,7 +338,7 @@
             "05/08/2023": 2351,
             "07/08/2023": 2370,
             "08/08/2023": 2276,
-            "09/08/2023": 2252
+            "09/08/2023": 2251
           },
           "nearest_rank": [
             "08/08/2023",
@@ -525,53 +525,55 @@
         6542477841,
         6544180328,
         6544131575,
-        6544602023,
+        6544762801,
         6544690386,
-        6544661197
+        6544661197,
+        6544602023,
+        6544819659
       ],
       "funny_stats": {
-        "total_matches": 108,
+        "total_matches": 110,
         "kills": {
           "kda": [
-            465,
-            461,
-            845
+            473,
+            472,
+            862
           ],
-          "first_blood": 2,
+          "first_blood": 3,
           "penta_kills": 0,
           "quadra_kills": 0,
           "triple_kills": 6,
-          "double_kills": 41
+          "double_kills": 42
         },
         "vision": {
-          "pinks": 111,
-          "wards": 959,
-          "vision_score": 1949
+          "pinks": 115,
+          "wards": 984,
+          "vision_score": 1995
         },
         "monsters": {
-          "dragon_kills": 12,
+          "dragon_kills": 13,
           "baron_kills": 1,
-          "creep_kills": 18741
+          "creep_kills": 19213
         },
         "objectives": {
           "objectives_stolen": 2,
           "first_tower_kill": 10,
-          "tower_kills": 149
+          "tower_kills": 152
         },
-        "gold": 1190654,
+        "gold": 1216750,
         "time": {
-          "total_time_played": 183769,
-          "time_spent_dead": 14726,
-          "time_spent_alive": 169043,
-          "time_cc_self": 40800,
-          "time_cc_other": 2892
+          "total_time_played": 187844,
+          "time_spent_dead": 15093,
+          "time_spent_alive": 172751,
+          "time_cc_self": 41981,
+          "time_cc_other": 2960
         },
         "pings": {
-          "missing": 299,
+          "missing": 312,
           "bait": 10
         },
         "other": {
-          "skill_shots_dodged": 3090
+          "skill_shots_dodged": 3235
         },
         "difference": {
           "date": "09/08/2023",
