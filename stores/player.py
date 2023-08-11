@@ -1,3 +1,4 @@
+import json
 from pprint import pprint
 import cassiopeia as cass
 from tinydb import Query
@@ -42,60 +43,18 @@ class Player:
                 "nearest_rank": ["", 0],
             },
         }
-        self.funny_stats = []
-        self.funny_stats_diff = {
-            "date": "",
-            "data": [],
-        }
         self.match_history = {
-            "total_matches": 0,
-            "match_ids": []
+            'saved_ids': [],
+            'matches': []
         }
 
-        # Data format
-        self.funny_stats_template = {
-            'match': {
-                'match_time': 0,
-                'match_id': 0,
-                'add_date': ""
-            },
-            'kills': {
-                'kda': [0, 0, 0],
-                'first_blood': 0,
-                'penta_kills': 0,
-                'quadra_kills': 0,
-                'triple_kills': 0,
-                'double_kills': 0,
-            },
-            'vision': {
-                'pinks': 0,
-                'wards': 0,
-                'vision_score': 0,
-            },
-            'monsters': {
-                'dragon_kills': 0,
-                'baron_kills': 0,
-                'creep_kills': 0,
-            },
-            'objectives': {
-                'objectives_stolen': 0,
-                'first_tower_kill': 0,
-                'tower_kills': 0,
-            },
-            'gold': 0,
-            'time': {
-                'time_spent_dead': 0,
-                'time_spent_alive': 0,
-                'time_cc_self': 0,
-                'time_cc_other': 0,
-            },
-            'pings': {
-                'missing': 0,
-                'bait': 0,
-            },
-            'other': {
-                'skill_shots_dodged': 0
-            },
+        # data format
+        self.match_template = {
+            "player_stats": {},
+            "match_ranks": {
+                "red": [],
+                "blue": [],
+            }
         }
 
         # dates
@@ -139,13 +98,6 @@ class Player:
 
                 self.ranked = data['ranked']
 
-            # deserialize funny stats
-            if 'funny_stats' in data:
-                self.funny_stats = data['funny_stats']
-
-            if 'funny_stats_diff' in data:
-                self.funny_stats_diff = data['funny_stats_diff']
-
             # deserialize match hist
             if 'match_history' in data:
                 self.match_history = data['match_history']
@@ -159,8 +111,6 @@ class Player:
             'username': self.username,
             'ranked': self.ranked,
             'match_history': self.match_history,
-            'funny_stats': self.funny_stats,
-            'funny_stats_diff': self.funny_stats_diff,
         }
 
     # update functions
@@ -226,25 +176,24 @@ class Player:
             self.ranked[queue]['rank_history'][self.curr_date] = self.ranked[queue]['rank']
             self.update_nearest_date()
 
-    def add_funny_to_stats(self):
+    def add_match_to_history(self):
 
-        def add_to_hist(f_id):
+        def add_to_id_hist(f_id):
             LOG.warning(f'id {f_id} not found adding')
-            self.match_history['match_ids'].append(f_id)
+            self.match_history['saved_ids'].append(f_id)
 
-        # adding funny stats
-        match_limit = 40
-        match_id_diff = []
+        # adding to match hist
+        match_limit = 2
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
-            # Limit to last 100 games
+            # Limit to last n games
             if i >= match_limit:
                 LOG.warning(f'Hit 100 match limit, stopping')
                 break
 
-            # # skip if already seen
-            if match.id in self.match_history['match_ids']:
+            # skip if already seen
+            if match.id in self.match_history['saved_ids']:
                 LOG.warning('Match id found, skipping')
                 continue
 
@@ -253,78 +202,52 @@ class Player:
                 # skip if mode is not classic
                 if match.queue.name not in ['ranked_flex_fives', 'normal_draft_fives', 'ranked_solo_fives']:
                     LOG.warning('match not classic')
-                    add_to_hist(match.id)
+                    add_to_id_hist(match.id)
                     match_limit += 1
                     continue
             except ValueError:
                 LOG.warning('match returned an error')
-                add_to_hist(match.id)
+                add_to_id_hist(match.id)
                 match_limit += 1
                 continue
 
             # add to hist if found
-            add_to_hist(match.id)
-            match_id_diff.append(match.id)
+            add_to_id_hist(match.id)
 
             # get current player stats from participants
-            LOG.warning(f'{match.id} adding to funny stats')
+            LOG.warning(f'{match.id} adding to match history')
 
+            match_template = copy.deepcopy(self.match_template)
             player_index = [x.summoner.name for x in match.participants].index(self.username)
             player_info = match.participants[player_index].to_dict()
-            player_stats = player_info['stats']
-            player_challenges = player_info['challenges']
 
-            # assign to funny stats
-            self.match_history['total_matches'] += 1
+            # adding player stats
+            match_template['player_stats'] = player_info
+            # fix weirdness
+            del match_template['player_stats']['side']
 
-            # Fill template
-            template = copy.deepcopy(self.funny_stats_template)
+            # calc match ranks
+            for player in match.participants:
 
-            template['match']['match_time'] = player_stats['timePlayed']
-            template['match']['match_id'] = match.id
-            template['match']['add_date'] = self.curr_date
+                participant_stats = {
+                    'username': player.summoner.name,
+                    'rank': 0,
+                    'winrate': [0, 0]
+                }
+                for entry in player.summoner.league_entries:
+                    values = entry.to_dict()
+                    queue = values['queue']
 
-            template['kills']['kda'][0] = player_stats['kills']
-            template['kills']['kda'][1] = player_stats['deaths']
-            template['kills']['kda'][2] = player_stats['assists']
-            template['kills']['first_blood'] = int(player_stats['firstBloodKill'])
-            template['kills']['double_kills'] = player_stats['doubleKills']
-            template['kills']['triple_kills'] = player_stats['tripleKills']
-            template['kills']['quadra_kills'] = player_stats['quadraKills']
-            template['kills']['penta_kills'] = player_stats['pentaKills']
+                    if queue not in self.ranked:
+                        continue
 
-            template['vision']['pinks'] = player_stats['visionWardsBoughtInGame']
-            template['vision']['wards'] = player_stats['wardsPlaced']
-            template['vision']['vision_score'] = player_stats['visionScore']
+                    # check if any rank exists
+                    if 'tier' in values:
+                        participant_stats['rank'] = utils.convert_to_rank_val(values)
+                        participant_stats['winrate'] = [values['wins'], values['losses']]
 
-            template['monsters']['dragon_kills'] = player_stats['dragonKills']
-            template['monsters']['baron_kills'] = player_stats['baronKills']
-            template['monsters']['creep_kills'] = player_stats['totalMinionsKilled']
+                # add player to match
+                match_template["match_ranks"][player.side.name].append(participant_stats)
 
-            template['objectives']['objectives_stolen'] = player_stats['objectivesStolen']
-            template['objectives']['first_tower_kill'] = int(player_stats['firstTowerKill'])
-            template['objectives']['tower_kills'] = player_stats['turretKills']
-
-            template['time']['time_cc_self'] = player_stats['totalTimeCCDealt']
-            template['time']['time_cc_other'] = player_stats['timeCCingOthers']
-            template['time']['time_spent_dead'] = player_stats['totalTimeSpentDead']
-            template['time']['time_spent_alive'] = (
-                    player_stats['timePlayed'] - player_stats['totalTimeSpentDead'])
-
-            template['gold'] = player_stats['goldEarned']
-
-            template['pings']['missing'] = player_info['enemyMissingPings']
-            template['pings']['bait'] = player_info['baitPings']
-
-            template['other']['skill_shots_dodged'] = player_challenges['skillshotsDodged']
-
-            # Add to funny stats list
-            self.funny_stats.append(template)
-
-        # track funny stats changes per day
-        if self.funny_stats_diff['date'] != self.curr_date:
-            LOG.warning('setting funny stats for the day')
-
-            # set values
-            self.funny_stats_diff['date'] = self.curr_date
-            self.funny_stats_diff['data'] = match_id_diff
+            # Add match to list
+            self.match_history['matches'].append(match_template)

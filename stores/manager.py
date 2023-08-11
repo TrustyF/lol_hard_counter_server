@@ -18,9 +18,9 @@ class Manager:
         self.db_path = os.path.join(BASE_PATH, f'../database/players_db.json')
         self.db = TinyDB(self.db_path, indent=2)
 
-        self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
-                          'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
-        # self.usernames = ['TURBO OLINGO', 'TURBO Trusty']
+        # self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
+        #                   'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
+        self.usernames = ['TURBO Trusty']
 
         # Prep players
         self.players = []
@@ -29,7 +29,7 @@ class Manager:
         self.load_players()
 
         # todo remove this
-        # self.add_rank_to_history()
+        self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:
@@ -60,7 +60,7 @@ class Manager:
     def add_rank_to_history(self):
         for player in self.players:
             player.add_rank_to_history()
-            player.add_funny_to_stats()
+            player.add_match_to_history()
 
         self.save_players()
 
