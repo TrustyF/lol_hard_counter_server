@@ -4,31 +4,18 @@ import cassiopeia as cass
 from tinydb import Query
 from datetime import datetime, date, timedelta
 import os
-from dotenv import load_dotenv
 import copy
 
 from stores.constants import LOG, DATE_FORMAT
 import stores.utils as utils
 
-# cassio settings
-env_path = os.path.join(os.path.dirname(__file__), '../.env')
-load_dotenv(env_path)
-RIOT_KEY = os.environ.get("RIOT_API_KEY")
-cass.set_riot_api_key(RIOT_KEY)
-cass.apply_settings({
-    "logging": {
-        "print_calls": True,
-        "print_riot_api_key": False,
-        "default": "INFO",
-        "core": "INFO"
-    }
-})
-
 
 class Player:
-    def __init__(self, username):
+    def __init__(self, username, database):
         # Inherent values
         self.username = username
+        self.database = database
+
         self.ranked = {
             "RANKED_SOLO_5x5": {
                 "rank": 0,
@@ -46,15 +33,6 @@ class Player:
         self.match_history = {
             'saved_ids': [],
             'matches': []
-        }
-
-        # data format
-        self.match_template = {
-            "player_stats": {},
-            "match_ranks": {
-                "red": [],
-                "blue": [],
-            }
         }
 
         # dates
@@ -113,6 +91,16 @@ class Player:
             'match_history': self.match_history,
         }
 
+    # db functions
+    def save_current_player(self):
+        LOG.warning(f'saving {self.username} to DB')
+        user_query = Query().username == self.username
+
+        if self.database.get(user_query):
+            self.database.update(self.save_to_json(), user_query)
+        else:
+            self.database.insert(self.save_to_json())
+
     # update functions
     def update_nearest_date(self):
         # LOG.warning('(update_nearest_date) - updating nearest date')
@@ -155,6 +143,8 @@ class Player:
                             f' {self.username} to {self.ranked[queue]["rank"]} in'
                             f' {queue} with winrate {self.ranked[queue]["winrate"]}')
 
+        self.save_current_player()
+
     def add_rank_to_history(self):
         """Add current rank info to rank history"""
         LOG.warning(f'(add_rank_to_history) - adding rank to history for {self.username}')
@@ -183,7 +173,7 @@ class Player:
             self.match_history['saved_ids'].append(f_id)
 
         # adding to match hist
-        match_limit = 2
+        match_limit = 60
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
@@ -211,13 +201,30 @@ class Player:
                 match_limit += 1
                 continue
 
+            # data format
+            match_template = {
+                "match_info": {
+                    # "type": match.type.name,
+                    # "game_type": match.game_type.name,
+                    "queue": match.queue.name,
+                    "id": match.id,
+                    "duration": match.duration.seconds,
+                },
+                "player_stats": {},
+                "match_ranks": {
+                    "red": [],
+                    "blue": [],
+                },
+            }
+
             # add to hist if found
             add_to_id_hist(match.id)
+
+            # pprint(dir(match))
 
             # get current player stats from participants
             LOG.warning(f'{match.id} adding to match history')
 
-            match_template = copy.deepcopy(self.match_template)
             player_index = [x.summoner.name for x in match.participants].index(self.username)
             player_info = match.participants[player_index].to_dict()
 
@@ -251,3 +258,6 @@ class Player:
 
             # Add match to list
             self.match_history['matches'].append(match_template)
+
+            # save to db
+            self.save_current_player()

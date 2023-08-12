@@ -1,4 +1,5 @@
-import cassiopeia
+import cassiopeia as cass
+from dotenv import load_dotenv
 from tinydb import TinyDB, Query
 import os
 from pprint import pprint
@@ -12,15 +13,24 @@ from stores.constants import DATE_FORMAT, LOG, BASE_PATH
 import stores.utils
 from stores.player import Player
 
+# cassio settings
+env_path = os.path.join(os.path.dirname(__file__), '../.env')
+load_dotenv(env_path)
+RIOT_KEY = os.environ.get("RIOT_API_KEY")
+
+settings = cass.get_default_config()
+settings['logging']['print_calls'] = False
+cass.apply_settings(settings)
+
 
 class Manager:
     def __init__(self):
         self.db_path = os.path.join(BASE_PATH, f'../database/players_db.json')
         self.db = TinyDB(self.db_path, indent=2)
 
-        # self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
-        #                   'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
-        self.usernames = ['TURBO Trusty']
+        self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
+                          'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
+        # self.usernames = ['TURBO Trusty', 'Raz0xx']
 
         # Prep players
         self.players = []
@@ -29,14 +39,14 @@ class Manager:
         self.load_players()
 
         # todo remove this
-        self.add_rank_to_history()
+        # self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:
             username_query = Query().username == user
             db_entry = self.db.get(username_query)
 
-            object = Player(user)
+            object = Player(user, self.db)
             object.load_from_json(db_entry)
 
             self.players.append(object)
@@ -61,8 +71,6 @@ class Manager:
         for player in self.players:
             player.add_rank_to_history()
             player.add_match_to_history()
-
-        self.save_players()
 
     def get_profile_icon(self, player):
         index = self.usernames.index(player)
