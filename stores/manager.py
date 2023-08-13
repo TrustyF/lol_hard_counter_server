@@ -51,7 +51,8 @@ class Manager:
 
             self.players.append(object)
 
-        self.save_players()
+        # todo removed for performance but might cause issues
+        # self.save_players()
 
     def all(self):
         return [x.save_to_json() for x in self.players]
