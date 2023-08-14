@@ -80,9 +80,6 @@ class Player:
             if 'match_history' in data:
                 self.match_history = data['match_history']
 
-        # updates
-        self.update_nearest_date()
-
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
@@ -142,6 +139,7 @@ class Player:
                 LOG.warning(f'(update_current_rank) - setting new current rank for'
                             f' {self.username} to {self.ranked[queue]["rank"]} in'
                             f' {queue} with winrate {self.ranked[queue]["winrate"]}')
+                self.update_nearest_date()
 
         self.save_current_player()
 
