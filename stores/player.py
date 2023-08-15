@@ -30,9 +30,26 @@ class Player:
                 "nearest_rank": ["", 0],
             },
         }
-        self.match_history = {
-            'saved_ids': [],
-            'matches': []
+        self.match_history = []
+        self.match_ids = []
+
+        # data format
+        self.match_template = {
+            "match_info": {},
+            "player_stats": {
+                'kills': 0,
+                'deaths': 0,
+                'assists': 0,
+                'goldPerMinute': 0,
+                'firstBloodKill': 0,
+                'totalAllyJungleMinionsKilled': 0,
+                'totalEnemyJungleMinionsKilled': 0,
+                'totalMinionsKilled': 0,
+            },
+            "match_ranks": {
+                "red": [],
+                "blue": [],
+            },
         }
 
         # dates
@@ -80,12 +97,17 @@ class Player:
             if 'match_history' in data:
                 self.match_history = data['match_history']
 
+            # deserialize match ids
+            if 'match_ids' in data:
+                self.match_ids = data['match_ids']
+
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
             'match_history': self.match_history,
+            'match_ids': self.match_ids,
         }
 
     # db functions
@@ -168,20 +190,20 @@ class Player:
 
         def add_to_id_hist(f_id):
             LOG.warning(f'id {f_id} not found adding')
-            self.match_history['saved_ids'].append(f_id)
+            self.match_ids.append(f_id)
 
         # adding to match hist
-        match_limit = 60
+        match_limit = 1
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
             # Limit to last n games
             if i >= match_limit:
-                LOG.warning(f'Hit 100 match limit, stopping')
+                LOG.warning(f'Hit match limit, stopping')
                 break
 
             # skip if already seen
-            if match.id in self.match_history['saved_ids']:
+            if match.id in self.match_ids:
                 LOG.warning('Match id found, skipping')
                 continue
 
@@ -199,32 +221,15 @@ class Player:
                 match_limit += 1
                 continue
 
-            # data format
-            match_template = {
-                "match_info": {
-                    # "type": match.type.name,
-                    # "game_type": match.game_type.name,
-                    "queue": match.queue.name,
-                    "id": match.id,
-                    "duration": match.duration.seconds,
-                },
-                "player_stats": {},
-                "match_ranks": {
-                    "red": [],
-                    "blue": [],
-                },
-            }
-
             # add to hist if found
             add_to_id_hist(match.id)
 
-            # pprint(dir(match))
-
             # get current player stats from participants
             LOG.warning(f'{match.id} adding to match history')
-
             player_index = [x.summoner.name for x in match.participants].index(self.username)
             player_info = match.participants[player_index].to_dict()
+
+            match_template = copy.deepcopy(self.match_template)
 
             # adding player stats
             match_template['player_stats'] = player_info
@@ -255,7 +260,7 @@ class Player:
                 match_template["match_ranks"][player.side.name].append(participant_stats)
 
             # Add match to list
-            self.match_history['matches'].append(match_template)
+            self.match_history.append(match_template)
 
             # save to db
             self.save_current_player()

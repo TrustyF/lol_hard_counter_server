@@ -12,6 +12,7 @@ from PIL import Image
 from stores.constants import DATE_FORMAT, LOG, BASE_PATH
 import stores.utils
 from stores.player import Player
+from perf import Profiler
 
 # cassio settings
 env_path = os.path.join(os.path.dirname(__file__), '../.env')
@@ -28,9 +29,9 @@ class Manager:
         self.db_path = os.path.join(BASE_PATH, f'../database/players_db.json')
         self.db = TinyDB(self.db_path, indent=2)
 
-        self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
-                          'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
-        # self.usernames = ['FRANZIZKUZ', 'Raz0xx']
+        # self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
+        #                   'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
+        self.usernames = ['TURBO Trusty']
 
         # Prep players
         self.players = []
@@ -39,7 +40,7 @@ class Manager:
         self.load_players()
 
         # todo remove this
-        # self.add_rank_to_history()
+        self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:
