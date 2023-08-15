@@ -35,7 +35,20 @@ class Player:
 
         # data format
         self.match_template = {
-            "match_info": {},
+            "match_info": {
+                "match_win": True,
+                "player_side": None,
+                "sides": {
+                    "red": {
+                        "isWinner": None,
+                        "objectives": {},
+                    },
+                    "blue": {
+                        "isWinner": None,
+                        "objectives": {},
+                    },
+                }
+            },
             "player_stats": {
                 'kills': 0,
                 'deaths': 0,
@@ -45,6 +58,40 @@ class Player:
                 'totalAllyJungleMinionsKilled': 0,
                 'totalEnemyJungleMinionsKilled': 0,
                 'totalMinionsKilled': 0,
+                'dodgeSkillShotsSmallWindow': 0,
+                'maxCsAdvantageOnLaneOpponent': 0,
+                'maxLevelLeadLaneOpponent': 0,
+                'visionScoreAdvantageLaneOpponent': 0,
+                'totalDamageTaken': 0,
+                'totalDamageDealt': 0,
+                'totalDamageDealtToChampions': 0,
+                'teamDamagePercentage': 0,
+                'damageSelfMitigated': 0,
+                'totalHeal': 0,
+                'totalHealsOnTeammates': 0,
+                'totalDamageShieldedOnTeammates': 0,
+                'timeAlive': 0,
+                'totalTimeSpentDead': 0,
+                'totalTimeCCDealt': 0,
+                'timeCCingOthers': 0,
+                'turretTakedowns': 0,
+                'damageDealtToTurrets': 0,
+                'takedownOnFirstTurret': 0,
+                'objectivesStolen': 0,
+                'epicMonsterStolenWithoutSmite': 0,
+                'teamRiftHeraldKills': 0,
+                'dragonTakedowns': 0,
+                'teamBaronKills': 0,
+                'teamElderDragonKills': 0,
+                'detectorWardsPlaced': 0,
+                'wardsPlaced': 0,
+                'visionScore': 0,
+                'doubleKills': 0,
+                'tripleKills': 0,
+                'quadraKills': 0,
+                'pentaKills': 0,
+                'enemyMissingPings': 0,
+                'baitPings': 0,
             },
             "match_ranks": {
                 "red": [],
@@ -192,8 +239,15 @@ class Player:
             LOG.warning(f'id {f_id} not found adding')
             self.match_ids.append(f_id)
 
+        def recursive_fill_template_from_dict(data: dict, template: dict):
+            for f_key in data:
+                if f_key in template:
+                    template[f_key] = data[f_key]
+                if isinstance(data[f_key], dict):
+                    recursive_fill_template_from_dict(data[f_key], template)
+
         # adding to match hist
-        match_limit = 1
+        match_limit = 2
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
@@ -231,30 +285,42 @@ class Player:
 
             match_template = copy.deepcopy(self.match_template)
 
-            # adding player stats
-            match_template['player_stats'] = player_info
-            # fix weirdness
-            del match_template['player_stats']['side']
+            # map player match stats
+            recursive_fill_template_from_dict(player_info, match_template['player_stats'])
+
+            # add match info for red and blue side
+            for f_side in match.teams:
+                side_info = f_side.to_dict()
+                recursive_fill_template_from_dict(side_info,
+                                                  match_template['match_info']['sides'][f_side.side.name])
+
+                # Set current player extra details
+                if self.username in [x['summonerName'] for x in side_info['participants']]:
+                    match_template['match_info']['match_win'] = side_info['isWinner']
+                    match_template['match_info']['player_side'] = f_side.side.name
 
             # calc match ranks
             for player in match.participants:
 
+                player_summ = player.summoner
+
                 participant_stats = {
                     'username': player.summoner.name,
                     'rank': 0,
-                    'winrate': [0, 0]
+                    'winrate': [0, 0],
+                    'account_lvl': player_summ.level
                 }
-                for entry in player.summoner.league_entries:
+
+                # get solo q rank
+                for entry in player_summ.league_entries:
                     values = entry.to_dict()
                     queue = values['queue']
 
-                    if queue not in self.ranked:
-                        continue
-
-                    # check if any rank exists
-                    if 'tier' in values:
-                        participant_stats['rank'] = utils.convert_to_rank_val(values)
-                        participant_stats['winrate'] = [values['wins'], values['losses']]
+                    if queue == 'RANKED_SOLO_5x5':
+                        # check if any rank exists
+                        if 'tier' in values:
+                            participant_stats['rank'] = utils.convert_to_rank_val(values)
+                            participant_stats['winrate'] = [values['wins'], values['losses']]
 
                 # add player to match
                 match_template["match_ranks"][player.side.name].append(participant_stats)
