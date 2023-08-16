@@ -262,6 +262,8 @@
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "blue",
+            "duration": 929,
+            "id": 6553412337,
             "sides": {
               "red": {
                 "isWinner": false,
@@ -407,10 +409,10 @@
               },
               {
                 "username": "B\u00f8wnz",
-                "rank": 2100,
+                "rank": 2075,
                 "winrate": [
                   23,
-                  20
+                  21
                 ],
                 "account_lvl": 398
               }
@@ -469,6 +471,8 @@
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "red",
+            "duration": 1922,
+            "id": 6553354963,
             "sides": {
               "red": {
                 "isWinner": true,
@@ -676,6 +680,8 @@
             "queue": "ranked_solo_fives",
             "match_win": false,
             "player_side": "red",
+            "duration": 2179,
+            "id": 6553252791,
             "sides": {
               "red": {
                 "isWinner": false,
@@ -883,6 +889,8 @@
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "red",
+            "duration": 1390,
+            "id": 6552952350,
             "sides": {
               "red": {
                 "isWinner": true,
@@ -1090,6 +1098,8 @@
             "queue": "ranked_solo_fives",
             "match_win": false,
             "player_side": "red",
+            "duration": 1666,
+            "id": 6552910577,
             "sides": {
               "red": {
                 "isWinner": false,

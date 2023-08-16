@@ -39,6 +39,8 @@ class Player:
                 "queue": None,
                 "match_win": True,
                 "player_side": None,
+                "duration": None,
+                "id": 0,
                 "sides": {
                     "red": {
                         "isWinner": None,
@@ -299,7 +301,13 @@ class Player:
                 if self.username in [x['summonerName'] for x in side_info['participants']]:
                     match_template['match_info']['match_win'] = side_info['isWinner']
                     match_template['match_info']['player_side'] = f_side.side.name
-                    match_template['match_info']['queue'] = match.queue.name
+
+            # add match info general
+            recursive_fill_template_from_dict(match.to_dict(),
+                                              match_template['match_info'])
+
+            match_template['match_info']['queue'] = match.queue.name
+            match_template['match_info']['duration'] = match.duration.seconds
 
             # calc match ranks
             for player in match.participants:
