@@ -36,6 +36,7 @@ class Player:
         # data format
         self.match_template = {
             "match_info": {
+                "queue": None,
                 "match_win": True,
                 "player_side": None,
                 "sides": {
@@ -247,7 +248,7 @@ class Player:
                     recursive_fill_template_from_dict(data[f_key], template)
 
         # adding to match hist
-        match_limit = 2
+        match_limit = 5
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
@@ -298,18 +299,21 @@ class Player:
                 if self.username in [x['summonerName'] for x in side_info['participants']]:
                     match_template['match_info']['match_win'] = side_info['isWinner']
                     match_template['match_info']['player_side'] = f_side.side.name
+                    match_template['match_info']['queue'] = match.queue.name
 
             # calc match ranks
             for player in match.participants:
 
-                player_summ = player.summoner
-
                 participant_stats = {
-                    'username': player.summoner.name,
+                    'username': 0,
                     'rank': 0,
                     'winrate': [0, 0],
-                    'account_lvl': player_summ.level
+                    'account_lvl': 0
                 }
+
+                player_summ = player.summoner
+                participant_stats['username'] = player_summ.name
+                participant_stats['account_lvl'] = player_summ.level
 
                 # get solo q rank
                 for entry in player_summ.league_entries:
