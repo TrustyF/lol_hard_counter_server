@@ -31,7 +31,7 @@ class Manager:
 
         # self.usernames = ['TURBO Trusty', 'Ckwaceupoulet', 'TURBO OLINGO', 'ATM Kryder', 'Raz0xx', 'FRANZIZKUZ',
         #                   'TheRedAquaman', 'TURBO ALUCO', 'Grandoullf', 'TURBO BERINGEI', 'Kertor']
-        self.usernames = ['FRANZIZKUZ']
+        self.usernames = ['TURBO Trusty', 'FRANZIZKUZ']
 
         # Prep players
         self.players = []
@@ -40,7 +40,7 @@ class Manager:
         self.load_players()
 
         # todo remove this
-        # self.add_rank_to_history()
+        self.add_rank_to_history()
 
     def load_players(self):
         for user in self.usernames:

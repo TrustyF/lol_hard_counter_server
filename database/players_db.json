@@ -34,7 +34,1076 @@
             2306
           ]
         }
-      }
+      },
+      "match_history": [
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "normal_draft_fives",
+            "match_win": false,
+            "player_side": "red",
+            "duration": 1572,
+            "creation": "14/08/2023",
+            "id": 6551185254,
+            "sides": {
+              "red": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 18
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 2
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 31
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 4
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 9
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 5,
+            "deaths": 5,
+            "assists": 5,
+            "goldPerMinute": 405.37255414633745,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 159,
+            "dodgeSkillShotsSmallWindow": 8,
+            "maxCsAdvantageOnLaneOpponent": 1,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": 0.6526404619216919,
+            "totalDamageTaken": 16728,
+            "totalDamageDealt": 105301,
+            "totalDamageDealtToChampions": 16708,
+            "teamDamagePercentage": 0.28068624331502223,
+            "damageSelfMitigated": 10403,
+            "totalHeal": 1449,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 132,
+            "totalTimeCCDealt": 0,
+            "timeCCingOthers": 0,
+            "turretTakedowns": 1,
+            "damageDealtToTurrets": 1275,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 0,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 1,
+            "wardsPlaced": 3,
+            "visionScore": 15,
+            "doubleKills": 1,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 3,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "dreyjey",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 398
+              },
+              {
+                "username": "FRANZIZKUZ",
+                "rank": 2155,
+                "winrate": [
+                  44,
+                  30
+                ],
+                "account_lvl": 337
+              },
+              {
+                "username": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 521
+              },
+              {
+                "username": "StrongKLED",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 28
+              },
+              {
+                "username": "4thebeat",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 281
+              }
+            ],
+            "blue": [
+              {
+                "username": "Mercurry",
+                "rank": 1825,
+                "winrate": [
+                  24,
+                  16
+                ],
+                "account_lvl": 506
+              },
+              {
+                "username": "un ricard et toi",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 213
+              },
+              {
+                "username": "NessUwU",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 333
+              },
+              {
+                "username": "IamEnix",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 293
+              },
+              {
+                "username": "\u0397\u03b1\u03ba\u03b1",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 242
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "normal_draft_fives",
+            "match_win": false,
+            "player_side": "red",
+            "duration": 1141,
+            "creation": "11/08/2023",
+            "id": 6547546547,
+            "sides": {
+              "red": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 7
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 0
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 20
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 4
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 2,
+            "deaths": 5,
+            "assists": 0,
+            "goldPerMinute": 325.74851285775304,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 121,
+            "dodgeSkillShotsSmallWindow": 13,
+            "maxCsAdvantageOnLaneOpponent": 9,
+            "maxLevelLeadLaneOpponent": 0,
+            "visionScoreAdvantageLaneOpponent": -0.5077463388442993,
+            "totalDamageTaken": 11491,
+            "totalDamageDealt": 59688,
+            "totalDamageDealtToChampions": 4910,
+            "teamDamagePercentage": 0.17263478023572507,
+            "damageSelfMitigated": 5894,
+            "totalHeal": 791,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 143,
+            "totalTimeCCDealt": 20,
+            "timeCCingOthers": 0,
+            "turretTakedowns": 0,
+            "damageDealtToTurrets": 0,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 0,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 0,
+            "wardsPlaced": 6,
+            "visionScore": 9,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 6,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "SnipunK",
+                "rank": 1628,
+                "winrate": [
+                  13,
+                  12
+                ],
+                "account_lvl": 533
+              },
+              {
+                "username": "FRANZIZKUZ",
+                "rank": 2155,
+                "winrate": [
+                  44,
+                  30
+                ],
+                "account_lvl": 337
+              },
+              {
+                "username": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 521
+              },
+              {
+                "username": "TURBO OLINGO",
+                "rank": 1478,
+                "winrate": [
+                  6,
+                  4
+                ],
+                "account_lvl": 479
+              },
+              {
+                "username": "Rat4TWITCHplayer",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 70
+              }
+            ],
+            "blue": [
+              {
+                "username": "Burguero",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 141
+              },
+              {
+                "username": "SHINIGAMlX ",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 665
+              },
+              {
+                "username": "Lasody",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 234
+              },
+              {
+                "username": "The Alpha Poro",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 703
+              },
+              {
+                "username": "Darkchelous",
+                "rank": 1779,
+                "winrate": [
+                  8,
+                  3
+                ],
+                "account_lvl": 474
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "normal_draft_fives",
+            "match_win": false,
+            "player_side": "red",
+            "duration": 2360,
+            "creation": "11/08/2023",
+            "id": 6547451210,
+            "sides": {
+              "red": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 35
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 6
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 47
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 4
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 11
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 10,
+            "deaths": 11,
+            "assists": 13,
+            "goldPerMinute": 306.92692908548315,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 41,
+            "dodgeSkillShotsSmallWindow": 0,
+            "maxCsAdvantageOnLaneOpponent": 2,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": 4.078299045562744,
+            "totalDamageTaken": 34951,
+            "totalDamageDealt": 43605,
+            "totalDamageDealtToChampions": 20275,
+            "teamDamagePercentage": 0.12597275111882192,
+            "damageSelfMitigated": 20958,
+            "totalHeal": 6305,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 414,
+            "totalTimeCCDealt": 162,
+            "timeCCingOthers": 56,
+            "turretTakedowns": 0,
+            "damageDealtToTurrets": 818,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 2,
+            "dragonTakedowns": 2,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 4,
+            "wardsPlaced": 53,
+            "visionScore": 115,
+            "doubleKills": 1,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 3,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "Malluttelija",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 337
+              },
+              {
+                "username": "FRANZIZKUZ",
+                "rank": 2155,
+                "winrate": [
+                  44,
+                  30
+                ],
+                "account_lvl": 337
+              },
+              {
+                "username": "kittenIover69",
+                "rank": 2400,
+                "winrate": [
+                  11,
+                  14
+                ],
+                "account_lvl": 50
+              },
+              {
+                "username": "H4Rip",
+                "rank": 1581,
+                "winrate": [
+                  18,
+                  8
+                ],
+                "account_lvl": 623
+              },
+              {
+                "username": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 521
+              }
+            ],
+            "blue": [
+              {
+                "username": "DNN Palahniuk",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 37
+              },
+              {
+                "username": "Ribban420",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 444
+              },
+              {
+                "username": "Hagg\u00e9",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 354
+              },
+              {
+                "username": "Tjack Lovis",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 197
+              },
+              {
+                "username": "NJW",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 338
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "normal_draft_fives",
+            "match_win": false,
+            "player_side": "red",
+            "duration": 572,
+            "creation": "11/08/2023",
+            "id": 6546522398,
+            "sides": {
+              "red": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 6
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 0
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 12
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 0
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 1,
+            "deaths": 1,
+            "assists": 1,
+            "goldPerMinute": 333.1036158288794,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 53,
+            "dodgeSkillShotsSmallWindow": 0,
+            "maxCsAdvantageOnLaneOpponent": 2,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": 0.7519961595535278,
+            "totalDamageTaken": 3231,
+            "totalDamageDealt": 24445,
+            "totalDamageDealtToChampions": 3452,
+            "teamDamagePercentage": 0.23876959533680817,
+            "damageSelfMitigated": 1513,
+            "totalHeal": 431,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 27,
+            "totalTimeCCDealt": 0,
+            "timeCCingOthers": 0,
+            "turretTakedowns": 0,
+            "damageDealtToTurrets": 0,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 0,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 0,
+            "wardsPlaced": 3,
+            "visionScore": 5,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 1,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "Madisons Beer",
+                "rank": 2114,
+                "winrate": [
+                  65,
+                  57
+                ],
+                "account_lvl": 663
+              },
+              {
+                "username": "iHydr\u00e4versx",
+                "rank": 1629,
+                "winrate": [
+                  10,
+                  6
+                ],
+                "account_lvl": 31
+              },
+              {
+                "username": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 521
+              },
+              {
+                "username": "\u00d0rakne",
+                "rank": 1324,
+                "winrate": [
+                  5,
+                  6
+                ],
+                "account_lvl": 31
+              },
+              {
+                "username": "RTC Viego",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 59
+              }
+            ],
+            "blue": [
+              {
+                "username": "ptitjusdepisse",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 423
+              },
+              {
+                "username": "Gyza",
+                "rank": 1800,
+                "winrate": [
+                  9,
+                  11
+                ],
+                "account_lvl": 612
+              },
+              {
+                "username": "Herr Krabbengott",
+                "rank": 1654,
+                "winrate": [
+                  14,
+                  18
+                ],
+                "account_lvl": 632
+              },
+              {
+                "username": "Gimlint thedwarf",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 648
+              },
+              {
+                "username": "Urvsme",
+                "rank": 1775,
+                "winrate": [
+                  12,
+                  15
+                ],
+                "account_lvl": 251
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "normal_draft_fives",
+            "match_win": true,
+            "player_side": "red",
+            "duration": 1981,
+            "creation": "08/08/2023",
+            "id": 6543152941,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 44
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 4
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 10
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 35
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 6
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 9,
+            "deaths": 10,
+            "assists": 13,
+            "goldPerMinute": 365.97104618716554,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 140,
+            "dodgeSkillShotsSmallWindow": 6,
+            "maxCsAdvantageOnLaneOpponent": 0,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": 0.0066907405853271484,
+            "totalDamageTaken": 32461,
+            "totalDamageDealt": 125488,
+            "totalDamageDealtToChampions": 30400,
+            "teamDamagePercentage": 0.24997668485844604,
+            "damageSelfMitigated": 17304,
+            "totalHeal": 5237,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 411,
+            "totalTimeCCDealt": 1,
+            "timeCCingOthers": 0,
+            "turretTakedowns": 2,
+            "damageDealtToTurrets": 1120,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 2,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 0,
+            "wardsPlaced": 11,
+            "visionScore": 19,
+            "doubleKills": 1,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 2,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "Yshiluzana",
+                "rank": 1325,
+                "winrate": [
+                  5,
+                  0
+                ],
+                "account_lvl": 129
+              },
+              {
+                "username": "GCS The Elder",
+                "rank": 2093,
+                "winrate": [
+                  32,
+                  41
+                ],
+                "account_lvl": 362
+              },
+              {
+                "username": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 521
+              },
+              {
+                "username": "TURBO OLINGO",
+                "rank": 1478,
+                "winrate": [
+                  6,
+                  4
+                ],
+                "account_lvl": 479
+              },
+              {
+                "username": "Raz0xx",
+                "rank": 801,
+                "winrate": [
+                  6,
+                  2
+                ],
+                "account_lvl": 138
+              }
+            ],
+            "blue": [
+              {
+                "username": "anarve01",
+                "rank": 1509,
+                "winrate": [
+                  23,
+                  28
+                ],
+                "account_lvl": 885
+              },
+              {
+                "username": "Elak",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 372
+              },
+              {
+                "username": "OrangeJuuzz",
+                "rank": 2000,
+                "winrate": [
+                  16,
+                  23
+                ],
+                "account_lvl": 294
+              },
+              {
+                "username": "pugn",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 406
+              },
+              {
+                "username": "V\u00e5ld",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 191
+              }
+            ]
+          }
+        }
+      ],
+      "match_ids": [
+        6551185254,
+        6547546547,
+        6547451210,
+        6546522398,
+        6546019093,
+        6545991096,
+        6545926061,
+        6544721413,
+        6543230667,
+        6543152941
+      ]
     },
     "2": {
       "username": "Ckwaceupoulet",
@@ -83,7 +1152,9 @@
             2300
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "3": {
       "username": "TURBO OLINGO",
@@ -118,7 +1189,9 @@
             1630
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "4": {
       "username": "ATM Kryder",
@@ -149,10 +1222,10 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 2512,
+          "rank": 2500,
           "winrate": [
             5,
-            6
+            7
           ],
           "rank_history": {
             "23/07/2023": 2401,
@@ -164,7 +1237,9 @@
             2512
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "5": {
       "username": "Raz0xx",
@@ -204,7 +1279,9 @@
             300
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "6": {
       "username": "FRANZIZKUZ",
@@ -240,15 +1317,16 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 1673,
+          "rank": 1651,
           "winrate": [
             6,
-            3
+            4
           ],
           "rank_history": {
             "22/07/2023": 1640,
             "04/08/2023": 1680,
-            "06/08/2023": 1673
+            "06/08/2023": 1673,
+            "16/08/2023": 1651
           },
           "nearest_rank": [
             "06/08/2023",
@@ -259,38 +1337,251 @@
       "match_history": [
         {
           "match_info": {
+            "player_username": "FRANZIZKUZ",
+            "queue": "ranked_flex_fives",
+            "match_win": false,
+            "player_side": "blue",
+            "duration": 1957,
+            "creation": "16/08/2023",
+            "id": 6554336672,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 27
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 4
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 7
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 9
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 3
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 2,
+            "deaths": 7,
+            "assists": 2,
+            "goldPerMinute": 329.66325312329343,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 212,
+            "dodgeSkillShotsSmallWindow": 0,
+            "maxCsAdvantageOnLaneOpponent": 4,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": -0.2022334337234497,
+            "totalDamageTaken": 50022,
+            "totalDamageDealt": 148211,
+            "totalDamageDealtToChampions": 12481,
+            "teamDamagePercentage": 0.1923056495572471,
+            "damageSelfMitigated": 60019,
+            "totalHeal": 5279,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 203,
+            "totalTimeCCDealt": 928,
+            "timeCCingOthers": 29,
+            "turretTakedowns": 2,
+            "damageDealtToTurrets": 3153,
+            "takedownOnFirstTurret": 1,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 1,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 2,
+            "wardsPlaced": 6,
+            "visionScore": 11,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 7,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "MaisOuiCestKled",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 290
+              },
+              {
+                "username": "kerplouzl",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 265
+              },
+              {
+                "username": "NP For Services",
+                "rank": 2400,
+                "winrate": [
+                  36,
+                  36
+                ],
+                "account_lvl": 658
+              },
+              {
+                "username": "evil but pro",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 108
+              },
+              {
+                "username": "Eine gelbe Biene",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 512
+              }
+            ],
+            "blue": [
+              {
+                "username": "ATM Kryder",
+                "rank": 2275,
+                "winrate": [
+                  20,
+                  28
+                ],
+                "account_lvl": 454
+              },
+              {
+                "username": "FRANZIZKUZ",
+                "rank": 2155,
+                "winrate": [
+                  44,
+                  30
+                ],
+                "account_lvl": 337
+              },
+              {
+                "username": "Grandoullf",
+                "rank": 2276,
+                "winrate": [
+                  16,
+                  13
+                ],
+                "account_lvl": 341
+              },
+              {
+                "username": "Hitake",
+                "rank": 2441,
+                "winrate": [
+                  2,
+                  3
+                ],
+                "account_lvl": 291
+              },
+              {
+                "username": "wantedbandeff",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "account_lvl": 277
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "FRANZIZKUZ",
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "blue",
             "duration": 929,
+            "creation": "15/08/2023",
             "id": 6553412337,
             "sides": {
               "red": {
                 "isWinner": false,
                 "objectives": {
                   "baron": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "champion": {
-                    "kills": 5,
-                    "first": false
+                    "first": false,
+                    "kills": 5
                   },
                   "dragon": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "inhibitor": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   }
                 }
               },
@@ -298,28 +1589,28 @@
                 "isWinner": true,
                 "objectives": {
                   "baron": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "champion": {
-                    "kills": 17,
-                    "first": true
+                    "first": true,
+                    "kills": 17
                   },
                   "dragon": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "inhibitor": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "riftHerald": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "tower": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   }
                 }
               }
@@ -373,12 +1664,12 @@
             "red": [
               {
                 "username": "i aate rocks",
-                "rank": 0,
+                "rank": 1653,
                 "winrate": [
-                  0,
-                  0
+                  2,
+                  3
                 ],
-                "account_lvl": 43
+                "account_lvl": 44
               },
               {
                 "username": "SeimurSan",
@@ -391,27 +1682,27 @@
               },
               {
                 "username": "MojoDiMan",
-                "rank": 2073,
+                "rank": 2119,
                 "winrate": [
-                  53,
+                  55,
                   55
                 ],
-                "account_lvl": 352
+                "account_lvl": 353
               },
               {
                 "username": "Illaks",
-                "rank": 2133,
+                "rank": 2181,
                 "winrate": [
-                  36,
+                  38,
                   33
                 ],
                 "account_lvl": 608
               },
               {
                 "username": "B\u00f8wnz",
-                "rank": 2075,
+                "rank": 2103,
                 "winrate": [
-                  23,
+                  24,
                   21
                 ],
                 "account_lvl": 398
@@ -447,12 +1738,12 @@
               },
               {
                 "username": "Carzzy Admirer",
-                "rank": 1941,
+                "rank": 1991,
                 "winrate": [
-                  23,
-                  12
+                  25,
+                  14
                 ],
-                "account_lvl": 33
+                "account_lvl": 34
               },
               {
                 "username": "Arist\u00f3s",
@@ -468,38 +1759,40 @@
         },
         {
           "match_info": {
+            "player_username": "FRANZIZKUZ",
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "red",
             "duration": 1922,
+            "creation": "15/08/2023",
             "id": 6553354963,
             "sides": {
               "red": {
                 "isWinner": true,
                 "objectives": {
                   "baron": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "champion": {
-                    "kills": 40,
-                    "first": true
+                    "first": true,
+                    "kills": 40
                   },
                   "dragon": {
-                    "kills": 3,
-                    "first": false
+                    "first": false,
+                    "kills": 3
                   },
                   "inhibitor": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 8,
-                    "first": false
+                    "first": false,
+                    "kills": 8
                   }
                 }
               },
@@ -507,28 +1800,28 @@
                 "isWinner": false,
                 "objectives": {
                   "baron": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "champion": {
-                    "kills": 23,
-                    "first": false
+                    "first": false,
+                    "kills": 23
                   },
                   "dragon": {
-                    "kills": 2,
-                    "first": true
+                    "first": true,
+                    "kills": 2
                   },
                   "inhibitor": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 5,
-                    "first": true
+                    "first": true,
+                    "kills": 5
                   }
                 }
               }
@@ -647,28 +1940,28 @@
               },
               {
                 "username": "\u0395\u039c\u03a1\u0391\u03a4\u0397\u03a5",
-                "rank": 2148,
+                "rank": 2140,
                 "winrate": [
-                  38,
-                  35
+                  40,
+                  37
                 ],
-                "account_lvl": 146
+                "account_lvl": 147
               },
               {
                 "username": "V\u03c8rus",
-                "rank": 2000,
+                "rank": 2143,
                 "winrate": [
-                  10,
-                  14
+                  15,
+                  16
                 ],
-                "account_lvl": 438
+                "account_lvl": 439
               },
               {
                 "username": "JukeBoxx",
-                "rank": 2048,
+                "rank": 2132,
                 "winrate": [
-                  48,
-                  43
+                  54,
+                  45
                 ],
                 "account_lvl": 271
               }
@@ -677,38 +1970,40 @@
         },
         {
           "match_info": {
+            "player_username": "FRANZIZKUZ",
             "queue": "ranked_solo_fives",
             "match_win": false,
             "player_side": "red",
             "duration": 2179,
+            "creation": "15/08/2023",
             "id": 6553252791,
             "sides": {
               "red": {
                 "isWinner": false,
                 "objectives": {
                   "baron": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "champion": {
-                    "kills": 42,
-                    "first": false
+                    "first": false,
+                    "kills": 42
                   },
                   "dragon": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "inhibitor": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 3,
-                    "first": false
+                    "first": false,
+                    "kills": 3
                   }
                 }
               },
@@ -716,28 +2011,28 @@
                 "isWinner": true,
                 "objectives": {
                   "baron": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "champion": {
-                    "kills": 53,
-                    "first": true
+                    "first": true,
+                    "kills": 53
                   },
                   "dragon": {
-                    "kills": 3,
-                    "first": true
+                    "first": true,
+                    "kills": 3
                   },
                   "inhibitor": {
-                    "kills": 2,
-                    "first": true
+                    "first": true,
+                    "kills": 2
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 9,
-                    "first": true
+                    "first": true,
+                    "kills": 9
                   }
                 }
               }
@@ -838,28 +2133,28 @@
             "blue": [
               {
                 "username": "ARageyMan",
-                "rank": 2083,
+                "rank": 2109,
                 "winrate": [
-                  23,
+                  24,
                   25
                 ],
-                "account_lvl": 189
+                "account_lvl": 190
               },
               {
                 "username": "JeanBonBeurrrrre",
-                "rank": 2127,
+                "rank": 2171,
                 "winrate": [
-                  63,
-                  48
+                  66,
+                  49
                 ],
                 "account_lvl": 66
               },
               {
                 "username": "\u0160m\u00f4k\u00e9",
-                "rank": 2200,
+                "rank": 2149,
                 "winrate": [
-                  110,
-                  112
+                  112,
+                  115
                 ],
                 "account_lvl": 99
               },
@@ -870,13 +2165,13 @@
                   16,
                   15
                 ],
-                "account_lvl": 361
+                "account_lvl": 362
               },
               {
                 "username": "Tirro",
-                "rank": 2103,
+                "rank": 2128,
                 "winrate": [
-                  46,
+                  47,
                   55
                 ],
                 "account_lvl": 270
@@ -886,38 +2181,40 @@
         },
         {
           "match_info": {
+            "player_username": "FRANZIZKUZ",
             "queue": "ranked_solo_fives",
             "match_win": true,
             "player_side": "red",
             "duration": 1390,
+            "creation": "15/08/2023",
             "id": 6552952350,
             "sides": {
               "red": {
                 "isWinner": true,
                 "objectives": {
                   "baron": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "champion": {
-                    "kills": 39,
-                    "first": true
+                    "first": true,
+                    "kills": 39
                   },
                   "dragon": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "inhibitor": {
-                    "kills": 3,
-                    "first": true
+                    "first": true,
+                    "kills": 3
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": false
+                    "first": false,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 11,
-                    "first": true
+                    "first": true,
+                    "kills": 11
                   }
                 }
               },
@@ -925,28 +2222,28 @@
                 "isWinner": false,
                 "objectives": {
                   "baron": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "champion": {
-                    "kills": 24,
-                    "first": false
+                    "first": false,
+                    "kills": 24
                   },
                   "dragon": {
-                    "kills": 2,
-                    "first": true
+                    "first": true,
+                    "kills": 2
                   },
                   "inhibitor": {
-                    "kills": 0,
-                    "first": false
+                    "first": false,
+                    "kills": 0
                   },
                   "riftHerald": {
-                    "kills": 1,
-                    "first": true
+                    "first": true,
+                    "kills": 1
                   },
                   "tower": {
-                    "kills": 3,
-                    "first": false
+                    "first": false,
+                    "kills": 3
                   }
                 }
               }
@@ -1000,10 +2297,10 @@
             "red": [
               {
                 "username": "j\u00edafei",
-                "rank": 2217,
+                "rank": 2219,
                 "winrate": [
-                  42,
-                  34
+                  43,
+                  35
                 ],
                 "account_lvl": 385
               },
@@ -1036,32 +2333,32 @@
               },
               {
                 "username": "DrMosquera",
-                "rank": 2157,
+                "rank": 2126,
                 "winrate": [
-                  93,
-                  104
+                  94,
+                  106
                 ],
-                "account_lvl": 485
+                "account_lvl": 486
               }
             ],
             "blue": [
               {
                 "username": "DIF DIF DIF",
-                "rank": 2158,
+                "rank": 2225,
                 "winrate": [
-                  98,
-                  82
+                  104,
+                  84
                 ],
-                "account_lvl": 291
+                "account_lvl": 292
               },
               {
                 "username": "\u03a3milia Tan",
-                "rank": 2139,
+                "rank": 2181,
                 "winrate": [
-                  65,
+                  67,
                   59
                 ],
-                "account_lvl": 254
+                "account_lvl": 255
               },
               {
                 "username": "S\u00e9xtingIsEnough",
@@ -1092,244 +2389,36 @@
               }
             ]
           }
-        },
-        {
-          "match_info": {
-            "queue": "ranked_solo_fives",
-            "match_win": false,
-            "player_side": "red",
-            "duration": 1666,
-            "id": 6552910577,
-            "sides": {
-              "red": {
-                "isWinner": false,
-                "objectives": {
-                  "baron": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "champion": {
-                    "kills": 28,
-                    "first": false
-                  },
-                  "dragon": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "inhibitor": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "riftHerald": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "tower": {
-                    "kills": 1,
-                    "first": false
-                  }
-                }
-              },
-              "blue": {
-                "isWinner": true,
-                "objectives": {
-                  "baron": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "champion": {
-                    "kills": 51,
-                    "first": true
-                  },
-                  "dragon": {
-                    "kills": 4,
-                    "first": true
-                  },
-                  "inhibitor": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "riftHerald": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "tower": {
-                    "kills": 8,
-                    "first": true
-                  }
-                }
-              }
-            }
-          },
-          "player_stats": {
-            "kills": 6,
-            "deaths": 7,
-            "assists": 16,
-            "goldPerMinute": 406.9358561281501,
-            "firstBloodKill": false,
-            "totalAllyJungleMinionsKilled": 98,
-            "totalEnemyJungleMinionsKilled": 4,
-            "totalMinionsKilled": 50,
-            "dodgeSkillShotsSmallWindow": 7,
-            "maxCsAdvantageOnLaneOpponent": 20.999999970197678,
-            "maxLevelLeadLaneOpponent": 1,
-            "visionScoreAdvantageLaneOpponent": 0.09301912784576416,
-            "totalDamageTaken": 44104,
-            "totalDamageDealt": 186150,
-            "totalDamageDealtToChampions": 22288,
-            "teamDamagePercentage": 0.2571143975955191,
-            "damageSelfMitigated": 56796,
-            "totalHeal": 41553,
-            "totalHealsOnTeammates": 1120,
-            "totalDamageShieldedOnTeammates": 0,
-            "timeAlive": 0,
-            "totalTimeSpentDead": 212,
-            "totalTimeCCDealt": 594,
-            "timeCCingOthers": 54,
-            "turretTakedowns": 0,
-            "damageDealtToTurrets": 0,
-            "takedownOnFirstTurret": 0,
-            "objectivesStolen": 0,
-            "epicMonsterStolenWithoutSmite": 0,
-            "teamRiftHeraldKills": 0,
-            "dragonTakedowns": 0,
-            "teamBaronKills": 0,
-            "teamElderDragonKills": 0,
-            "detectorWardsPlaced": 3,
-            "wardsPlaced": 6,
-            "visionScore": 24,
-            "doubleKills": 0,
-            "tripleKills": 0,
-            "quadraKills": 0,
-            "pentaKills": 0,
-            "enemyMissingPings": 14,
-            "baitPings": 1
-          },
-          "match_ranks": {
-            "red": [
-              {
-                "username": "SoisPAs",
-                "rank": 2124,
-                "winrate": [
-                  98,
-                  100
-                ],
-                "account_lvl": 670
-              },
-              {
-                "username": "FRANZIZKUZ",
-                "rank": 2155,
-                "winrate": [
-                  44,
-                  30
-                ],
-                "account_lvl": 337
-              },
-              {
-                "username": "DysletsicRoger",
-                "rank": 1792,
-                "winrate": [
-                  4,
-                  5
-                ],
-                "account_lvl": 362
-              },
-              {
-                "username": "Flying In Mid",
-                "rank": 2075,
-                "winrate": [
-                  28,
-                  40
-                ],
-                "account_lvl": 119
-              },
-              {
-                "username": "AHAHAH XD LOL",
-                "rank": 1814,
-                "winrate": [
-                  27,
-                  18
-                ],
-                "account_lvl": 35
-              }
-            ],
-            "blue": [
-              {
-                "username": "\u039e Ruggler \u039e",
-                "rank": 2100,
-                "winrate": [
-                  45,
-                  34
-                ],
-                "account_lvl": 249
-              },
-              {
-                "username": "shiro002",
-                "rank": 2144,
-                "winrate": [
-                  74,
-                  65
-                ],
-                "account_lvl": 998
-              },
-              {
-                "username": "Biatenc",
-                "rank": 2110,
-                "winrate": [
-                  33,
-                  31
-                ],
-                "account_lvl": 46
-              },
-              {
-                "username": "D3R T R3X",
-                "rank": 2001,
-                "winrate": [
-                  12,
-                  9
-                ],
-                "account_lvl": 224
-              },
-              {
-                "username": "Th\u00e9 au Gingembre",
-                "rank": 1924,
-                "winrate": [
-                  18,
-                  15
-                ],
-                "account_lvl": 46
-              }
-            ]
-          }
         }
       ],
       "match_ids": [
+        6554336672,
         6553412337,
         6553354963,
         6553252791,
-        6552952350,
-        6552910577
+        6552952350
       ]
     },
     "7": {
       "username": "TheRedAquaman",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 1381,
+          "rank": 1349,
           "winrate": [
-            7,
-            4
+            8,
+            7
           ],
           "rank_history": {
             "25/07/2023": 1288,
             "27/07/2023": 1322,
             "10/08/2023": 1334,
             "11/08/2023": 1347,
-            "14/08/2023": 1381
+            "14/08/2023": 1381,
+            "16/08/2023": 1349
           },
           "nearest_rank": [
-            "11/08/2023",
-            1347
+            "14/08/2023",
+            1381
           ]
         },
         "RANKED_FLEX_SR": {
@@ -1347,7 +2436,9 @@
             1417
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "8": {
       "username": "TURBO ALUCO",
@@ -1386,16 +2477,18 @@
             675
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "10": {
       "username": "Grandoullf",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2273,
+          "rank": 2276,
           "winrate": [
-            14,
-            11
+            16,
+            13
           ],
           "rank_history": {
             "23/07/2023": 2216,
@@ -1405,7 +2498,8 @@
             "01/08/2023": 2283,
             "03/08/2023": 2288,
             "08/08/2023": 2268,
-            "12/08/2023": 2273
+            "12/08/2023": 2273,
+            "16/08/2023": 2276
           },
           "nearest_rank": [
             "12/08/2023",
@@ -1413,10 +2507,10 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 2401,
+          "rank": 2400,
           "winrate": [
             7,
-            7
+            8
           ],
           "rank_history": {
             "22/07/2023": 2310,
@@ -1430,7 +2524,9 @@
             2401
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "11": {
       "username": "TURBO BERINGEI",
@@ -1459,7 +2555,9 @@
             null
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     },
     "12": {
       "username": "Kertor",
@@ -1488,7 +2586,9 @@
             0
           ]
         }
-      }
+      },
+      "match_history": [],
+      "match_ids": []
     }
   }
 }

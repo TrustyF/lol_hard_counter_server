@@ -36,10 +36,12 @@ class Player:
         # data format
         self.match_template = {
             "match_info": {
+                "player_username": self.username,
                 "queue": None,
                 "match_win": True,
                 "player_side": None,
                 "duration": None,
+                "creation": None,
                 "id": 0,
                 "sides": {
                     "red": {
@@ -254,6 +256,9 @@ class Player:
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
+            # pprint(dir(match))
+            # break
+
             # Limit to last n games
             if i >= match_limit:
                 LOG.warning(f'Hit match limit, stopping')
@@ -308,6 +313,7 @@ class Player:
 
             match_template['match_info']['queue'] = match.queue.name
             match_template['match_info']['duration'] = match.duration.seconds
+            match_template['match_info']['creation'] = match.creation.strftime(DATE_FORMAT)
 
             # calc match ranks
             for player in match.participants:
