@@ -252,7 +252,7 @@ class Player:
                     recursive_fill_template_from_dict(data[f_key], template)
 
         # adding to match hist
-        match_limit = 70
+        match_limit = 40
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
