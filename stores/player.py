@@ -31,6 +31,7 @@ class Player:
             },
         }
         self.match_history = []
+        self.invalid_matches = []
 
         # data format
         self.match_template = {
@@ -148,12 +149,17 @@ class Player:
             if 'match_history' in data:
                 self.match_history = data['match_history']
 
+            # deserialize invalid matches
+            if 'invalid_matches' in data:
+                self.invalid_matches = data['invalid_matches']
+
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
             'match_history': self.match_history,
+            'invalid_matches': self.invalid_matches,
         }
 
     # db functions
@@ -234,6 +240,10 @@ class Player:
 
     def add_match_to_history(self):
 
+        def add_id_to_invalid_list(f_id):
+            LOG.warning(f'id {f_id} invalid and added to list')
+            self.invalid_matches.append(f_id)
+
         def recursive_fill_template_from_dict(data: dict, template: dict):
             for f_key in data:
                 if f_key in template:
@@ -251,6 +261,11 @@ class Player:
                 LOG.warning(f'Hit match limit, stopping')
                 break
 
+            # skip if in invalid list
+            if match.id in self.invalid_matches:
+                LOG.warning('Match id found, skipping')
+                continue
+
             # skip if already seen
             if match.id in [x['match_info']['id'] for x in self.match_history]:
                 LOG.warning('Match id found, skipping')
@@ -261,10 +276,12 @@ class Player:
                 # skip if mode is not classic
                 if match.queue.name not in ['ranked_flex_fives', 'normal_draft_fives', 'ranked_solo_fives']:
                     LOG.warning('match not classic')
+                    add_id_to_invalid_list(match.id)
                     match_limit += 1
                     continue
             except ValueError:
                 LOG.warning('match returned an error')
+                add_id_to_invalid_list(match.id)
                 match_limit += 1
                 continue
 
