@@ -6,7 +6,7 @@ from datetime import datetime, date, timedelta
 import os
 import copy
 
-from stores.constants import LOG, DATE_FORMAT
+from stores.constants import LOG, DATE_FORMAT, DATE_FORMAT_HOUR
 import stores.utils as utils
 
 
@@ -31,7 +31,6 @@ class Player:
             },
         }
         self.match_history = []
-        self.match_ids = []
 
         # data format
         self.match_template = {
@@ -149,17 +148,12 @@ class Player:
             if 'match_history' in data:
                 self.match_history = data['match_history']
 
-            # deserialize match ids
-            if 'match_ids' in data:
-                self.match_ids = data['match_ids']
-
     def save_to_json(self):
         """Return formatted values to be saved to json"""
         return {
             'username': self.username,
             'ranked': self.ranked,
             'match_history': self.match_history,
-            'match_ids': self.match_ids,
         }
 
     # db functions
@@ -240,10 +234,6 @@ class Player:
 
     def add_match_to_history(self):
 
-        def add_to_id_hist(f_id):
-            LOG.warning(f'id {f_id} not found adding')
-            self.match_ids.append(f_id)
-
         def recursive_fill_template_from_dict(data: dict, template: dict):
             for f_key in data:
                 if f_key in template:
@@ -256,16 +246,13 @@ class Player:
 
         for i, match in enumerate(self.cass_summoner.match_history):
 
-            # pprint(dir(match))
-            # break
-
             # Limit to last n games
             if i >= match_limit:
                 LOG.warning(f'Hit match limit, stopping')
                 break
 
             # skip if already seen
-            if match.id in self.match_ids:
+            if match.id in [x['match_info']['id'] for x in self.match_history]:
                 LOG.warning('Match id found, skipping')
                 continue
 
@@ -274,17 +261,12 @@ class Player:
                 # skip if mode is not classic
                 if match.queue.name not in ['ranked_flex_fives', 'normal_draft_fives', 'ranked_solo_fives']:
                     LOG.warning('match not classic')
-                    add_to_id_hist(match.id)
                     match_limit += 1
                     continue
             except ValueError:
                 LOG.warning('match returned an error')
-                add_to_id_hist(match.id)
                 match_limit += 1
                 continue
-
-            # add to hist if found
-            add_to_id_hist(match.id)
 
             # get current player stats from participants
             LOG.warning(f'{match.id} adding to match history')
@@ -313,7 +295,7 @@ class Player:
 
             match_template['match_info']['queue'] = match.queue.name
             match_template['match_info']['duration'] = match.duration.seconds
-            match_template['match_info']['creation'] = match.creation.strftime(DATE_FORMAT)
+            match_template['match_info']['creation'] = match.creation.strftime(DATE_FORMAT_HOUR)
 
             # calc match ranks
             for player in match.participants:
