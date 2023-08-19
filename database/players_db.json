@@ -8477,7 +8477,40 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6557499087,
+        6557467973,
+        6557439091,
+        6557406280,
+        6557376243,
+        6557358870,
+        6557327401,
+        6556109418,
+        6556078431,
+        6556046931,
+        6556018568,
+        6554673629,
+        6554639986,
+        6554610362,
+        6554593504,
+        6554557772,
+        6554519289,
+        6546019093,
+        6545991096,
+        6545926061,
+        6544721413,
+        6543230667,
+        6541705024,
+        6541433230,
+        6540226337,
+        6536900344,
+        6536428043,
+        6536404780,
+        6535201488,
+        6535138031,
+        6533678110,
+        6533639057
+      ]
     },
     "2": {
       "username": "Ckwaceupoulet",
@@ -16969,7 +17002,19 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6541705024,
+        6540226337,
+        6536965819,
+        6536939855,
+        6536910599,
+        6536797233,
+        6536767253,
+        6536401437,
+        6536379812,
+        6536353222,
+        6536336671
+      ]
     },
     "3": {
       "username": "TURBO OLINGO",
@@ -25447,7 +25492,30 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6544721413,
+        6543230667,
+        6541705024,
+        6540226337,
+        6536965819,
+        6536939855,
+        6536910599,
+        6536401437,
+        6536379812,
+        6536353222,
+        6536336671,
+        6535201488,
+        6535138031,
+        6533678110,
+        6533639057,
+        6531984062,
+        6531948793,
+        6531708696,
+        6531667339,
+        6531642787,
+        6530819464,
+        6498515750
+      ]
     },
     "4": {
       "username": "ATM Kryder",
@@ -25475,8 +25543,8 @@
             "18/08/2023": 2230
           },
           "nearest_rank": [
-            "17/08/2023",
-            2252
+            "18/08/2023",
+            2230
           ]
         },
         "RANKED_FLEX_SR": {
@@ -25493,8 +25561,8 @@
             "18/08/2023": 2590
           },
           "nearest_rank": [
-            "16/08/2023",
-            2500
+            "18/08/2023",
+            2590
           ]
         }
       },
@@ -35420,217 +35488,6 @@
           "match_info": {
             "player_username": "ATM Kryder",
             "queue": "ranked_solo_fives",
-            "match_win": true,
-            "player_side": "blue",
-            "duration": 1438,
-            "creation": "19/08/2023, 07:01:22",
-            "id": 6557991494,
-            "sides": {
-              "red": {
-                "isWinner": false,
-                "objectives": {
-                  "baron": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "champion": {
-                    "kills": 17,
-                    "first": true
-                  },
-                  "dragon": {
-                    "kills": 1,
-                    "first": false
-                  },
-                  "inhibitor": {
-                    "kills": 0,
-                    "first": false
-                  },
-                  "riftHerald": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "tower": {
-                    "kills": 3,
-                    "first": false
-                  }
-                }
-              },
-              "blue": {
-                "isWinner": true,
-                "objectives": {
-                  "baron": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "champion": {
-                    "kills": 37,
-                    "first": false
-                  },
-                  "dragon": {
-                    "kills": 2,
-                    "first": true
-                  },
-                  "inhibitor": {
-                    "kills": 1,
-                    "first": true
-                  },
-                  "riftHerald": {
-                    "kills": 1,
-                    "first": false
-                  },
-                  "tower": {
-                    "kills": 9,
-                    "first": true
-                  }
-                }
-              }
-            }
-          },
-          "player_stats": {
-            "kills": 19,
-            "deaths": 2,
-            "assists": 8,
-            "goldPerMinute": 676.6684000513134,
-            "firstBloodKill": false,
-            "totalAllyJungleMinionsKilled": 2,
-            "totalEnemyJungleMinionsKilled": 0,
-            "totalMinionsKilled": 212,
-            "dodgeSkillShotsSmallWindow": 0,
-            "maxCsAdvantageOnLaneOpponent": 56.99999997019768,
-            "maxLevelLeadLaneOpponent": 2,
-            "visionScoreAdvantageLaneOpponent": 0.03836095333099365,
-            "totalDamageTaken": 10661,
-            "totalDamageDealt": 184931,
-            "totalDamageDealtToChampions": 25444,
-            "teamDamagePercentage": 0.3272805068264122,
-            "damageSelfMitigated": 7646,
-            "totalHeal": 2397,
-            "totalHealsOnTeammates": 0,
-            "totalDamageShieldedOnTeammates": 0,
-            "timeAlive": 0,
-            "totalTimeSpentDead": 47,
-            "totalTimeCCDealt": 72,
-            "timeCCingOthers": 4,
-            "turretTakedowns": 6,
-            "damageDealtToTurrets": 10928,
-            "takedownOnFirstTurret": 1,
-            "objectivesStolen": 0,
-            "epicMonsterStolenWithoutSmite": 0,
-            "teamRiftHeraldKills": 1,
-            "dragonTakedowns": 1,
-            "teamBaronKills": 1,
-            "teamElderDragonKills": 0,
-            "detectorWardsPlaced": 0,
-            "wardsPlaced": 7,
-            "visionScore": 11,
-            "doubleKills": 5,
-            "tripleKills": 0,
-            "quadraKills": 0,
-            "pentaKills": 0,
-            "enemyMissingPings": 11,
-            "baitPings": 0
-          },
-          "match_ranks": {
-            "red": [
-              {
-                "username": "SoloMid",
-                "rank": 2182,
-                "winrate": [
-                  22,
-                  12
-                ],
-                "account_lvl": 374
-              },
-              {
-                "username": "LSDelivery",
-                "rank": 2266,
-                "winrate": [
-                  33,
-                  34
-                ],
-                "account_lvl": 66
-              },
-              {
-                "username": "YouGotBarted",
-                "rank": 2133,
-                "winrate": [
-                  14,
-                  22
-                ],
-                "account_lvl": 585
-              },
-              {
-                "username": "H\u00e1rl\u00e9y Q\u00fa\u00ednn",
-                "rank": 2100,
-                "winrate": [
-                  45,
-                  35
-                ],
-                "account_lvl": 38
-              },
-              {
-                "username": "KiteWalker",
-                "rank": 2410,
-                "winrate": [
-                  47,
-                  31
-                ],
-                "account_lvl": 202
-              }
-            ],
-            "blue": [
-              {
-                "username": "EL Nuggetz",
-                "rank": 2169,
-                "winrate": [
-                  17,
-                  19
-                ],
-                "account_lvl": 365
-              },
-              {
-                "username": "Stopin",
-                "rank": 2211,
-                "winrate": [
-                  74,
-                  74
-                ],
-                "account_lvl": 329
-              },
-              {
-                "username": "ropsiujy",
-                "rank": 2075,
-                "winrate": [
-                  9,
-                  5
-                ],
-                "account_lvl": 97
-              },
-              {
-                "username": "ATM Kryder",
-                "rank": 2230,
-                "winrate": [
-                  23,
-                  34
-                ],
-                "account_lvl": 456
-              },
-              {
-                "username": "lilla katten",
-                "rank": 2245,
-                "winrate": [
-                  9,
-                  7
-                ],
-                "account_lvl": 100
-              }
-            ]
-          }
-        },
-        {
-          "match_info": {
-            "player_username": "ATM Kryder",
-            "queue": "ranked_solo_fives",
             "match_win": false,
             "player_side": "red",
             "duration": 3413,
@@ -35837,9 +35694,224 @@
               }
             ]
           }
+        },
+        {
+          "match_info": {
+            "player_username": "ATM Kryder",
+            "queue": "ranked_solo_fives",
+            "match_win": true,
+            "player_side": "blue",
+            "duration": 1438,
+            "creation": "19/08/2023, 07:01:22",
+            "id": 6557991494,
+            "sides": {
+              "red": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "kills": 0,
+                    "first": false
+                  },
+                  "champion": {
+                    "kills": 17,
+                    "first": true
+                  },
+                  "dragon": {
+                    "kills": 1,
+                    "first": false
+                  },
+                  "inhibitor": {
+                    "kills": 0,
+                    "first": false
+                  },
+                  "riftHerald": {
+                    "kills": 1,
+                    "first": true
+                  },
+                  "tower": {
+                    "kills": 3,
+                    "first": false
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "kills": 1,
+                    "first": true
+                  },
+                  "champion": {
+                    "kills": 37,
+                    "first": false
+                  },
+                  "dragon": {
+                    "kills": 2,
+                    "first": true
+                  },
+                  "inhibitor": {
+                    "kills": 1,
+                    "first": true
+                  },
+                  "riftHerald": {
+                    "kills": 1,
+                    "first": false
+                  },
+                  "tower": {
+                    "kills": 9,
+                    "first": true
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "kills": 19,
+            "deaths": 2,
+            "assists": 8,
+            "goldPerMinute": 676.6684000513134,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 2,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 212,
+            "dodgeSkillShotsSmallWindow": 0,
+            "maxCsAdvantageOnLaneOpponent": 56.99999997019768,
+            "maxLevelLeadLaneOpponent": 2,
+            "visionScoreAdvantageLaneOpponent": 0.03836095333099365,
+            "totalDamageTaken": 10661,
+            "totalDamageDealt": 184931,
+            "totalDamageDealtToChampions": 25444,
+            "teamDamagePercentage": 0.3272805068264122,
+            "damageSelfMitigated": 7646,
+            "totalHeal": 2397,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 47,
+            "totalTimeCCDealt": 72,
+            "timeCCingOthers": 4,
+            "turretTakedowns": 6,
+            "damageDealtToTurrets": 10928,
+            "takedownOnFirstTurret": 1,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 1,
+            "dragonTakedowns": 1,
+            "teamBaronKills": 1,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 0,
+            "wardsPlaced": 7,
+            "visionScore": 11,
+            "doubleKills": 5,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 11,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "username": "SoloMid",
+                "rank": 2182,
+                "winrate": [
+                  22,
+                  12
+                ],
+                "account_lvl": 374
+              },
+              {
+                "username": "LSDelivery",
+                "rank": 2289,
+                "winrate": [
+                  34,
+                  34
+                ],
+                "account_lvl": 66
+              },
+              {
+                "username": "YouGotBarted",
+                "rank": 2197,
+                "winrate": [
+                  16,
+                  22
+                ],
+                "account_lvl": 585
+              },
+              {
+                "username": "H\u00e1rl\u00e9y Q\u00fa\u00ednn",
+                "rank": 2207,
+                "winrate": [
+                  49,
+                  35
+                ],
+                "account_lvl": 39
+              },
+              {
+                "username": "KiteWalker",
+                "rank": 2410,
+                "winrate": [
+                  47,
+                  31
+                ],
+                "account_lvl": 202
+              }
+            ],
+            "blue": [
+              {
+                "username": "EL Nuggetz",
+                "rank": 2154,
+                "winrate": [
+                  18,
+                  21
+                ],
+                "account_lvl": 366
+              },
+              {
+                "username": "Stopin",
+                "rank": 2209,
+                "winrate": [
+                  75,
+                  75
+                ],
+                "account_lvl": 330
+              },
+              {
+                "username": "ropsiujy",
+                "rank": 2075,
+                "winrate": [
+                  9,
+                  5
+                ],
+                "account_lvl": 97
+              },
+              {
+                "username": "ATM Kryder",
+                "rank": 2230,
+                "winrate": [
+                  23,
+                  34
+                ],
+                "account_lvl": 456
+              },
+              {
+                "username": "lilla katten",
+                "rank": 2245,
+                "winrate": [
+                  9,
+                  7
+                ],
+                "account_lvl": 100
+              }
+            ]
+          }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6551069257,
+        6537753879,
+        6537717287
+      ]
     },
     "5": {
       "username": "Raz0xx",
@@ -44322,7 +44394,61 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6546019093,
+        6545991096,
+        6545926061,
+        6543230667,
+        6541705024,
+        6540226337,
+        6536900344,
+        6535196041,
+        6535138031,
+        6535044931,
+        6533639057,
+        6533350451,
+        6533320439,
+        6533276141,
+        6532076954,
+        6532036938,
+        6531999155,
+        6531978643,
+        6531944023,
+        6531727843,
+        6530135037,
+        6530091932,
+        6529601453,
+        6529539898,
+        6529510047,
+        6529475497,
+        6529440501,
+        6529032360,
+        6528508999,
+        6528438101,
+        6528371653,
+        6528329812,
+        6523199945,
+        6521370888,
+        6521333522,
+        6521295537,
+        6521241047,
+        6519595080,
+        6519555640,
+        6519146307,
+        6517677480,
+        6517634843,
+        6517385586,
+        6515544766,
+        6515506615,
+        6515379593,
+        6515316505,
+        6515255355,
+        6508747363,
+        6508703115,
+        6508646987,
+        6506436547,
+        6504978798
+      ]
     },
     "6": {
       "username": "FRANZIZKUZ",
@@ -44354,8 +44480,8 @@
             "18/08/2023": 2200
           },
           "nearest_rank": [
-            "17/08/2023",
-            2172
+            "18/08/2023",
+            2200
           ]
         },
         "RANKED_FLEX_SR": {
@@ -62566,7 +62692,59 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6554007307,
+        6550228667,
+        6548848096,
+        6548012049,
+        6547050122,
+        6533350451,
+        6533320439,
+        6533276141,
+        6531999155,
+        6531978643,
+        6531944023,
+        6530124797,
+        6530083069,
+        6530038691,
+        6529601453,
+        6529494186,
+        6529472424,
+        6528037179,
+        6527350391,
+        6526674106,
+        6524944296,
+        6524410961,
+        6524381248,
+        6524357510,
+        6520165991,
+        6519146307,
+        6518564099,
+        6518537689,
+        6518516764,
+        6518350152,
+        6516145113,
+        6516120688,
+        6515544766,
+        6515506615,
+        6514713423,
+        6514669437,
+        6514474407,
+        6513073594,
+        6512975917,
+        6512867020,
+        6507488430,
+        6507461875,
+        6507306724,
+        6504790445,
+        6503208783,
+        6476677345,
+        6476647059,
+        6476608353,
+        6470264992,
+        6470241050,
+        6464582463
+      ]
     },
     "8": {
       "username": "TURBO ALUCO",
@@ -71048,7 +71226,41 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6557499087,
+        6557467973,
+        6557439091,
+        6557406280,
+        6557376243,
+        6557358870,
+        6557327401,
+        6556109418,
+        6556078431,
+        6556046931,
+        6556018568,
+        6554673629,
+        6554639986,
+        6554610362,
+        6554593504,
+        6554557772,
+        6554519289,
+        6545926061,
+        6541705024,
+        6536412354,
+        6536382380,
+        6536342223,
+        6530135037,
+        6530091932,
+        6522489235,
+        6522461080,
+        6519550231,
+        6493958014,
+        6493915116,
+        6483296603,
+        6483219227,
+        6483027103,
+        6481754986
+      ]
     },
     "10": {
       "username": "Grandoullf",
@@ -71074,8 +71286,8 @@
             "18/08/2023": 2281
           },
           "nearest_rank": [
-            "17/08/2023",
-            2278
+            "18/08/2023",
+            2281
           ]
         },
         "RANKED_FLEX_SR": {
@@ -71094,8 +71306,8 @@
             "18/08/2023": 2496
           },
           "nearest_rank": [
-            "16/08/2023",
-            2400
+            "18/08/2023",
+            2496
           ]
         }
       },
@@ -80385,7 +80597,39 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6535138031,
+        6534855185,
+        6526559513,
+        6526527664,
+        6526466410,
+        6526431016,
+        6526154637,
+        6526112006,
+        6526080518,
+        6526050551,
+        6525994760,
+        6517673428,
+        6517641464,
+        6517372675,
+        6517208371,
+        6517178696,
+        6517136108,
+        6517095721,
+        6515399599,
+        6515267861,
+        6515123384,
+        6515054490,
+        6513310560,
+        6513271260,
+        6513233336,
+        6513198858,
+        6513073594,
+        6512975917,
+        6512867020,
+        6512814133,
+        6512778203
+      ]
     },
     "11": {
       "username": "TURBO BERINGEI",
@@ -88857,7 +89101,87 @@
           }
         }
       ],
-      "invalid_matches": []
+      "invalid_matches": [
+        6539729292,
+        6539694520,
+        6537933552,
+        6537902474,
+        6537680191,
+        6537663978,
+        6537642503,
+        6537336271,
+        6537336784,
+        6537326919,
+        6536428043,
+        6536404780,
+        6536216205,
+        6536191346,
+        6536167183,
+        6534798147,
+        6534753399,
+        6533088827,
+        6533055511,
+        6532996401,
+        6531708696,
+        6531667339,
+        6531642787,
+        6479935438,
+        6479053068,
+        6459797754,
+        6453474398,
+        6440783660,
+        6434073367,
+        6432537232,
+        6430614686,
+        6429250041,
+        6427749693,
+        6427201552,
+        6426921365,
+        6426125866,
+        6426023666,
+        6425115361,
+        6424365816,
+        6424184383,
+        6424093647,
+        6423732254,
+        6423583165,
+        6423517359,
+        6420965045,
+        6419061974,
+        6419031418,
+        6419004010,
+        6418989490,
+        6418940521,
+        6418838005,
+        6418818935,
+        6418782197,
+        6418766834,
+        6418404803,
+        6417480226,
+        6417460732,
+        6417432324,
+        6417293009,
+        6417274950,
+        6410391509,
+        6410360428,
+        6409591013,
+        6408703785,
+        6408669280,
+        6408583234,
+        6408544762,
+        6408509851,
+        6404913130,
+        6404859138,
+        6404812209,
+        6403264493,
+        6402906391,
+        6401240551,
+        6401067964,
+        6399077555,
+        6399032165,
+        6398993967,
+        6398942605
+      ]
     },
     "12": {
       "username": "Kertor",

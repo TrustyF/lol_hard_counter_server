@@ -243,6 +243,8 @@ class Player:
         def add_id_to_invalid_list(f_id):
             LOG.warning(f'id {f_id} invalid and added to list')
             self.invalid_matches.append(f_id)
+            # save to db
+            self.save_current_player()
 
         def recursive_fill_template_from_dict(data: dict, template: dict):
             for f_key in data:
@@ -263,7 +265,7 @@ class Player:
 
             # skip if in invalid list
             if match.id in self.invalid_matches:
-                LOG.warning('Match id found, skipping')
+                LOG.warning('Invalid Match id found, skipping')
                 continue
 
             # skip if already seen
