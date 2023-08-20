@@ -16,10 +16,10 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 2306,
+          "rank": 2300,
           "winrate": [
             5,
-            11
+            12
           ],
           "rank_history": {
             "23/07/2023": 2352,
@@ -27,7 +27,8 @@
             "03/08/2023": 2301,
             "04/08/2023": 2332,
             "06/08/2023": 2326,
-            "07/08/2023": 2306
+            "07/08/2023": 2306,
+            "21/08/2023": 2300
           },
           "nearest_rank": [
             "07/08/2023",
@@ -67,7 +68,13 @@
         6535201488,
         6535138031,
         6533678110,
-        6533639057
+        6533639057,
+        6560646740,
+        6560605382,
+        6560582217,
+        6560456314,
+        6560422970,
+        6560356642
       ],
       "match_history": [
         {
@@ -5285,6 +5292,332 @@
               }
             ]
           }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO Trusty",
+            "queue": "ranked_flex_fives",
+            "match_win": false,
+            "player_side": "blue",
+            "duration": 2310,
+            "creation": "20/08/2023, 20:22:42",
+            "id": 6560501426,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "kills": 2,
+                    "first": false
+                  },
+                  "champion": {
+                    "kills": 36,
+                    "first": true
+                  },
+                  "dragon": {
+                    "kills": 3,
+                    "first": true
+                  },
+                  "inhibitor": {
+                    "kills": 3,
+                    "first": false
+                  },
+                  "riftHerald": {
+                    "kills": 0,
+                    "first": false
+                  },
+                  "tower": {
+                    "kills": 11,
+                    "first": false
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "kills": 1,
+                    "first": true
+                  },
+                  "champion": {
+                    "kills": 42,
+                    "first": false
+                  },
+                  "dragon": {
+                    "kills": 3,
+                    "first": false
+                  },
+                  "inhibitor": {
+                    "kills": 1,
+                    "first": true
+                  },
+                  "riftHerald": {
+                    "kills": 2,
+                    "first": true
+                  },
+                  "tower": {
+                    "kills": 7,
+                    "first": true
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "championName": "Katarina",
+            "role": "SOLO",
+            "lane": "MIDDLE",
+            "individualPosition": "MIDDLE",
+            "teamPosition": "MIDDLE",
+            "kills": 13,
+            "deaths": 7,
+            "assists": 9,
+            "goldPerMinute": 405.3240301591087,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 4,
+            "totalEnemyJungleMinionsKilled": 4,
+            "totalMinionsKilled": 166,
+            "dodgeSkillShotsSmallWindow": 2,
+            "maxCsAdvantageOnLaneOpponent": 0,
+            "maxLevelLeadLaneOpponent": 2,
+            "visionScoreAdvantageLaneOpponent": 0.02922224998474121,
+            "totalDamageTaken": 33497,
+            "totalDamageDealt": 152316,
+            "totalDamageDealtToChampions": 32095,
+            "teamDamagePercentage": 0.22268174370755958,
+            "damageSelfMitigated": 23366,
+            "totalHeal": 5466,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 230,
+            "totalTimeCCDealt": 54,
+            "timeCCingOthers": 5,
+            "turretTakedowns": 3,
+            "damageDealtToTurrets": 2786,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 2,
+            "dragonTakedowns": 1,
+            "teamBaronKills": 1,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 2,
+            "wardsPlaced": 9,
+            "visionScore": 45,
+            "doubleKills": 1,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 5,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "summonerName": "HOMME FIABLE",
+                "rank": 2156,
+                "winrate": [
+                  103,
+                  87
+                ],
+                "level": 0,
+                "championName": "Yorick",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 7,
+                "assists": 5,
+                "goldPerMinute": 452.2122116413197,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 283
+              },
+              {
+                "summonerName": "Saabutage",
+                "rank": 1892,
+                "winrate": [
+                  27,
+                  38
+                ],
+                "level": 0,
+                "championName": "Trundle",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 9,
+                "deaths": 13,
+                "assists": 10,
+                "goldPerMinute": 401.8594268042992,
+                "totalAllyJungleMinionsKilled": 112,
+                "totalEnemyJungleMinionsKilled": 18,
+                "totalMinionsKilled": 13
+              },
+              {
+                "summonerName": "BlauerPueblo",
+                "rank": 2129,
+                "winrate": [
+                  44,
+                  47
+                ],
+                "level": 0,
+                "championName": "Azir",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 9,
+                "assists": 14,
+                "goldPerMinute": 383.34480759411616,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 248
+              },
+              {
+                "summonerName": "Tigermajs",
+                "rank": 2133,
+                "winrate": [
+                  12,
+                  22
+                ],
+                "level": 0,
+                "championName": "Caitlyn",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 13,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 512.989260971731,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 269
+              },
+              {
+                "summonerName": "ABlackCanadian",
+                "rank": 1689,
+                "winrate": [
+                  20,
+                  10
+                ],
+                "level": 0,
+                "championName": "Braum",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 4,
+                "deaths": 5,
+                "assists": 21,
+                "goldPerMinute": 298.32149380652146,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 39
+              }
+            ],
+            "blue": [
+              {
+                "summonerName": "Ckwaceupoulet",
+                "rank": 2223,
+                "winrate": [
+                  26,
+                  31
+                ],
+                "level": 0,
+                "championName": "Ornn",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 4,
+                "deaths": 4,
+                "assists": 13,
+                "goldPerMinute": 402.44219423678277,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 270
+              },
+              {
+                "summonerName": "Martpal",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 0,
+                "championName": "XinZhao",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 11,
+                "deaths": 10,
+                "assists": 12,
+                "goldPerMinute": 441.58506131435036,
+                "totalAllyJungleMinionsKilled": 98,
+                "totalEnemyJungleMinionsKilled": 41,
+                "totalMinionsKilled": 42
+              },
+              {
+                "summonerName": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 522,
+                "championName": "Katarina",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 13,
+                "deaths": 7,
+                "assists": 9,
+                "goldPerMinute": 405.3240301591087,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 166
+              },
+              {
+                "summonerName": "TURBO OLINGO",
+                "rank": 1478,
+                "winrate": [
+                  6,
+                  4
+                ],
+                "level": 0,
+                "championName": "Kaisa",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 12,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 496.56963261251514,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 294
+              },
+              {
+                "summonerName": "Tyrox PVP",
+                "rank": 2001,
+                "winrate": [
+                  5,
+                  1
+                ],
+                "level": 0,
+                "championName": "Alistar",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 2,
+                "deaths": 7,
+                "assists": 23,
+                "goldPerMinute": 272.61983222169926,
+                "totalAllyJungleMinionsKilled": 1,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 29
+              }
+            ]
+          }
         }
       ]
     },
@@ -5317,10 +5650,10 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 2300,
+          "rank": 2275,
           "winrate": [
             9,
-            10
+            11
           ],
           "rank_history": {
             "22/07/2023": 2239,
@@ -5328,7 +5661,8 @@
             "26/07/2023": 2257,
             "04/08/2023": 2292,
             "06/08/2023": 2299,
-            "07/08/2023": 2300
+            "07/08/2023": 2300,
+            "21/08/2023": 2275
           },
           "nearest_rank": [
             "07/08/2023",
@@ -5347,7 +5681,14 @@
         6536401437,
         6536379812,
         6536353222,
-        6536336671
+        6536336671,
+        6560646740,
+        6560605382,
+        6560582217,
+        6560456314,
+        6560422970,
+        6560356642,
+        6560277458
       ],
       "match_history": [
         {
@@ -16433,6 +16774,332 @@
               }
             ]
           }
+        },
+        {
+          "match_info": {
+            "player_username": "Ckwaceupoulet",
+            "queue": "ranked_flex_fives",
+            "match_win": false,
+            "player_side": "blue",
+            "duration": 2310,
+            "creation": "20/08/2023, 20:22:42",
+            "id": 6560501426,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 2
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 36
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 3
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 11
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 42
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 7
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "championName": "Ornn",
+            "role": "SOLO",
+            "lane": "TOP",
+            "individualPosition": "TOP",
+            "teamPosition": "TOP",
+            "kills": 4,
+            "deaths": 4,
+            "assists": 13,
+            "goldPerMinute": 402.44219423678277,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 0,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 270,
+            "dodgeSkillShotsSmallWindow": 0,
+            "maxCsAdvantageOnLaneOpponent": 17,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": 0.15941524505615234,
+            "totalDamageTaken": 40082,
+            "totalDamageDealt": 221209,
+            "totalDamageDealtToChampions": 21948,
+            "teamDamagePercentage": 0.1522824447745131,
+            "damageSelfMitigated": 86241,
+            "totalHeal": 6794,
+            "totalHealsOnTeammates": 0,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 120,
+            "totalTimeCCDealt": 795,
+            "timeCCingOthers": 45,
+            "turretTakedowns": 6,
+            "damageDealtToTurrets": 9491,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 2,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 1,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 2,
+            "wardsPlaced": 13,
+            "visionScore": 24,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 5,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "summonerName": "HOMME FIABLE",
+                "rank": 2156,
+                "winrate": [
+                  103,
+                  87
+                ],
+                "level": 0,
+                "championName": "Yorick",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 7,
+                "assists": 5,
+                "goldPerMinute": 452.2122116413197,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 283
+              },
+              {
+                "summonerName": "Saabutage",
+                "rank": 1892,
+                "winrate": [
+                  27,
+                  38
+                ],
+                "level": 0,
+                "championName": "Trundle",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 9,
+                "deaths": 13,
+                "assists": 10,
+                "goldPerMinute": 401.8594268042992,
+                "totalAllyJungleMinionsKilled": 112,
+                "totalEnemyJungleMinionsKilled": 18,
+                "totalMinionsKilled": 13
+              },
+              {
+                "summonerName": "BlauerPueblo",
+                "rank": 2129,
+                "winrate": [
+                  44,
+                  47
+                ],
+                "level": 0,
+                "championName": "Azir",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 9,
+                "assists": 14,
+                "goldPerMinute": 383.34480759411616,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 248
+              },
+              {
+                "summonerName": "Tigermajs",
+                "rank": 2133,
+                "winrate": [
+                  12,
+                  22
+                ],
+                "level": 0,
+                "championName": "Caitlyn",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 13,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 512.989260971731,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 269
+              },
+              {
+                "summonerName": "ABlackCanadian",
+                "rank": 1689,
+                "winrate": [
+                  20,
+                  10
+                ],
+                "level": 0,
+                "championName": "Braum",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 4,
+                "deaths": 5,
+                "assists": 21,
+                "goldPerMinute": 298.32149380652146,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 39
+              }
+            ],
+            "blue": [
+              {
+                "summonerName": "Ckwaceupoulet",
+                "rank": 2223,
+                "winrate": [
+                  26,
+                  31
+                ],
+                "level": 618,
+                "championName": "Ornn",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 4,
+                "deaths": 4,
+                "assists": 13,
+                "goldPerMinute": 402.44219423678277,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 270
+              },
+              {
+                "summonerName": "Martpal",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 0,
+                "championName": "XinZhao",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 11,
+                "deaths": 10,
+                "assists": 12,
+                "goldPerMinute": 441.58506131435036,
+                "totalAllyJungleMinionsKilled": 98,
+                "totalEnemyJungleMinionsKilled": 41,
+                "totalMinionsKilled": 42
+              },
+              {
+                "summonerName": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 522,
+                "championName": "Katarina",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 13,
+                "deaths": 7,
+                "assists": 9,
+                "goldPerMinute": 405.3240301591087,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 166
+              },
+              {
+                "summonerName": "TURBO OLINGO",
+                "rank": 1478,
+                "winrate": [
+                  6,
+                  4
+                ],
+                "level": 0,
+                "championName": "Kaisa",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 12,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 496.56963261251514,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 294
+              },
+              {
+                "summonerName": "Tyrox PVP",
+                "rank": 2001,
+                "winrate": [
+                  5,
+                  1
+                ],
+                "level": 0,
+                "championName": "Alistar",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 2,
+                "deaths": 7,
+                "assists": 23,
+                "goldPerMinute": 272.61983222169926,
+                "totalAllyJungleMinionsKilled": 1,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 29
+              }
+            ]
+          }
         }
       ]
     },
@@ -16456,13 +17123,14 @@
           ]
         },
         "RANKED_FLEX_SR": {
-          "rank": 1630,
+          "rank": 1607,
           "winrate": [
             2,
-            4
+            5
           ],
           "rank_history": {
-            "09/08/2023": 1630
+            "09/08/2023": 1630,
+            "21/08/2023": 1607
           },
           "nearest_rank": [
             "09/08/2023",
@@ -16492,7 +17160,10 @@
         6531667339,
         6531642787,
         6530819464,
-        6498515750
+        6498515750,
+        6560456314,
+        6560422970,
+        6560356642
       ],
       "match_history": [
         {
@@ -24641,6 +25312,332 @@
                 "totalAllyJungleMinionsKilled": 0,
                 "totalEnemyJungleMinionsKilled": 0,
                 "totalMinionsKilled": 43
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "TURBO OLINGO",
+            "queue": "ranked_flex_fives",
+            "match_win": false,
+            "player_side": "blue",
+            "duration": 2310,
+            "creation": "20/08/2023, 20:22:42",
+            "id": 6560501426,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 2
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 36
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 3
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 11
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 42
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 3
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 7
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "championName": "Kaisa",
+            "role": "CARRY",
+            "lane": "BOTTOM",
+            "individualPosition": "BOTTOM",
+            "teamPosition": "BOTTOM",
+            "kills": 12,
+            "deaths": 8,
+            "assists": 9,
+            "goldPerMinute": 496.56963261251514,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 2,
+            "totalEnemyJungleMinionsKilled": 0,
+            "totalMinionsKilled": 294,
+            "dodgeSkillShotsSmallWindow": 1,
+            "maxCsAdvantageOnLaneOpponent": 43,
+            "maxLevelLeadLaneOpponent": 3,
+            "visionScoreAdvantageLaneOpponent": 2.026318311691284,
+            "totalDamageTaken": 34446,
+            "totalDamageDealt": 298328,
+            "totalDamageDealtToChampions": 37343,
+            "teamDamagePercentage": 0.2590889842537728,
+            "damageSelfMitigated": 25143,
+            "totalHeal": 11063,
+            "totalHealsOnTeammates": 1036,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 252,
+            "totalTimeCCDealt": 159,
+            "timeCCingOthers": 3,
+            "turretTakedowns": 5,
+            "damageDealtToTurrets": 6996,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 2,
+            "dragonTakedowns": 2,
+            "teamBaronKills": 1,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 2,
+            "wardsPlaced": 15,
+            "visionScore": 35,
+            "doubleKills": 3,
+            "tripleKills": 1,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 0,
+            "baitPings": 0
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "summonerName": "HOMME FIABLE",
+                "rank": 2156,
+                "winrate": [
+                  103,
+                  87
+                ],
+                "level": 0,
+                "championName": "Yorick",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 7,
+                "assists": 5,
+                "goldPerMinute": 452.2122116413197,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 283
+              },
+              {
+                "summonerName": "Saabutage",
+                "rank": 1892,
+                "winrate": [
+                  27,
+                  38
+                ],
+                "level": 0,
+                "championName": "Trundle",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 9,
+                "deaths": 13,
+                "assists": 10,
+                "goldPerMinute": 401.8594268042992,
+                "totalAllyJungleMinionsKilled": 112,
+                "totalEnemyJungleMinionsKilled": 18,
+                "totalMinionsKilled": 13
+              },
+              {
+                "summonerName": "BlauerPueblo",
+                "rank": 2129,
+                "winrate": [
+                  44,
+                  47
+                ],
+                "level": 0,
+                "championName": "Azir",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 9,
+                "assists": 14,
+                "goldPerMinute": 383.34480759411616,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 248
+              },
+              {
+                "summonerName": "Tigermajs",
+                "rank": 2133,
+                "winrate": [
+                  12,
+                  22
+                ],
+                "level": 0,
+                "championName": "Caitlyn",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 13,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 512.989260971731,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 269
+              },
+              {
+                "summonerName": "ABlackCanadian",
+                "rank": 1689,
+                "winrate": [
+                  20,
+                  10
+                ],
+                "level": 0,
+                "championName": "Braum",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 4,
+                "deaths": 5,
+                "assists": 21,
+                "goldPerMinute": 298.32149380652146,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 39
+              }
+            ],
+            "blue": [
+              {
+                "summonerName": "Ckwaceupoulet",
+                "rank": 2223,
+                "winrate": [
+                  26,
+                  31
+                ],
+                "level": 618,
+                "championName": "Ornn",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 4,
+                "deaths": 4,
+                "assists": 13,
+                "goldPerMinute": 402.44219423678277,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 270
+              },
+              {
+                "summonerName": "Martpal",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 0,
+                "championName": "XinZhao",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 11,
+                "deaths": 10,
+                "assists": 12,
+                "goldPerMinute": 441.58506131435036,
+                "totalAllyJungleMinionsKilled": 98,
+                "totalEnemyJungleMinionsKilled": 41,
+                "totalMinionsKilled": 42
+              },
+              {
+                "summonerName": "TURBO Trusty",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 522,
+                "championName": "Katarina",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 13,
+                "deaths": 7,
+                "assists": 9,
+                "goldPerMinute": 405.3240301591087,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 166
+              },
+              {
+                "summonerName": "TURBO OLINGO",
+                "rank": 1478,
+                "winrate": [
+                  6,
+                  4
+                ],
+                "level": 480,
+                "championName": "Kaisa",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 12,
+                "deaths": 8,
+                "assists": 9,
+                "goldPerMinute": 496.56963261251514,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 294
+              },
+              {
+                "summonerName": "Tyrox PVP",
+                "rank": 2001,
+                "winrate": [
+                  5,
+                  1
+                ],
+                "level": 0,
+                "championName": "Alistar",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 2,
+                "deaths": 7,
+                "assists": 23,
+                "goldPerMinute": 272.61983222169926,
+                "totalAllyJungleMinionsKilled": 1,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 29
               }
             ]
           }
@@ -43387,10 +44384,10 @@
       "username": "FRANZIZKUZ",
       "ranked": {
         "RANKED_SOLO_5x5": {
-          "rank": 2200,
+          "rank": 2197,
           "winrate": [
-            52,
-            36
+            53,
+            37
           ],
           "rank_history": {
             "22/07/2023": 1737,
@@ -43412,11 +44409,12 @@
             "17/08/2023": 2172,
             "18/08/2023": 2200,
             "19/08/2023": 2170,
-            "20/08/2023": 2200
+            "20/08/2023": 2200,
+            "21/08/2023": 2197
           },
           "nearest_rank": [
-            "19/08/2023",
-            2170
+            "20/08/2023",
+            2200
           ]
         },
         "RANKED_FLEX_SR": {
@@ -57453,6 +58451,658 @@
                 "totalAllyJungleMinionsKilled": 0,
                 "totalEnemyJungleMinionsKilled": 0,
                 "totalMinionsKilled": 28
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "FRANZIZKUZ",
+            "queue": "ranked_solo_fives",
+            "match_win": true,
+            "player_side": "red",
+            "duration": 2141,
+            "creation": "20/08/2023, 21:16:38",
+            "id": 6560596229,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 47
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 5
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 3
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 8
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 26
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 3
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "championName": "Zac",
+            "role": "NONE",
+            "lane": "JUNGLE",
+            "individualPosition": "JUNGLE",
+            "teamPosition": "JUNGLE",
+            "kills": 8,
+            "deaths": 4,
+            "assists": 15,
+            "goldPerMinute": 412.1308048553438,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 135,
+            "totalEnemyJungleMinionsKilled": 12,
+            "totalMinionsKilled": 47,
+            "dodgeSkillShotsSmallWindow": 28,
+            "maxCsAdvantageOnLaneOpponent": 84.15000009536743,
+            "maxLevelLeadLaneOpponent": 3,
+            "visionScoreAdvantageLaneOpponent": -0.008540511131286621,
+            "totalDamageTaken": 47063,
+            "totalDamageDealt": 291987,
+            "totalDamageDealtToChampions": 32518,
+            "teamDamagePercentage": 0.22661813286661492,
+            "damageSelfMitigated": 75256,
+            "totalHeal": 72289,
+            "totalHealsOnTeammates": 1067,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 171,
+            "totalTimeCCDealt": 777,
+            "timeCCingOthers": 55,
+            "turretTakedowns": 3,
+            "damageDealtToTurrets": 1271,
+            "takedownOnFirstTurret": 0,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 1,
+            "dragonTakedowns": 5,
+            "teamBaronKills": 1,
+            "teamElderDragonKills": 1,
+            "detectorWardsPlaced": 3,
+            "wardsPlaced": 4,
+            "visionScore": 24,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 13,
+            "baitPings": 1
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "summonerName": "G2 Madara",
+                "rank": 2149,
+                "winrate": [
+                  53,
+                  55
+                ],
+                "level": 0,
+                "championName": "Riven",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 13,
+                "deaths": 5,
+                "assists": 10,
+                "goldPerMinute": 467.78151049207247,
+                "totalAllyJungleMinionsKilled": 9,
+                "totalEnemyJungleMinionsKilled": 2,
+                "totalMinionsKilled": 183
+              },
+              {
+                "summonerName": "FRANZIZKUZ",
+                "rank": 2197,
+                "winrate": [
+                  53,
+                  37
+                ],
+                "level": 338,
+                "championName": "Zac",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 8,
+                "deaths": 4,
+                "assists": 15,
+                "goldPerMinute": 412.1308048553438,
+                "totalAllyJungleMinionsKilled": 135,
+                "totalEnemyJungleMinionsKilled": 12,
+                "totalMinionsKilled": 47
+              },
+              {
+                "summonerName": "DontFeedBot",
+                "rank": 2172,
+                "winrate": [
+                  97,
+                  85
+                ],
+                "level": 0,
+                "championName": "Malzahar",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 6,
+                "deaths": 5,
+                "assists": 10,
+                "goldPerMinute": 462.59084131795805,
+                "totalAllyJungleMinionsKilled": 2,
+                "totalEnemyJungleMinionsKilled": 9,
+                "totalMinionsKilled": 289
+              },
+              {
+                "summonerName": "RF27 Diryan ",
+                "rank": 1901,
+                "winrate": [
+                  4,
+                  5
+                ],
+                "level": 0,
+                "championName": "Sivir",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 20,
+                "deaths": 6,
+                "assists": 11,
+                "goldPerMinute": 526.914420436346,
+                "totalAllyJungleMinionsKilled": 23,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 201
+              },
+              {
+                "summonerName": "RealGiz",
+                "rank": 0,
+                "winrate": [
+                  0,
+                  0
+                ],
+                "level": 0,
+                "championName": "Bard",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 0,
+                "deaths": 6,
+                "assists": 14,
+                "goldPerMinute": 242.92184552453878,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 20
+              }
+            ],
+            "blue": [
+              {
+                "summonerName": "KC Sukuna",
+                "rank": 1723,
+                "winrate": [
+                  13,
+                  15
+                ],
+                "level": 0,
+                "championName": "Sett",
+                "individualPosition": "TOP",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 2,
+                "deaths": 9,
+                "assists": 5,
+                "goldPerMinute": 358.88981436420437,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 206
+              },
+              {
+                "summonerName": "SwaGGwer",
+                "rank": 2060,
+                "winrate": [
+                  154,
+                  119
+                ],
+                "level": 0,
+                "championName": "Hecarim",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 1,
+                "deaths": 11,
+                "assists": 12,
+                "goldPerMinute": 319.40170615437466,
+                "totalAllyJungleMinionsKilled": 97,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 43
+              },
+              {
+                "summonerName": "WITHOUT CONSENT",
+                "rank": 2102,
+                "winrate": [
+                  13,
+                  11
+                ],
+                "level": 0,
+                "championName": "Cassiopeia",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 6,
+                "deaths": 4,
+                "assists": 13,
+                "goldPerMinute": 408.0226649809917,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 4,
+                "totalMinionsKilled": 240
+              },
+              {
+                "summonerName": "otp Varus",
+                "rank": 2116,
+                "winrate": [
+                  36,
+                  30
+                ],
+                "level": 0,
+                "championName": "Varus",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 13,
+                "deaths": 11,
+                "assists": 4,
+                "goldPerMinute": 524.7517145666616,
+                "totalAllyJungleMinionsKilled": 26,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 236
+              },
+              {
+                "summonerName": "MID\u039aNIGHT",
+                "rank": 1800,
+                "winrate": [
+                  4,
+                  5
+                ],
+                "level": 0,
+                "championName": "Pyke",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 4,
+                "deaths": 12,
+                "assists": 10,
+                "goldPerMinute": 281.0498570281015,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 30
+              }
+            ]
+          }
+        },
+        {
+          "match_info": {
+            "player_username": "FRANZIZKUZ",
+            "queue": "ranked_solo_fives",
+            "match_win": false,
+            "player_side": "blue",
+            "duration": 1625,
+            "creation": "20/08/2023, 20:43:53",
+            "id": 6560543905,
+            "sides": {
+              "red": {
+                "isWinner": true,
+                "objectives": {
+                  "baron": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "champion": {
+                    "first": true,
+                    "kills": 36
+                  },
+                  "dragon": {
+                    "first": true,
+                    "kills": 4
+                  },
+                  "inhibitor": {
+                    "first": true,
+                    "kills": 2
+                  },
+                  "riftHerald": {
+                    "first": false,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": false,
+                    "kills": 9
+                  }
+                }
+              },
+              "blue": {
+                "isWinner": false,
+                "objectives": {
+                  "baron": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "champion": {
+                    "first": false,
+                    "kills": 18
+                  },
+                  "dragon": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "inhibitor": {
+                    "first": false,
+                    "kills": 0
+                  },
+                  "riftHerald": {
+                    "first": true,
+                    "kills": 1
+                  },
+                  "tower": {
+                    "first": true,
+                    "kills": 4
+                  }
+                }
+              }
+            }
+          },
+          "player_stats": {
+            "championName": "Zac",
+            "role": "NONE",
+            "lane": "JUNGLE",
+            "individualPosition": "JUNGLE",
+            "teamPosition": "JUNGLE",
+            "kills": 3,
+            "deaths": 3,
+            "assists": 7,
+            "goldPerMinute": 375.16246358931375,
+            "firstBloodKill": false,
+            "totalAllyJungleMinionsKilled": 121,
+            "totalEnemyJungleMinionsKilled": 8,
+            "totalMinionsKilled": 11,
+            "dodgeSkillShotsSmallWindow": 5,
+            "maxCsAdvantageOnLaneOpponent": 10,
+            "maxLevelLeadLaneOpponent": 1,
+            "visionScoreAdvantageLaneOpponent": -0.2372545599937439,
+            "totalDamageTaken": 34979,
+            "totalDamageDealt": 188453,
+            "totalDamageDealtToChampions": 11797,
+            "teamDamagePercentage": 0.15245762069523672,
+            "damageSelfMitigated": 41862,
+            "totalHeal": 41454,
+            "totalHealsOnTeammates": 225,
+            "totalDamageShieldedOnTeammates": 0,
+            "timeAlive": 0,
+            "totalTimeSpentDead": 128,
+            "totalTimeCCDealt": 454,
+            "timeCCingOthers": 37,
+            "turretTakedowns": 1,
+            "damageDealtToTurrets": 244,
+            "takedownOnFirstTurret": 1,
+            "objectivesStolen": 0,
+            "epicMonsterStolenWithoutSmite": 0,
+            "teamRiftHeraldKills": 1,
+            "dragonTakedowns": 0,
+            "teamBaronKills": 0,
+            "teamElderDragonKills": 0,
+            "detectorWardsPlaced": 2,
+            "wardsPlaced": 3,
+            "visionScore": 17,
+            "doubleKills": 0,
+            "tripleKills": 0,
+            "quadraKills": 0,
+            "pentaKills": 0,
+            "enemyMissingPings": 8,
+            "baitPings": 1
+          },
+          "match_ranks": {
+            "red": [
+              {
+                "summonerName": "TheRatak",
+                "rank": 2221,
+                "winrate": [
+                  21,
+                  23
+                ],
+                "level": 0,
+                "championName": "Kayn",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 4,
+                "deaths": 7,
+                "assists": 6,
+                "goldPerMinute": 377.28635186262534,
+                "totalAllyJungleMinionsKilled": 4,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 176
+              },
+              {
+                "summonerName": "sami fully mad ",
+                "rank": 2162,
+                "winrate": [
+                  46,
+                  56
+                ],
+                "level": 0,
+                "championName": "Maokai",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 8,
+                "deaths": 2,
+                "assists": 14,
+                "goldPerMinute": 512.2684386301694,
+                "totalAllyJungleMinionsKilled": 94,
+                "totalEnemyJungleMinionsKilled": 12,
+                "totalMinionsKilled": 47
+              },
+              {
+                "summonerName": "Drututts Son ",
+                "rank": 2180,
+                "winrate": [
+                  124,
+                  130
+                ],
+                "level": 0,
+                "championName": "Akshan",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 7,
+                "deaths": 4,
+                "assists": 7,
+                "goldPerMinute": 455.9833982703737,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 176
+              },
+              {
+                "summonerName": "AYRTOTO",
+                "rank": 2211,
+                "winrate": [
+                  95,
+                  89
+                ],
+                "level": 0,
+                "championName": "Jhin",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 16,
+                "deaths": 4,
+                "assists": 3,
+                "goldPerMinute": 540.5491260261496,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 173
+              },
+              {
+                "summonerName": "calypZU",
+                "rank": 2146,
+                "winrate": [
+                  48,
+                  41
+                ],
+                "level": 0,
+                "championName": "Milio",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 1,
+                "deaths": 1,
+                "assists": 25,
+                "goldPerMinute": 329.07381763723095,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 14
+              }
+            ],
+            "blue": [
+              {
+                "summonerName": "Zorec",
+                "rank": 2071,
+                "winrate": [
+                  47,
+                  43
+                ],
+                "level": 0,
+                "championName": "Sion",
+                "individualPosition": "TOP",
+                "lane": "TOP",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 3,
+                "assists": 5,
+                "goldPerMinute": 411.5600422561768,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 160
+              },
+              {
+                "summonerName": "FRANZIZKUZ",
+                "rank": 2197,
+                "winrate": [
+                  53,
+                  37
+                ],
+                "level": 338,
+                "championName": "Zac",
+                "individualPosition": "JUNGLE",
+                "lane": "JUNGLE",
+                "role": "NONE",
+                "kills": 3,
+                "deaths": 3,
+                "assists": 7,
+                "goldPerMinute": 375.16246358931375,
+                "totalAllyJungleMinionsKilled": 121,
+                "totalEnemyJungleMinionsKilled": 8,
+                "totalMinionsKilled": 11
+              },
+              {
+                "summonerName": "boozer000",
+                "rank": 2102,
+                "winrate": [
+                  89,
+                  104
+                ],
+                "level": 0,
+                "championName": "Chogath",
+                "individualPosition": "MIDDLE",
+                "lane": "MIDDLE",
+                "role": "SOLO",
+                "kills": 5,
+                "deaths": 9,
+                "assists": 2,
+                "goldPerMinute": 325.11351687709646,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 143
+              },
+              {
+                "summonerName": "Polanec",
+                "rank": 2297,
+                "winrate": [
+                  153,
+                  154
+                ],
+                "level": 0,
+                "championName": "Vayne",
+                "individualPosition": "BOTTOM",
+                "lane": "BOTTOM",
+                "role": "CARRY",
+                "kills": 3,
+                "deaths": 9,
+                "assists": 2,
+                "goldPerMinute": 357.98314423268806,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 147
+              },
+              {
+                "summonerName": "Support Holy",
+                "rank": 2100,
+                "winrate": [
+                  62,
+                  64
+                ],
+                "level": 0,
+                "championName": "Shaco",
+                "individualPosition": "UTILITY",
+                "lane": "BOTTOM",
+                "role": "SUPPORT",
+                "kills": 2,
+                "deaths": 12,
+                "assists": 4,
+                "goldPerMinute": 240.26153924436917,
+                "totalAllyJungleMinionsKilled": 0,
+                "totalEnemyJungleMinionsKilled": 0,
+                "totalMinionsKilled": 25
               }
             ]
           }

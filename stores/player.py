@@ -286,7 +286,7 @@ class Player:
                     add_id_to_invalid_list(match.id)
                     match_limit += 1
                     continue
-            except ValueError:
+            except Exception:
                 LOG.warning('match returned an error')
                 add_id_to_invalid_list(match.id)
                 match_limit += 1
