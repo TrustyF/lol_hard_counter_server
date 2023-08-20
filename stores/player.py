@@ -55,6 +55,11 @@ class Player:
                 }
             },
             "player_stats": {
+                "championName": None,
+                "role": None,
+                "lane": None,
+                "individualPosition": None,
+                "teamPosition": None,
                 'kills': 0,
                 'deaths': 0,
                 'assists': 0,
@@ -320,15 +325,27 @@ class Player:
             for player in match.participants:
 
                 participant_stats = {
-                    'username': 0,
+                    'summonerName': 0,
                     'rank': 0,
                     'winrate': [0, 0],
-                    'account_lvl': 0
+                    'level': 0,
+                    'championName': None,
+                    'individualPosition': None,
+                    'lane': None,
+                    'role': None,
+                    'kills': 0,
+                    'deaths': 0,
+                    'assists': 0,
+                    'goldPerMinute': 0,
+                    'totalAllyJungleMinionsKilled': 0,
+                    'totalEnemyJungleMinionsKilled': 0,
+                    'totalMinionsKilled': 0,
                 }
 
+                recursive_fill_template_from_dict(player.to_dict(), participant_stats)
+
                 player_summ = player.summoner
-                participant_stats['username'] = player_summ.name
-                participant_stats['account_lvl'] = player_summ.level
+                recursive_fill_template_from_dict(player_summ.to_dict(), participant_stats)
 
                 # get solo q rank
                 for entry in player_summ.league_entries:
@@ -338,6 +355,7 @@ class Player:
                     if queue == 'RANKED_SOLO_5x5':
                         # check if any rank exists
                         if 'tier' in values:
+
                             participant_stats['rank'] = utils.convert_to_rank_val(values)
                             participant_stats['winrate'] = [values['wins'], values['losses']]
 
@@ -349,3 +367,7 @@ class Player:
 
             # save to db
             self.save_current_player()
+
+    # Temp functions
+    def add_champion_ids(self):
+        pass
