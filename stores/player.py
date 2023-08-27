@@ -220,8 +220,6 @@ class Player:
                             f' {queue} with winrate {self.ranked[queue]["winrate"]}')
                 self.update_nearest_date()
 
-        self.save_current_player()
-
     def add_rank_to_history(self):
         """Add current rank info to rank history"""
         LOG.warning(f'(add_rank_to_history) - adding rank to history for {self.username}')
