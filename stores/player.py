@@ -160,6 +160,7 @@ class Player:
 
     def save_to_json(self):
         """Return formatted values to be saved to json"""
+        self.update_nearest_date()
         return {
             'username': self.username,
             'ranked': self.ranked,
@@ -353,7 +354,6 @@ class Player:
                     if queue == 'RANKED_SOLO_5x5':
                         # check if any rank exists
                         if 'tier' in values:
-
                             participant_stats['rank'] = utils.convert_to_rank_val(values)
                             participant_stats['winrate'] = [values['wins'], values['losses']]
 
